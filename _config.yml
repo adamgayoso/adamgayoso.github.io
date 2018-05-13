@@ -1,0 +1,23 @@
+# Site settings
+title: "Adam Gayoso"
+# email: "adamgayoso@berkeley.edu"
+description: ""
+baseurl: ""
+url: "http://adamgayoso.com"
+# twitter_username: ""
+github_username: "adamgayoso"
+# facebook_username: ""
+linkedin_username: "adam-gayoso"
+
+# Build settings
+markdown: "kramdown"
+highlighter: "rouge"
+permalink: "pretty"
+paginate: 10
+timezone: "America/New_York"
+exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md"]
+plugins: ["jekyll-paginate", "jekyll-sitemap"]
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
