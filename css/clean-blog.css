@@ -437,7 +437,7 @@ form .row:first-child .floating-label-form-group {
   background-color: #404040;
   cursor: not-allowed;
 }
-::-moz-selection {
+/*::-moz-selection {
   color: white;
   text-shadow: none;
   background: #0085a1;
@@ -446,7 +446,7 @@ form .row:first-child .floating-label-form-group {
   color: white;
   text-shadow: none;
   background: #0085a1;
-}
+}*/
 
 body {
   webkit-tap-highlight-color: #0085a1;
