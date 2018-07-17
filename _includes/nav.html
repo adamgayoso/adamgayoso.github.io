@@ -1,32 +1,29 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="background: black; border: none;">
-    <div class="container-fluid">
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light style="background-color: #404040;">
+        <!-- <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="fa fa-home"></i></a> -->
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="fa fa-home"></i></a>
-        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ site.baseurl }}/">Home <span class="sr-only">(current)</span></a>
+                </li>
                 {% assign pages = site.pages | sort: 'weight' | reverse %}
 
                 {% for page in pages %}
                     {% if page.title %}
-                        <li>
-                            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                         </li>
                     {% endif %}
                 {% endfor %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
+    </nav>
+</div>
