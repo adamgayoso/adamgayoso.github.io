@@ -58,6 +58,13 @@ hr.small {
   border-color: white;
 }
 
+.btn-link {
+    border-color: black;
+}
+.btn-link:hover {
+      border-color: black;
+}
+
 .navbar-nav a{
     font-size: 1.5em !important;
 }
