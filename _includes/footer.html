@@ -2,7 +2,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="col-md-10 offset-md-1">
                 <ul class="list-inline text-center">
 <!--                     <li>
                         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
@@ -13,7 +13,7 @@
                         </a>
                     </li> -->
                     {% if site.twitter_username %}
-                    <li>
+                    <li class="list-inline-item">
                         <a href="https://twitter.com/{{ site.twitter_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -23,7 +23,7 @@
                     </li>
                     {% endif %}
                     {% if site.email %}
-                    <li>
+                    <li class="list-inline-item">
                         <a href="mailto: {{ site.email }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -33,7 +33,7 @@
                     </li>
                     {% endif %}
                     {% if site.facebook_username %}
-                    <li>
+                    <li class="list-inline-item">
                         <a href="https://www.facebook.com/{{ site.facebook_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -43,7 +43,7 @@
                     </li>
                     {% endif %}
                     {% if site.github_username %}
-                    <li>
+                    <li class="list-inline-item">
                         <a href="https://github.com/{{ site.github_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -53,7 +53,7 @@
                     </li>
                     {% endif %}
                     {% if site.linkedin_username %}
-                    <li>
+                    <li class="list-inline-item">
                         <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -63,17 +63,16 @@
                     </li>
                     {% endif %}
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+                <p class="copyright text-muted" style="padding-top: 0.5em;">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
             </div>
         </div>
     </div>
 </footer>
 
-<!-- jQuery -->
-<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<!-- Boostrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>

@@ -1,0 +1,262 @@
+body {
+  font-family: 'Computer Modern Serif', serif;
+  font-size: 17px;
+  color: #404040;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+#aboutme h3 {
+  margin-top: 0px !important;
+  margin-bottom: 1em !important;
+}
+
+#aboutme h4 {
+  margin-top: 0px !important;
+  margin-bottom: 0.25em !important;
+  font-size: 17px;
+}
+
+a {
+  color: #404040;
+}
+.post a {
+  color: #337ab7;
+}
+
+#aboutme a {
+  color: #337ab7;
+}
+a:hover,
+a:focus {
+  color: #0085a1;
+}
+blockquote {
+  color: #808080;
+  font-style: italic;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+hr.small {
+  max-width: 100px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+
+.navbar-nav a{
+    font-size: 1.5em !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .page {
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page {
+    padding-top: 40px;
+  }
+}
+.post-preview > a {
+  color: #404040;
+}
+.post-preview > a:hover,
+.post-preview > a:focus {
+  text-decoration: none;
+  color: #0085a1;
+}
+.post-preview > a .post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width : 768px) {
+  .post-preview > a .post-title {
+    margin-top: 30px;
+  }
+
+  .post-preview {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width : 768px) {
+  .post-preview > a .post-title {
+    margin-top: 0;
+  }
+}
+
+.post-preview > a .post-subtitle {
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.post-preview .post-meta {
+  color: #808080;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.post-preview .post-meta > a {
+  text-decoration: none;
+  color: #404040;
+}
+.post-preview .post-meta > a:hover,
+.post-preview .post-meta > a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+  .post-preview > a > .post-title {
+    font-size: 24px;
+  }
+}
+.section-heading {
+  font-size: 24px;
+  margin-top: 60px;
+  font-weight: 600;
+}
+.caption {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  font-style: italic;
+  margin: 0;
+  display: block;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+footer {
+  padding: 50px 0 65px;
+}
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+}
+footer .copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.floating-label-form-group {
+  font-size: 14px;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #eeeeee;
+}
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+  z-index: 1;
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 1.5em;
+  background: none;
+  box-shadow: none !important;
+  resize: none;
+}
+.floating-label-form-group label {
+  display: block;
+  z-index: 0;
+  position: relative;
+  top: 2em;
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.764705882em;
+  vertical-align: middle;
+  vertical-align: baseline;
+  opacity: 0;
+  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+  -moz-transition: top 0.3s ease,opacity 0.3s ease;
+  -ms-transition: top 0.3s ease,opacity 0.3s ease;
+  transition: top 0.3s ease,opacity 0.3s ease;
+}
+.floating-label-form-group::not(:first-child) {
+  padding-left: 14px;
+  border-left: 1px solid #eeeeee;
+}
+.floating-label-form-group-with-value label {
+  top: 0;
+  opacity: 1;
+}
+.floating-label-form-group-with-focus label {
+  color: #0085a1;
+}
+form .row:first-child .floating-label-form-group {
+  border-top: 1px solid #eeeeee;
+}
+.pager {
+  margin: 20px 0 0;
+}
+.pager li > a,
+.pager li > span {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 10px 5px;
+  background-color: white;
+  border-radius: 0;
+}
+@media only screen and (min-width: 768px) {
+  .pager li > a,
+  .pager li > span {
+    font-size: 14px;
+    padding: 15px 25px;
+  }
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  color: white;
+  background-color: #0085a1;
+  border: 1px solid #0085a1;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  color: #808080;
+  background-color: #404040;
+  cursor: not-allowed;
+}
+
+body {
+  webkit-tap-highlight-color: #0085a1;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.post p {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
