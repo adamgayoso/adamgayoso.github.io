@@ -2,6 +2,10 @@
 <div class="container">
     <nav class="navbar navbar-expand navbar-light style="background-color: #404040;">
         <!-- <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="fa fa-home"></i></a> -->
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <img src="/img/avatar.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Adam Gayoso
+        </a>
         <!-- Brand and toggle get grouped for better mobile display -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,9 +14,6 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/">Home <span class="sr-only">(current)</span></a>
-                </li>
                 {% assign pages = site.pages | sort: 'weight' | reverse %}
 
                 {% for page in pages %}
