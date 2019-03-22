@@ -1,6 +1,8 @@
 body {
-  font-family: 'Computer Modern Serif', serif;
+  font-family: minion-pro-caption, 'Computer Modern Serif', serif;
   color: #404040;
+  font-weight: 500; 
+  font-style: normal;
 }
 
 h1,
@@ -46,10 +48,10 @@ hr.small {
 }
 
 .btn-link {
-    border-color: black;
+    border-color: #404040;
 }
 .btn-link:hover {
-      border-color: black;
+      border-color: #404040;
 }
 
 .navbar-nav a{
