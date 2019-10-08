@@ -1,8 +1,9 @@
 body {
   font-family: minion-pro, 'Computer Modern Serif', serif;
   color: #404040;
-  font-weight: 400; 
+  font-weight: 400;
   font-style: normal;
+  font-size: 13pt;
 }
 
 h1,
@@ -16,7 +17,7 @@ h6 {
 #aboutme h4 {
   margin-top: 0px !important;
   margin-bottom: 0.25em !important;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 a {
