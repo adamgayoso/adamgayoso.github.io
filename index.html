@@ -17,10 +17,13 @@ description: "About me"
                 <h6>Computational Biology,</h6>
                 <h6><a href="http://ccb.berkeley.edu">UC Berkeley</a></h6>
                 <h6>adamgayoso [at] berkeley [dot] edu</h6>
+                <a href="https://twitter.com/{{ site.twitter_username }}" class=" icon">
+                    <i class="fa fa-twitter fa-lg"></i>
+                </a>
                 <a href="https://github.com/{{ site.github_username }}" class="icon">
                     <i class="fa fa-github fa-lg"></i>
                 </a>
-                <a href="https://linkedin.com/in/{{ site.linkedin_username }}"" class=" icon">
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class=" icon">
                     <i class="fa fa-linkedin fa-lg"></i>
                 </a>
             </div>
@@ -30,69 +33,16 @@ description: "About me"
     <div class="col-md-8 offset-md-2 text-left">
         <p>I am a second year graduate student in the Center for Computational Biology at UC Berkeley co-advised by <a
                 href="http://streetslab.berkeley.edu">Aaron Streets</a> and <a href="https://niryosef.wordpress.com">Nir
-                Yosef</a>. I am interested in using deep generative models to derive insights from single-cell data.</p>
+                Yosef</a>. My research focuses on modeling single-cell multiomics data with deep generative models, with
+            the goal of connecting an expressive data representation to common downstream tasks. I am
+            also a contributor to <a href="https://github.com/YosefLab/scVI">single-cell Variational Inference
+                (scVI)</a>, which is a set of probabilistic tools for analyzing single-cell data.</p>
         <p>
-            I received my BS in Operations Research: Engineering Management Systems and MS in Computer Science at
-            Columbia University. As a Columbia graduate student, I developed computational models for single-cell
+            I received both my BS in Operations Research: Engineering Management Systems and MS in Computer Science at
+            Columbia University. At Columbia, I developed computational models for single-cell
             RNA-sequencing data with the <a href="https://www.mskcc.org/research-areas/labs/dana-pe-er">Dana Pe'er
-                Lab</a>.
-        </p>
-        <h3 style="padding-top: 0.4em;">Publications</h3>
-        <hr>
-        <h4 style="padding-top: 0.4em; padding-bottom: 0.7em;">Journal Articles</h4>
-        <p>
-            Interpretable factor models of single-cell RNA-seq via variational autoencoders.<br>
-            Valentine Svensson, <b>Adam Gayoso</b>, Nir Yosef, Lior Pachter.<br>
-            <i>Bioinformatics</i>, 2020.
-            <a
-                href="https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa169/5807606?rss=1">[Paper]</a>
-        </p>
-        <p>
-            Characterization of cell fate probabilities in single-cell data with Palantir.<br>
-            Manu Setty, Vaidotas Kiseliovas, Jacob Levine, <b>Adam Gayoso</b>, Linas Mazutis, Dana Pe’er.<br>
-            <i>Nature Biotechnology</i>, 2019.
-            <a href="https://www.nature.com/articles/s41587-019-0068-4">[Paper]</a>
-        </p>
-        <p>
-            Stress-adaptive responses associated with high-level carbapenem resistance in kpc-producing klebsiella
-            pneumoniae.<br>
-            Sheila Adams-Sapper, <b>Adam Gayoso</b>, Lee. W. Riley.<br>
-            <i>Journal of Pathogens</i>, 2018.
-            <a href="https://www.hindawi.com/journals/jpath/2018/3028290/abs/">[Paper]</a>
-        </p>
-
-        <h4 style="padding-top: 0.4em; padding-bottom: 0.7em;">Refereed Workshop Papers</h4>
-        <p>
-            A joint model of RNA expression and surface protein abundance in single cells.<br>
-            <b>Adam Gayoso</b>, Romain Lopez, Zo&euml; Steier, Jeffrey Regier, Aaron Streets, Nir Yosef<br>
-            <i>Machine Learning in Computational Biology (MLCB)</i>, 2019.
-            <a href="https://www.biorxiv.org/content/10.1101/791947v1">[bioRxiv]</a>
-        </p>
-        <p>
-            Detecting zero-inflated genes in single-cell transcriptomics data<br>
-            Oscar Clivio, Romain Lopez, Jeffrey Regier, <b>Adam Gayoso</b>, Michael I. Jordan, Nir Yosef<br>
-            <i>Machine Learning in Computational Biology (MLCB), Spotlight talk</i>, 2019.
-            <a href="https://www.biorxiv.org/content/10.1101/794875v1">[bioRxiv]</a>
-        </p>
-        <p>
-            Deep generative models for detecting differential expression in single cells.<br>
-            Pierre Boyeau, Romain Lopez, Jeffrey Regier, <b>Adam Gayoso</b>, Michael I. Jordan, Nir
-            Yosef.<br>
-            <i>Machine Learning in Computational Biology (MLCB)</i>, 2019.
-            <a href="https://www.biorxiv.org/content/10.1101/794289v1">[bioRxiv]</a>
-        </p>
-
-        <h3 style="padding-top: 0.4em;">Software</h3>
-        <hr>
-        <h4 style="padding-top: 0.4em;">single-cell Variational Inference (scVI)</h4>
-        <p>
-            <a href="https://github.com/YosefLab/scVI">scVI</a> is an end-to-end analysis framework for single-cell
-            transcriptomics.
-        </p>
-        <h4 style="padding-top: 0.4em;">DoubletDetection</h4>
-        <p>
-            <a href="https://github.com/JonathanShor/DoubletDetection">DoubletDetection</a> is a package to detect
-            cross-type doublets in scRNA-seq datasets.
+                Lab</a>, including a <a href="https://github.com/JonathanShor/DoubletDetection">method</a> to detect
+            doublets in single-cell RNA-sequencing datasets.
         </p>
     </div>
 </div>
