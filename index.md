@@ -6,7 +6,7 @@
 ~~~
 <div class="row">
   <div class="container">
-    <img class="left" style="margin:0 25px 0 0; height:180px; width:180px;" src="/assets/avatar.jpg">
+    <img class="left" style="margin:0 15px 0 0; height:185px; width:185px; display: flex;" src="/assets/avatar.jpg">
     <p>
        <font size="+2"><b>Adam Gayoso</b></font>
        <br>
@@ -16,7 +16,7 @@
        <br>
        <font size="+1"><a href="http://ccb.berkeley.edu">UC Berkeley</a>,</font>
        <br>
-       <font size="+1">adamgayoso [at] berkeley [dot] edu,</font>
+       adamgayoso at berkeley dot edu,
        <br>
       <a href="https://twitter.com/adamgayoso" class=" icon">
         <i class="fa fa-twitter fa-lg"></i>
