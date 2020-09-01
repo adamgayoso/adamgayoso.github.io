@@ -1,1 +1,0 @@
-adamgayoso.github.io
