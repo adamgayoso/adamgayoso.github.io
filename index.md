@@ -6,7 +6,7 @@
 ~~~
 <div class="row">
   <div class="container">
-    <img class="left" style="margin:0 15px 0 0; height:185px; width:185px; display: flex;" src="/assets/avatar.jpg">
+    <img class="left" style="margin:0 15px 0 0; height:180px; width:180px; display: flex;" src="/assets/avatar.jpg">
     <p>
        <font size="+2"><b>Adam Gayoso</b></font>
        <br>
