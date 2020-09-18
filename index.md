@@ -37,7 +37,7 @@
 
 I am a third year PhD candidate in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://niryosef.wordpress.com).
 My research focuses on modeling single-cell multiomics data with deep generative models, with the goal of connecting an expressive data representation to common downstream tasks.
-I am also a core developer of [single-cell variational inference](https://scvi.readthedocs.io/en/stable/) (scvi), which is a set of probabilistic tools for analyzing single-cell data.
+I am also a core developer of [single-cell variational inference tools](http://scvi-tools.org/) (scvi-tools), which is a set of probabilistic tools for analyzing single-cell data.
 
 I received both my BS in Operations Research: Engineering Management Systems and MS in Computer Science at
 Columbia University. At Columbia, I developed computational models for single-cell
