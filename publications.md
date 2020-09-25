@@ -32,7 +32,7 @@ Romain Lopez, \bold{Adam Gayoso}, Nir Yosef.
 ~~~
 <br>
 ~~~
-\italic{Molecular Systems Biology}, 2020. [To appear]
+\italic{Molecular Systems Biology}, 2020. [[Paper]](https://www.embopress.org/doi/full/10.15252/msb.20199198)
 
 \title{#003262}{Interpretable factor models of single-cell RNA-seq via
 variational autoencoders.}
