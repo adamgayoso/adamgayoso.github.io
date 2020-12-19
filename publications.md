@@ -15,16 +15,15 @@
 <hr>
 ~~~
 
-## Preprints
+<!-- ## Preprints -->
+## Journal Articles
 
-\title{#003262}{Joint probabilistic modeling of paired transcriptome and proteome measurements in single cells.}
+\title{#003262}{Joint probabilistic modeling of single-cell multi-omic data with totalVI.}
 \bold{Adam Gayoso*}, Zoë Steier*, Romain Lopez, Jeffrey Regier, Kristopher L Nazor, Aaron Streets, Nir Yosef.
 ~~~
 <br>
 ~~~
-\italic{bioRxiv}, 2020. [[Paper]](https://www.biorxiv.org/content/10.1101/2020.05.08.083337v2)
-
-## Journal Articles
+\italic{Nature Methods (in press)}, 2020. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2020.05.08.083337v2)
 
 \title{#003262}{Enhancing scientiﬁc discoveries in molecular biology with deep generative
 models.}
