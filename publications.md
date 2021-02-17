@@ -23,7 +23,7 @@
 ~~~
 <br>
 ~~~
-\italic{Nature Methods (in press)}, 2021. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2020.05.08.083337v2)
+\italic{Nature Methods}, 2021. [[Paper]](https://www.nature.com/articles/s41592-020-01050-x.epdf?sharing_token=F_xpBUwgD5vHVAB5jvU0c9RgN0jAjWel9jnR3ZoTv0NDA6nPyssLQkWDcY8VB7gLKdlD8q3cqpF5ovLZjZTudaweTnzODEXCrkjJ2UJEEpOAhfOCwEZ0h0Y2WTkn_GOBfGUZhH-lzX_u_AswArGFGinU1pcuXPvuTkPrrQI4zko%3D)[[bioRxiv]](https://www.biorxiv.org/content/10.1101/2020.05.08.083337v2)
 
 \title{#003262}{Enhancing scientiﬁc discoveries in molecular biology with deep generative
 models.}
