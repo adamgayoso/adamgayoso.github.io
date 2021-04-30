@@ -18,7 +18,7 @@
 ## Preprints
 
 \title{#003262}{scvi-tools: a library for deep probabilistic analysis of single-cell omics data.}
-\bold{Adam Gayoso*}, Romain Lopez*, Galen Xing, Pierre Boyeau, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, \italic{et al.}
+\bold{Adam Gayoso*}, Romain Lopez*, Galen Xing*, Pierre Boyeau, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, \italic{et al.}
 ~~~
 <br>
 ~~~
