@@ -15,7 +15,14 @@
 <hr>
 ~~~
 
-<!-- ## Preprints -->
+## Preprints
+
+\title{#003262}{scvi-tools: a library for deep probabilistic analysis of single-cell omics data.}
+\bold{Adam Gayoso*}, Romain Lopez*, Galen Xing, Pierre Boyeau, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, \italic{et al.}
+~~~
+<br>
+~~~
+\italic{bioRxiv}, 2021. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2021.04.28.441833v1)
 ## Journal Articles
 
 \title{#003262}{Joint probabilistic modeling of single-cell multi-omic data with totalVI.}
@@ -24,14 +31,6 @@
 <br>
 ~~~
 \italic{Nature Methods}, 2021. [[Paper]](https://www.nature.com/articles/s41592-020-01050-x.epdf?sharing_token=F_xpBUwgD5vHVAB5jvU0c9RgN0jAjWel9jnR3ZoTv0NDA6nPyssLQkWDcY8VB7gLKdlD8q3cqpF5ovLZjZTudaweTnzODEXCrkjJ2UJEEpOAhfOCwEZ0h0Y2WTkn_GOBfGUZhH-lzX_u_AswArGFGinU1pcuXPvuTkPrrQI4zko%3D)[[bioRxiv]](https://www.biorxiv.org/content/10.1101/2020.05.08.083337v2)
-
-\title{#003262}{Enhancing scientiﬁc discoveries in molecular biology with deep generative
-models.}
-Romain Lopez, \bold{Adam Gayoso}, Nir Yosef.
-~~~
-<br>
-~~~
-\italic{Molecular Systems Biology}, 2020. [[Paper]](https://www.embopress.org/doi/full/10.15252/msb.20199198)
 
 \title{#003262}{Interpretable factor models of single-cell RNA-seq via
 variational autoencoders.}
@@ -57,6 +56,16 @@ Sheila Adams-Sapper, \bold{Adam Gayoso}, Lee. W. Riley.
 <br>
 ~~~
 \italic{Journal of Pathogens}, 2018. [[Paper]](https://www.hindawi.com/journals/jpath/2018/3028290/abs/)
+
+## Review Articles
+
+\title{#003262}{Enhancing scientiﬁc discoveries in molecular biology with deep generative
+models.}
+Romain Lopez, \bold{Adam Gayoso}, Nir Yosef.
+~~~
+<br>
+~~~
+\italic{Molecular Systems Biology}, 2020. [[Paper]](https://www.embopress.org/doi/full/10.15252/msb.20199198)
 
 ## Refereed Workshop Papers
 
