@@ -17,6 +17,16 @@
 
 ## Preprints
 
+
+\title{#003262}{PeakVI: A deep generative model for single cell chromatin accessibility analysis}
+Tal Ashuach, Daniel A. Reidenbach, \bold{Adam Gayoso}, Nir Yosef
+~~~
+<br>
+~~~
+\italic{bioRxiv}, 2021. [[bioRxiv]](https://doi.org/10.1101/2021.04.29.442020 )
+
+
+
 \title{#003262}{scvi-tools: a library for deep probabilistic analysis of single-cell omics data.}
 \bold{Adam Gayoso*}, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Carlos Talavera-Lopez, Lior Pachter, Fabian J. Theis, Aaron Streets, Michael I. Jordan, Jeffrey Regier, Nir Yosef
 ~~~
