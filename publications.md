@@ -36,7 +36,7 @@ Tal Ashuach, Daniel A. Reidenbach, \bold{Adam Gayoso}, Nir Yosef.
 ## Journal Articles
 
 \title{#003262}{Query to reference single-cell integration with transfer learning.}
-Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, MarenBüttner, Marco Wagenstetter, Ziga Avsec, \bold{Adam Gayoso}, Nir Yosef, Marta Interlandi,Sergei Rybakov, Alexander V. Misharin, and Fabian J. Theis
+Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, Maren Büttner, Marco Wagenstetter, Ziga Avsec, \bold{Adam Gayoso}, Nir Yosef, Marta Interlandi, Sergei Rybakov, Alexander V. Misharin, and Fabian J. Theis
 ~~~
 <br>
 ~~~
