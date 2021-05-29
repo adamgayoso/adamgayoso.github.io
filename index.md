@@ -37,7 +37,7 @@
 
 I am a third year PhD candidate in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://yoseflab.github.io/).
 I develop deep probabilistic models for single-cell omics data that learn an expressive representation of the data and facilitate common analysis tasks.
-In my research, I use these models to refine our understanding of immune cell types.
+In my research, I use these models to refine our understanding of immune cells.
 I am also a lead contributor to single-cell variational inference tools ([scvi-tools](http://scvi-tools.org/)), which is a Python package that provides readily accessible implementations of popular single-cell probabilistic models and the building blocks to rapidly develop new models.
 
 I received both my BS in Operations Research: Engineering Management Systems and MS in Computer Science at
