@@ -108,13 +108,13 @@ pre{
   margin-bottom: 0.8em;
 }
 code{
-  font-family:"SFMono-Regular",Menlo,Consolas,Monospace;
+  font-family: Consolas,"SFMono-Regular",Menlo,Monospace;
   font-size:12px;
   line-height:1.4;
     padding:0.2em 0.15em;
     font-weight:400;
     background-color:#f5f6fa;
-    border:1px solid #eeebee;
+    border:2px solid #eeebee;
     border-radius:4px;
 }
 li:not(:last-child) {
@@ -561,6 +561,7 @@ body { counter-reset: eqnum; }
     font-size: 90%;
     line-height: 1.35em;
     border-radius: 10px;
+    background-color: #fffff8;
     padding: 1em;}
 
 .hljs-meta, .hljs-metas, .hljs-metap { font-weight: bold; }
