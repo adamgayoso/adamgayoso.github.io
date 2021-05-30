@@ -18,13 +18,13 @@
        <br>
        adamgayoso [at] berkeley [dot] edu,
        <br>
-      <a href="https://twitter.com/adamgayoso" class=" icon">
+      <a href="https://twitter.com/adamgayoso" class="icon">
         <i class="fa fa-twitter fa-lg"></i>
       </a>
       <a href="https://github.com/adamgayoso" class="icon">
           <i class="fa fa-github fa-lg"></i>
       </a>
-      <a href="https://linkedin.com/in/adam-gayoso" class=" icon">
+      <a href="https://linkedin.com/in/adam-gayoso" class="icon">
           <i class="fa fa-linkedin fa-lg"></i>
       </a>
     </p>
