@@ -193,7 +193,7 @@ SIDE BAR
   padding-right: 2rem;
   border:0;
   width: calc(100% - 220px);
-  background-color: white;
+  background-color: #fffff8;
 }
 .side-bar .menu {
   width: 100%;
