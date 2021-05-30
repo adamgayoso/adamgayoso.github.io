@@ -374,7 +374,7 @@ MAIN CONTENT
   display:none;
   /* padding-top:1rem; */
   /* padding-bottom:1rem; */
-  background-color:#f5f6fa;
+  background-color:#fffff8;
   height: 60px;
   line-height: 60px;
 }
@@ -389,7 +389,7 @@ MAIN CONTENT
     display:flex;
     justify-content:flex-end;
     height:60px;
-    background-color:#fff;
+    background-color:#fffff8;
     border-bottom:1px solid #eeebee;
   }
 }
