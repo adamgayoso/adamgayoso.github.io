@@ -75,6 +75,7 @@ a {
   text-decoration: none;
   border-bottom: 1px dotted gray;
   transition: color 0.1s linear;
+  word-wrap: break-word;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
 }
@@ -108,13 +109,13 @@ pre{
   margin-bottom: 0.8em;
 }
 code{
-  font-family:"SFMono-Regular",Menlo,Consolas,Monospace;
+  font-family: Consolas,"SFMono-Regular",Menlo,Monospace;
   font-size:12px;
   line-height:1.4;
     padding:0.2em 0.15em;
     font-weight:400;
     background-color:#f5f6fa;
-    border:1px solid #eeebee;
+    border:2px solid #eeebee;
     border-radius:4px;
 }
 li:not(:last-child) {
@@ -561,6 +562,7 @@ body { counter-reset: eqnum; }
     font-size: 90%;
     line-height: 1.35em;
     border-radius: 10px;
+    background-color: #fffff8;
     padding: 1em;}
 
 .hljs-meta, .hljs-metas, .hljs-metap { font-weight: bold; }
@@ -570,3 +572,12 @@ body { counter-reset: eqnum; }
 .hljs-metas { color: red; }
 
 .hljs-metap { color: rgb(51, 131, 231); }
+
+/* ==================================================================
+    YOUTUBE
+================================================================== */
+
+.responsive-youtube
+{overflow:hidden; padding-bottom:56.25%; position:relative; height:0;}
+.responsive-youtube iframe
+{left:0; top:0; height:100%; width:100%; position:absolute;}

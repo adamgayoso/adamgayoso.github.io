@@ -9,9 +9,8 @@
 \newcommand{\italic}[1]{_*!#1*_}
 \newcommand{\bold}[1]{__!#1__}
 
-# Publications
-
 ~~~
+<h1>Publications</h1>
 <hr>
 ~~~
 
