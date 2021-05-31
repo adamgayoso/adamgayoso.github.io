@@ -9,8 +9,8 @@
 \newcommand{\italic}[1]{_*!#1*_}
 \newcommand{\bold}[1]{__!#1__}
 
-# Blog
 ~~~
+<h1>Blog</h1>
 <hr>
 ~~~
 
