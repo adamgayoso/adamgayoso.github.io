@@ -63,3 +63,8 @@ A lot of high quality open-source software has been developed just for single-ce
 - It's ok to be confused
 - There's not always a good reason for why things are done the way they are (and this can make a good research direction!)
 - While these resources represent a starting point, it's important to read publications that apply these computational techniques and technologies. At first, the papers will contain jargon that does not make sense, and that's ok.
+
+
+~~~
+<hr>
+~~~
