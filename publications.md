@@ -34,7 +34,7 @@ Tal Ashuach, Daniel A. Reidenbach, \bold{Adam Gayoso}, Nir Yosef.
 \italic{bioRxiv}, 2021. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2021.04.28.441833v1)
 ## Journal Articles
 
-\title{#003262}{Query to reference single-cell integration with transfer learning.}
+\title{#003262}{Mapping single-cell data to reference atlases by transfer learning.}
 Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, Maren Büttner, Marco Wagenstetter, Ziga Avsec, \bold{Adam Gayoso}, Nir Yosef, Marta Interlandi, Sergei Rybakov, Alexander V. Misharin, and Fabian J. Theis
 ~~~
 <br>
