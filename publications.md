@@ -39,7 +39,7 @@ Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, Maren
 ~~~
 <br>
 ~~~
-\italic{Nature Biotechnology} (In press), 2021.
+\italic{Nature Biotechnology}, 2021. [[Paper]](https://www.nature.com/articles/s41587-021-01001-7)
 
 \title{#003262}{Joint probabilistic modeling of single-cell multi-omic data with totalVI.}
 \bold{Adam Gayoso*}, Zoë Steier*, Romain Lopez, Jeffrey Regier, Kristopher L Nazor, Aaron Streets, Nir Yosef.
