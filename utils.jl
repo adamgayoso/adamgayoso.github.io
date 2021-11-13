@@ -2,7 +2,7 @@ using Dates
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
-    return round(sqrt(val), digits=2)
+    return round(sqrt(val), digits = 2)
 end
 
 function hfun_m1fill(vname)
@@ -11,9 +11,9 @@ function hfun_m1fill(vname)
 end
 
 function lx_baz(com, _)
-  # keep this first line
+    # keep this first line
     brace_content = Franklin.content(com.braces[1]) # input string
-  # do whatever you want here
+    # do whatever you want here
     return uppercase(brace_content)
 end
 
@@ -32,7 +32,7 @@ function hfun_blogposts()
     list = readdir("posts")
     filter!(endswith(".md"), list)
     function sorter(p)
-        ps  = splitext(p)[1]
+        ps = splitext(p)[1]
         url = "/posts/$ps/"
         surl = strip(url, '/')
         pubdate = pagevar(surl, :published)
@@ -41,7 +41,7 @@ function hfun_blogposts()
         end
         return Date(pubdate, dateformat"d U Y")
     end
-    sort!(list, by=sorter, rev=true)
+    sort!(list, by = sorter, rev = true)
 
     io = IOBuffer()
     # write(io, """<ul class="blog-posts">""")
@@ -49,7 +49,7 @@ function hfun_blogposts()
         if post == "index.md"
             continue
         end
-        ps  = splitext(post)[1]
+        ps = splitext(post)[1]
         # write(io, "<li><span><i>")
         url = "/posts/$ps/"
         surl = strip(url, '/')

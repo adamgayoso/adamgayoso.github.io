@@ -1,3 +1,4 @@
 anndata
 pandas
 matplotlib
+scipy
