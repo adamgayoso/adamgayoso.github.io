@@ -1,6 +1,6 @@
 @def title = "Getting started with single-cell genomics"
 @def date = Date(2021, 5, 31)
-@def published = "5 May 2021"
+@def published = "31 May 2021"
 @def tags = ["syntax", "code"]
 @def description = "New to single-cell genomics? These are the resources I wish I had when I entered the field."
 
