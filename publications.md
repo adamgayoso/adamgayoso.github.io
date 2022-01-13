@@ -16,6 +16,12 @@
 
 ## Preprints
 
+\title{#003262}{The Tabula Sapiens: a multiple organ single cell transcriptomic atlas of humans.}
+The Tabula Sapiens Consortium, Stephen R Quake
+~~~
+<br>
+~~~
+\italic{bioRxiv}, 2021. [[Paper]](https://www.biorxiv.org/content/10.1101/2021.07.19.452956v2.abstract)
 
 \title{#003262}{PeakVI: A deep generative model for single cell chromatin accessibility analysis}
 Tal Ashuach, Daniel A. Reidenbach, \bold{Adam Gayoso}, Nir Yosef.
@@ -33,6 +39,13 @@ Tal Ashuach, Daniel A. Reidenbach, \bold{Adam Gayoso}, Nir Yosef.
 ~~~
 \italic{bioRxiv}, 2021. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2021.04.28.441833v1)
 ## Journal Articles
+
+\title{#003262}{Cell2location maps fine-grained cell types in spatial transcriptomics.}
+Vitalii Kleshchevnikov, Artem Shmatko, Emma Dann, Alexander Aivazidis, Hamish W. King, Tong Li, Rasa Elmentaite, Artem Lomakin, Veronika Kedlian, \bold{Adam Gayoso}, Mika Sarkin Jain, Jun Sung Park, Lauma Ramona, Elizabeth Tuck, Anna Arutyunyan, Roser Vento-Tormo, Moritz Gerstung, Louisa James, Oliver Stegle, Omer Ali Bayraktar.
+~~~
+<br>
+~~~
+\italic{Nature Biotechnology}, 2022. [[Paper]](https://www.nature.com/articles/s41587-021-01139-4)
 
 \title{#003262}{Mapping single-cell data to reference atlases by transfer learning.}
 Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, Maren Büttner, Marco Wagenstetter, Ziga Avsec, \bold{Adam Gayoso}, Nir Yosef, Marta Interlandi, Sergei Rybakov, Alexander V. Misharin, and Fabian J. Theis
