@@ -44,6 +44,8 @@ I received my BS in Operations Research: Engineering Management Systems and MS i
 Columbia University. At Columbia, I developed computational models for single-cell
 RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-areas/labs/dana-pe-er) including a [method](https://github.com/JonathanShor/DoubletDetection) to detect doublets in single-cell RNA-sequencing datasets.
 
-
+~~~
+<hr>
+~~~
 
 
