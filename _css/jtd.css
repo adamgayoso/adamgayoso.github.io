@@ -248,6 +248,20 @@ SIDE BAR
   text-decoration:none
 }
 
+.menu-list a {
+  color: #111111;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.1s linear;
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+}
+
+.menu-list a:hover {
+  color: #C4820E;
+}
+
 .side-bar .footer {
   width: 150px;
   font-size: 13px;
