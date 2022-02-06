@@ -30,15 +30,14 @@ Tal Ashuach, Daniel A. Reidenbach, \bold{Adam Gayoso}, Nir Yosef.
 ~~~
 \italic{bioRxiv}, 2021. [[bioRxiv]](https://doi.org/10.1101/2021.04.29.442020)
 
+## Journal Articles
 
-
-\title{#003262}{scvi-tools: a library for deep probabilistic analysis of single-cell omics data.}
-\bold{Adam Gayoso*}, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Carlos Talavera-Lopez, Lior Pachter, Fabian J. Theis, Aaron Streets, Michael I. Jordan, Jeffrey Regier, Nir Yosef.
+\title{#003262}{A Python library for probabilistic analysis of single-cell omics data.}
+\bold{Adam Gayoso*}, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Valeh Valiollah Pour Amiri, Justin Hong, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Vitalii Kleshchevnikov, Carlos Talavera-Lopez, Lior Pachter, Fabian J Theis, Aaron Streets, Michael I Jordan, Jeffrey Regier, and Nir Yosef.
 ~~~
 <br>
 ~~~
-\italic{bioRxiv}, 2021. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2021.04.28.441833v1)
-## Journal Articles
+\italic{Nature Biotechnology}, 2022. [[Paper]](http://dx.doi.org/10.1038/s41587-021-01206-w)[[bioRxiv]](https://www.biorxiv.org/content/10.1101/2021.04.28.441833v1)
 
 \title{#003262}{Cell2location maps fine-grained cell types in spatial transcriptomics.}
 Vitalii Kleshchevnikov, Artem Shmatko, Emma Dann, Alexander Aivazidis, Hamish W. King, Tong Li, Rasa Elmentaite, Artem Lomakin, Veronika Kedlian, \bold{Adam Gayoso}, Mika Sarkin Jain, Jun Sung Park, Lauma Ramona, Elizabeth Tuck, Anna Arutyunyan, Roser Vento-Tormo, Moritz Gerstung, Louisa James, Oliver Stegle, Omer Ali Bayraktar.
