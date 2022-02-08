@@ -17,7 +17,7 @@
 ## Preprints
 
 \title{#003262}{The Tabula Sapiens: a multiple organ single cell transcriptomic atlas of humans.}
-The Tabula Sapiens Consortium, Stephen R Quake
+\bold{The Tabula Sapiens Consortium*}, Stephen R Quake
 ~~~
 <br>
 ~~~
