@@ -8,8 +8,6 @@
 <h1>{{ title }}</h1>
 ~~~
 
-Last modified: {{ fill fd_mtime }}.
-
 
 \newcommand{\pycode}[2]{
 ```julia:!#1
