@@ -1,12 +1,6 @@
-@def title = "Home"
-@def tags = ["syntax", "code"]
-
-
-
-~~~
-<div class="row">
+<!-- <div class="row">
   <div class="container">
-    <img class="left" style="margin:0 15px 0 0; height:180px; width:180px;" src="/assets/adam_square.jpeg">
+    <img class="left" style="margin:0 15px 0 0; height:180px; width:180px;" src="_assets/adam_square.jpeg">
     <p>
        <font size="+1"><b>Adam Gayoso</b></font>
        <br>
@@ -31,9 +25,44 @@
     <div style="clear: both"></div>
   </div>
   <hr>
-</div>
+</div> -->
 
-~~~
+<br>
+<br>
+<br>
+<br>
+
+::::{grid} 2
+:padding: 1
+
+:::{grid-item}
+:columns: auto
+
+```{image} ./_assets/adam_square.jpeg
+:width: 180px
+```
+:::
+
+:::{grid-item}
+:columns: auto
+
+**Adam Gayoso**
+<br>
+PhD Candidate,
+<br>
+Computational Biology,
+<br>
+[UC Berkeley](http://ccb.berkeley.edu),
+<br>
+adamgayoso [at] berkeley [dot] edu
+<!-- [{octicon}`mark-github;1.3em`](https://github.com/adamgayoso) -->
+[[GitHub]](https://github.com/adamgayoso), [[Twitter]](https://twitter.com/adamgayoso), [[LinkedIn]](https://linkedin.com/in/adam-gayoso)
+:::
+::::
+
+----
+
+<h2>About</h2>
 
 I am a PhD candidate in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://yoseflab.github.io/).
 I develop deep probabilistic models for single-cell omics data that learn an expressive representation of the data and facilitate common analysis tasks.
@@ -44,8 +73,15 @@ I received my BS in Operations Research: Engineering Management Systems and MS i
 Columbia University. At Columbia, I developed computational models for single-cell
 RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-areas/labs/dana-pe-er) including a [method](https://github.com/JonathanShor/DoubletDetection) to detect doublets in single-cell RNA-sequencing datasets.
 
-~~~
-<hr>
-~~~
+----
 
 
+```{toctree}
+:hidden: true
+:maxdepth: 1
+:titlesonly: true
+
+publications
+blog
+CV <./_assets/CV_Adam_Gayoso.pdf#http://>
+```

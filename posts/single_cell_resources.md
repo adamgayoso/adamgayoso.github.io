@@ -1,13 +1,10 @@
-@def title = "Getting started with single-cell genomics"
-@def date = Date(2021, 5, 31)
-@def published = "31 May 2021"
-@def tags = ["syntax", "code"]
-@def description = "New to single-cell genomics? These are the resources I wish I had when I entered the field."
+# Getting started with single-cell genomics
 
-~~~
-<h1>{{ title }}</h1>
-~~~
-
+```{article-info}
+:date: May 31, 2021
+:read-time: 5-10 min read
+:class-container: sd-p-2 sd-outline-muted sd-rounded-1
+```
 
 I started working with single-cell RNA-sequencing (scRNA-seq) data in 2016 during my Master's. As the field was rapidly proliferating at the time, there were a lack of resources available to quickly learn about how single-cell data are generated as well as best practices for how it should be analyzed. As single-cell genomics has become more routine, there are now so many resources that it can be hard to know where to start. Here I provide some of my favorite resources that I regularly share with undergraduates and new PhD students. This intentionally short list of resources is intended to quickly acclimate those with computational backgrounds; however, they are all of general interest. I will continue to update this post as new material becomes available. For a more comprehensive set of resources, I recommend [Ming Tang's](https://twitter.com/tangming2005) [analysis notes](https://github.com/crazyhottommy/scRNAseq-analysis-notes).
 
@@ -16,7 +13,7 @@ These videos provide a high-level overview of many popular biological questions 
 
 ### Videos
 
-~~~
+
 <div class="responsive-youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PRjX3-m16cw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -24,15 +21,13 @@ These videos provide a high-level overview of many popular biological questions 
 <div class="responsive-youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mt1BbuW75qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<br>
-~~~
+
 This last video is from the [Stat 115](https://canvas.harvard.edu/courses/39391) course at Harvard, which is fully available online, and goes more in depth with single-cell technologies.
-~~~
-<br>
+
 <div class="responsive-youtube">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PFG_SKpM5OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-~~~
+
 
 ### Papers
 
@@ -62,8 +57,3 @@ A lot of high quality open-source software has been developed just for single-ce
 - It's ok to be confused
 - There's not always a good reason for why things are done the way they are (and this can make a good research direction!)
 - While these resources represent a starting point, it's important to read publications that apply these computational techniques and technologies. At first, the papers will contain jargon that does not make sense, and that's ok.
-
-
-~~~
-<hr>
-~~~
