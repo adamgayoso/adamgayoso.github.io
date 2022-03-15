@@ -2,7 +2,7 @@ anndata
 pandas
 matplotlib
 scipy
-furo
+furo>=2022.03.04
 myst-parser
 sphinx>=4.4.0
 sphinx-autobuild>=2021.03.14
