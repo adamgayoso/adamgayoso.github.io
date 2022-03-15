@@ -127,11 +127,8 @@ html_css_files += [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css",
 ]
 html_css_files += ["https://use.typekit.net/ajj5weq.css"]
+html_js_files = [
+    'https://www.googletagmanager.com/gtag/js?id=UA-116702308-1',
+    'google_analytics_tracker.js',
+]
 html_show_sphinx = False
-
-def setup(app):
-    # 3. Tell Sphinx to add your JS code. Sphinx will insert
-    #    the `body` into the html inside a <script> tag:
-    app.add_javascript("https://www.googletagmanager.com/gtag/js?id=UA-116702308-1")
-    app.add_javascript("google_analytics_tracker.js")
-
