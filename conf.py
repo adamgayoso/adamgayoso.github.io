@@ -28,10 +28,10 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
     # External stuff
-    "myst_parser",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_inline_tabs",
+    "myst_nb",
 ]
 templates_path = ["_templates"]
 
@@ -61,6 +61,8 @@ todo_include_todos = False
 myst_enable_extensions = [
     "colon_fence",
     "deflist",
+    "dollarmath",
+    "amsmath",
 ]
 myst_heading_anchors = 3
 
@@ -84,7 +86,7 @@ html_theme_options = {
         # "color-background-border": "#fffff8",
         "admonition-font-size": "var(--font-size-normal)",
         "admonition-title-font-size": "var(--font-size-normal)",
-        "code-font-size": "var(--font-size--small)",
+        # "code-font-size": "var(--font-size--small)",
     },
     "navigation_with_keys": True,
     "footer_icons": [

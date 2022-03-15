@@ -1,6 +1,6 @@
 # Publications
 
-### Preprints
+<h3>Preprints</h3>
 
 **The Tabula Sapiens: a multiple organ single cell transcriptomic atlas of humans.**
 **The Tabula Sapiens Consortium\***, Stephen R Quake
@@ -10,7 +10,7 @@
 Tal Ashuach, Daniel A. Reidenbach, **Adam Gayoso**, Nir Yosef.
 *bioRxiv*, 2021. [[bioRxiv]](https://doi.org/10.1101/2021.04.29.442020)
 
-### Journal Articles
+<h3>Journal Articles</h3>
 
 **A Python library for probabilistic analysis of single-cell omics data.**
 \bold{Adam Gayoso*}, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Valeh Valiollah Pour Amiri, Justin Hong, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Vitalii Kleshchevnikov, Carlos Talavera-Lopez, Lior Pachter, Fabian J Theis, Aaron Streets, Michael I Jordan, Jeffrey Regier, and Nir Yosef.
@@ -52,14 +52,14 @@ pneumoniae.**
 Sheila Adams-Sapper, **Adam Gayoso**, Lee. W. Riley.
 *Journal of Pathogens*, 2018. [[Paper]](https://www.hindawi.com/journals/jpath/2018/3028290/abs/)
 
-### Review Articles
+<h3>Review Articles</h3>
 
 **Enhancing scientiﬁc discoveries in molecular biology with deep generative
 models.**
 Romain Lopez, **Adam Gayoso**, Nir Yosef.
 *Molecular Systems Biology*, 2020. [[Paper]](https://www.embopress.org/doi/full/10.15252/msb.20199198)
 
-### Refereed Workshop Papers
+<h3>Refereed Workshop Papers</h3>
 
 **A joint model of RNA expression and surface protein abundance in single
 cells.**
