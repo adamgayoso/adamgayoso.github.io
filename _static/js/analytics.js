@@ -1,6 +1,4 @@
-{% extends "!layout.html" %}
-{% block extrahead %}
-<!-- Global site tag (gtag.js) - Google Analytics -->
+< !--Global site tag(gtag.js) - Google Analytics-- >
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116702308-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,6 +7,3 @@
 
     gtag('config', 'UA-116702308-1');
 </script>
-<link rel="stylesheet" href="https://use.typekit.net/ajj5weq.css">
-{{ super() }}
-{% endblock %}
