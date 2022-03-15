@@ -17,7 +17,7 @@ Tal Ashuach, Daniel A. Reidenbach, **Adam Gayoso**, Nir Yosef.
 <br>
 
 **A Python library for probabilistic analysis of single-cell omics data.**
-\bold{Adam Gayoso*}, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Valeh Valiollah Pour Amiri, Justin Hong, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Vitalii Kleshchevnikov, Carlos Talavera-Lopez, Lior Pachter, Fabian J Theis, Aaron Streets, Michael I Jordan, Jeffrey Regier, and Nir Yosef.
+**Adam Gayoso\***, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Valeh Valiollah Pour Amiri, Justin Hong, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Vitalii Kleshchevnikov, Carlos Talavera-Lopez, Lior Pachter, Fabian J Theis, Aaron Streets, Michael I Jordan, Jeffrey Regier, and Nir Yosef.
 *Nature Biotechnology*, 2022. [[Paper]](http://dx.doi.org/10.1038/s41587-021-01206-w)[[bioRxiv]](https://www.biorxiv.org/content/10.1101/2021.04.28.441833v1)
 
 **Cell2location maps fine-grained cell types in spatial transcriptomics.**
@@ -29,7 +29,7 @@ Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, Maren
 *Nature Biotechnology*, 2021. [[Paper]](https://www.nature.com/articles/s41587-021-01001-7)
 
 **Joint probabilistic modeling of single-cell multi-omic data with totalVI.**
-\bold{Adam Gayoso*}, Zoë Steier*, Romain Lopez, Jeffrey Regier, Kristopher L Nazor, Aaron Streets, Nir Yosef.
+**Adam Gayoso\***, Zoë Steier*, Romain Lopez, Jeffrey Regier, Kristopher L Nazor, Aaron Streets, Nir Yosef.
 *Nature Methods*, 2021. [[Paper]](https://www.nature.com/articles/s41592-020-01050-x.epdf?sharing_token=F_xpBUwgD5vHVAB5jvU0c9RgN0jAjWel9jnR3ZoTv0NDA6nPyssLQkWDcY8VB7gLKdlD8q3cqpF5ovLZjZTudaweTnzODEXCrkjJ2UJEEpOAhfOCwEZ0h0Y2WTkn_GOBfGUZhH-lzX_u_AswArGFGinU1pcuXPvuTkPrrQI4zko%3D)[[bioRxiv]](https://www.biorxiv.org/content/10.1101/2020.05.08.083337v2)
 
 **Interpretable factor models of single-cell RNA-seq via
@@ -40,7 +40,7 @@ Valentine Svensson, **Adam Gayoso**, Nir Yosef, Lior Pachter.
 **Characterization of cell fate probabilities
 in single-cell data with Palantir.**
 Manu Setty, Vaidotas Kiseliovas, Jacob Levine, **Adam Gayoso**, Linas Mazutis, Dana Pe’er.
-*Nature Biotechnology}, 2019. [[Paper]](https://www.nature.com/articles/s41587-019-0068-4)
+*Nature Biotechnology*, 2019. [[Paper]](https://www.nature.com/articles/s41587-019-0068-4)
 
 **Stress-adaptive responses associated with high-level
 carbapenem resistance in kpc-producing klebsiella
