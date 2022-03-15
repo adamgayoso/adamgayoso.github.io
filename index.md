@@ -1,6 +1,6 @@
 <!-- <div class="row">
   <div class="container">
-    <img class="left" style="margin:0 15px 0 0; height:180px; width:180px;" src="_assets/adam_square.jpeg">
+    <img class="left" style="margin:0 15px 0 0; height:180px; width:180px;" src="_images/adam_square.jpeg">
     <p>
        <font size="+1"><b>Adam Gayoso</b></font>
        <br>
@@ -32,32 +32,24 @@
 <br>
 <br>
 
-::::{grid} 1 2 3 4
-:padding: 0
-:gutter: 1
 
+:::{figure} ./_assets/adam_square.jpeg
+:align: center
+:alt: Adam profile
+:class: img-fluid
+:width: 200
 
-:::{grid-item-card}
-:columns: auto
-:padding: 0
-:margin: 0
-
-```{image} ./_assets/adam_square.jpeg
-:width: 180px
-:class: sd-m-auto
-```
 **Adam Gayoso**
 <br>
-PhD Candidate,
-<br>
-Computational Biology,
-<br>
-[UC Berkeley](http://ccb.berkeley.edu),
+PhD Candidate, Computational Biology, [UC Berkeley](http://ccb.berkeley.edu),
 <br>
 adamgayoso [at] berkeley [dot] edu
+<br>
+[[GitHub]](https://github.com/adamgayoso), [[Twitter]](https://twitter.com/adamgayoso), [[LinkedIn]](https://linkedin.com/in/adam-gayoso)
 :::
 
-::::
+ <!-- {download}`[CV] <./_assets/CV_Adam_Gayoso.pdf>` -->
+----
 
 <h2>About</h2>
 
@@ -80,5 +72,5 @@ RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-are
 
 publications
 blog
-CV <./_assets/CV_Adam_Gayoso.pdf#http://>
+CV <https://adamgayoso.com/_static/CV_Adam_Gayoso.pdf>
 ```

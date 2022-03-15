@@ -14,6 +14,12 @@ kernelspec:
 
 # 5, maybe 10 minutes to AnnData
 
+```{article-info}
+:date: November 13, 2021
+:read-time: 5-10 min read
+:class-container: sd-p-2 sd-outline-muted sd-rounded-1
+```
+
 
 I regularly use [Scanpy](https://scanpy.readthedocs.io) to analyze single-cell genomics data.
 Scanpy's functionality heavily depends on the data being stored in an [AnnData](https://anndata.readthedocs.io/en/latest/) object, which provides Scanpy a systematic way of storing and retrieving intermediate analysis results, like principal components scores, [UMAP](https://umap-learn.readthedocs.io/) embeddings, cluster labels, etc.

@@ -73,7 +73,7 @@ html_theme = "furo"
 
 # Set link name generated in the top bar.
 html_title = "Adam Gayoso"
-html_favicon = "_assets/favicon"
+html_favicon = "./_assets/favicon.ico"
 html_theme_options = {
     "sidebar_hide_name": False,
     "light_css_variables": {
@@ -89,20 +89,20 @@ html_theme_options = {
         # "code-font-size": "var(--font-size--small)",
     },
     "navigation_with_keys": True,
-    "footer_icons": [
-        {
-            "name": "GitHub",
-            "url": "https://github.com/adamgayoso/",
-            "html": "",
-            "class": "fa-solid fa-github fa-2x",
-        },
-        {
-            "name": "Twitter",
-            "url": "https://twitter.com/adamgayoso/",
-            "html": "",
-            "class": "fa-solid fa-twitter fa-2x",
-        },
-    ],
+    # "footer_icons": [
+    #     {
+    #         "name": "GitHub",
+    #         "url": "https://github.com/adamgayoso/",
+    #         "html": "",
+    #         "class": "fa-solid fa-github fa-2x",
+    #     },
+    #     {
+    #         "name": "Twitter",
+    #         "url": "https://twitter.com/adamgayoso/",
+    #         "html": "",
+    #         "class": "fa-solid fa-twitter fa-2x",
+    #     },
+    # ],
 }
 html_sidebars = {
     "**": [
@@ -116,12 +116,14 @@ html_sidebars = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ["_static"]
+html_static_path = ["_static"]
 # html_css_files = []
 html_css_files = [
       "css/override.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css",
+]
+html_css_files += [
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css",
 ]
 html_show_sphinx = False

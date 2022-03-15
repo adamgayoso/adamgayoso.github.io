@@ -1,6 +1,8 @@
 # Publications
 
+<br>
 <h3>Preprints</h3>
+<br>
 
 **The Tabula Sapiens: a multiple organ single cell transcriptomic atlas of humans.**
 **The Tabula Sapiens Consortium\***, Stephen R Quake
@@ -10,7 +12,9 @@
 Tal Ashuach, Daniel A. Reidenbach, **Adam Gayoso**, Nir Yosef.
 *bioRxiv*, 2021. [[bioRxiv]](https://doi.org/10.1101/2021.04.29.442020)
 
+<br>
 <h3>Journal Articles</h3>
+<br>
 
 **A Python library for probabilistic analysis of single-cell omics data.**
 \bold{Adam Gayoso*}, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Valeh Valiollah Pour Amiri, Justin Hong, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Vitalii Kleshchevnikov, Carlos Talavera-Lopez, Lior Pachter, Fabian J Theis, Aaron Streets, Michael I Jordan, Jeffrey Regier, and Nir Yosef.
@@ -19,14 +23,6 @@ Tal Ashuach, Daniel A. Reidenbach, **Adam Gayoso**, Nir Yosef.
 **Cell2location maps fine-grained cell types in spatial transcriptomics.**
 Vitalii Kleshchevnikov, Artem Shmatko, Emma Dann, Alexander Aivazidis, Hamish W. King, Tong Li, Rasa Elmentaite, Artem Lomakin, Veronika Kedlian, **Adam Gayoso**, Mika Sarkin Jain, Jun Sung Park, Lauma Ramona, Elizabeth Tuck, Anna Arutyunyan, Roser Vento-Tormo, Moritz Gerstung, Louisa James, Oliver Stegle, Omer Ali Bayraktar.
 *Nature Biotechnology*, 2022. [[Paper]](https://www.nature.com/articles/s41587-021-01139-4)
-
-**Cell types of origin in the cell free transcriptome in human health and disease.**
-Sevahn K Vorperian, Mira N Moufarrej, Stephen R Quake, \bold{Tabula Sapiens Consortium}, et al.
-*Nature Biotechnology*, 2022. [[Paper]](https://www.nature.com/articles/s41587-021-01188-9)
-
-**RNA splicing programs define tissue compartments and cell types at single-cell resolution.**
-Julia Eve Olivieri, Roozbeh Dehghannasiri, Peter L Wang, SoRi Jang, Antoine DeMorree, Serena Y Tan, Jingsi Ming, Angela Ruohao Wu, \bold{Tabula Sapiens Consortium}, Stephen R Quake, Mark A Krasnow, and Julia Salzman.
-*Elife*, 2021. [[Paper]](https://elifesciences.org/articles/70692)
 
 **Mapping single-cell data to reference atlases by transfer learning.**
 Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, Maren Büttner, Marco Wagenstetter, Ziga Avsec, **Adam Gayoso**, Nir Yosef, Marta Interlandi, Sergei Rybakov, Alexander V. Misharin, and Fabian J. Theis
@@ -52,14 +48,18 @@ pneumoniae.**
 Sheila Adams-Sapper, **Adam Gayoso**, Lee. W. Riley.
 *Journal of Pathogens*, 2018. [[Paper]](https://www.hindawi.com/journals/jpath/2018/3028290/abs/)
 
+<br>
 <h3>Review Articles</h3>
+<br>
 
 **Enhancing scientiﬁc discoveries in molecular biology with deep generative
 models.**
 Romain Lopez, **Adam Gayoso**, Nir Yosef.
 *Molecular Systems Biology*, 2020. [[Paper]](https://www.embopress.org/doi/full/10.15252/msb.20199198)
 
+<br>
 <h3>Refereed Workshop Papers</h3>
+<br>
 
 **A joint model of RNA expression and surface protein abundance in single
 cells.**
