@@ -4,9 +4,9 @@ matplotlib
 scipy
 furo
 myst-parser
-sphinx
+sphinx>=4.4.0
 sphinx-autobuild>=2021.03.14
-sphinx-copybutton
+sphinx-copybutton>=0.5.0
 sphinx-design>=0.0.13
 sphinx-inline-tabs
 myst-nb>=0.13.2
