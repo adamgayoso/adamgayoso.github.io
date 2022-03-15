@@ -6,7 +6,7 @@ furo
 myst-parser
 sphinx
 sphinx-autobuild
-sphinx-copybutton
-sphinx-design
+sphinx-copybutton>=2021.03.14
+sphinx-design>=0.0.13
 sphinx-inline-tabs
-myst-nb
+myst-nb>=0.13.2
