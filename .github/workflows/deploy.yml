@@ -26,7 +26,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         pip install -r requirements.txt
-    - run: make html
+    - run: sphinx-build -b dirhtml -v . _build
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
