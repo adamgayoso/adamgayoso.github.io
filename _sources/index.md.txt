@@ -83,5 +83,5 @@ RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-are
 
 publications
 blog
-CV <./_assets/CV_Adam_Gayoso.pdf#http://>
+CV <https://adamgayoso.com/_static/CV_Adam_Gayoso.pdf>
 ```
