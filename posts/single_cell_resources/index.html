@@ -1,0 +1,353 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
+
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
+        <title>Getting started with single-cell genomics - Adam Gayoso</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/override.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: acumin-pro, sans-serif;
+  --color-background-primary: #fffff8;
+  --color-background-secondary: #fffff8;
+  --color-background-hover: #F5F3ED;
+  --color-brand-primary: black;
+  --color-brand-content: #A46F0D;
+  --admonition-font-size: var(--font-size-normal);
+  --admonition-title-font-size: var(--font-size-normal);
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../"><div class="brand">Adam Gayoso</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../../">
+  
+  
+  <span class="sidebar-brand-text">Adam Gayoso</span>
+  
+</a><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../publications/">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blog/">Blog</a></li>
+<li class="toctree-l1"><a class="reference external" href="./_assets/CV_Adam_Gayoso.pdf#http://">CV</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-single-cell-genomics">
+<h1>Getting started with single-cell genomics<a class="headerlink" href="#getting-started-with-single-cell-genomics" title="Permalink to this headline">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-p-2 sd-outline-muted sd-rounded-1 docutils">
+<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
+<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
+<div class="sd-container-fluid sd-sphinx-override docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg aria-hidden="true" class="sd-octicon sd-octicon-calendar" height="16.0px" version="1.1" viewbox="0 0 16 16" width="16.0px"><path d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z" fill-rule="evenodd"></path></svg></span>May 31, 2021</p>
+</div>
+<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg aria-hidden="true" class="sd-octicon sd-octicon-clock" height="16.0px" version="1.1" viewbox="0 0 16 16" width="16.0px"><path d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z" fill-rule="evenodd"></path></svg></span>5-10 min read</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>I started working with single-cell RNA-sequencing (scRNA-seq) data in 2016 during my Master’s. As the field was rapidly proliferating at the time, there were a lack of resources available to quickly learn about how single-cell data are generated as well as best practices for how it should be analyzed. As single-cell genomics has become more routine, there are now so many resources that it can be hard to know where to start. Here I provide some of my favorite resources that I regularly share with undergraduates and new PhD students. This intentionally short list of resources is intended to quickly acclimate those with computational backgrounds; however, they are all of general interest. I will continue to update this post as new material becomes available. For a more comprehensive set of resources, I recommend <a class="reference external" href="https://twitter.com/tangming2005">Ming Tang’s</a> <a class="reference external" href="https://github.com/crazyhottommy/scRNAseq-analysis-notes">analysis notes</a>.</p>
+<section id="overview-of-single-cell-genomics">
+<h2>Overview of single-cell genomics<a class="headerlink" href="#overview-of-single-cell-genomics" title="Permalink to this headline">#</a></h2>
+<p>These videos provide a high-level overview of many popular biological questions that can be answered with single-cell data, as well as some description of the underlying technologies.</p>
+<section id="videos">
+<h3>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">#</a></h3>
+<div class="responsive-youtube">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/PRjX3-m16cw" title="YouTube video player" width="560"></iframe>
+</div>
+<br/>
+<div class="responsive-youtube">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Mt1BbuW75qc" title="YouTube video player" width="560"></iframe>
+</div>
+<p>This last video is from the <a class="reference external" href="https://canvas.harvard.edu/courses/39391">Stat 115</a> course at Harvard, which is fully available online, and goes more in depth with single-cell technologies.</p>
+<div class="responsive-youtube">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/PFG_SKpM5OI" title="YouTube video player" width="560"></iframe>
+</div>
+</section>
+<section id="papers">
+<h3>Papers<a class="headerlink" href="#papers" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Wagner, A., Regev, A., &amp; Yosef, N. (2016). Revealing the vectors of cellular identity with single-cell genomics. Nature biotechnology, 34(11), 1145-1160. <a class="reference external" href="https://www.nature.com/articles/nbt.3711">[Paper]</a></p></li>
+<li><p>Regev, A., Teichmann, S. A., Lander, E. S., Amit, I., Benoist, C., Birney, E., … &amp; Yosef, N. (2017). Science forum: the human cell atlas. Elife, 6, e27041. <a class="reference external" href="https://elifesciences.org/articles/27041">[Paper]</a></p></li>
+</ul>
+</section>
+</section>
+<section id="data-analysis">
+<h2>Data analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">#</a></h2>
+<p>The development of computational methods for single-cell genomics data has become very popular in the computational biology/applied stats/applied machine learning fields. In fact, there are about two new scRNA-seq computational methods for every three studies (with new data) published (<a class="reference external" href="https://twitter.com/sinabooeshaghi/status/1357434610750136321?s=20">source</a>). These methods <a class="reference external" href="https://www.scrna-tools.org/analysis">overwhelmingly</a> target a core set of tasks, and most are designed to handle the technical characteristics of these data.</p>
+<section id="id1">
+<h3>Papers<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Luecken, M. D., &amp; Theis, F. J. (2019). Current best practices in single‐cell RNA‐seq analysis: a tutorial. Molecular systems biology, 15(6), e8746. <a class="reference external" href="https://www.embopress.org/doi/full/10.15252/msb.20188746">[Paper]</a></p></li>
+<li><p>Lähnemann, D., Köster, J., Szczurek, E., McCarthy, D. J., Hicks, S. C., Robinson, M. D., … &amp; Schönhuth, A. (2020). Eleven grand challenges in single-cell data science. Genome biology, 21(1), 1-35. <a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1926-6">[Paper]</a></p></li>
+<li><p>Amezquita, R. A., Lun, A. T., Becht, E., Carey, V. J., Carpp, L. N., Geistlinger, L., … &amp; Hicks, S. C. (2020). Orchestrating single-cell analysis with Bioconductor. Nature methods, 17(2), 137-145. <a class="reference external" href="https://www.nature.com/articles/s41592-019-0654-x">[Paper]</a> <a class="reference external" href="https://bioconductor.org/books/release/OSCA/">[Online book]</a> (<em>caveat: I would first focus on the motivation sections and not the code sections of the online book.</em>)</p></li>
+</ul>
+</section>
+<section id="software-and-tutorials">
+<h3>Software and tutorials<a class="headerlink" href="#software-and-tutorials" title="Permalink to this headline">#</a></h3>
+<p>A lot of high quality open-source software has been developed just for single-cell data analysis. I am biased as I mostly use Python and therefore only present Python packages here. I assume that R is the more popular language for single-cell data analysis due to <a class="reference external" href="https://satijalab.org/seurat/">Seurat</a>; however, given the power of Python-based machine learning frameworks like <a class="reference external" href="https://pytorch.org/">PyTorch</a>, <a class="reference external" href="https://github.com/google/jax">Jax</a>, and <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a>, along with datasets that regularly approach &gt;100,000 cells, I believe Python has a brighter future in the field. That said, for now, many common analyses can be done with either language, though certain tasks may require language-specific packages. Therefore, it’s also beneficial to understand popular data structures in both languages and how to convert between them (perhaps described in another tutorial). Also, in Python, all packages use the cell by genes orientation for the data, while in R it’s genes by cells.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scanpy.readthedocs.io/en/stable/">Scanpy</a> and its <a class="reference external" href="https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html">basic tutorial</a>. Scanpy underlies most Python-based single-cell analyses and for good reason. It uses the <a class="reference external" href="https://anndata.readthedocs.io/en/latest/">AnnData</a> data structure for storing the data, which has become the most widely accepted input to other Python-based methods. It also provides nice plotting functions for exploratory analysis. Familiarity with the Scanpy workflow is essential.</p></li>
+<li><p><a class="reference external" href="https://scvi-tools.org/">scvi-tools</a>, which I help develop, provides access to <a class="reference external" href="https://scvi-tools.org/get_started#single-cell-omics-data-analysis">many</a> popular probabilistic models for single-cell genomics as well as an interface to build novel probabilistic/deep learning models using <a class="reference external" href="https://pytorch.org/">PyTorch</a>, <a class="reference external" href="https://www.pytorchlightning.ai/">PyTorch Lightning</a>, and <a class="reference external" href="https://pyro.ai/">Pyro</a>. I present a Scanpy/scvi-tools tutorial <a class="reference external" href="https://ccbskillssem.github.io/pages/scanpy_scvi_tools/">here</a>, with corresponding <a class="reference external" href="https://youtu.be/EKTg9NV5hEA">video</a>.</p></li>
+<li><p><a class="reference external" href="https://chanzuckerberg.github.io/cellxgene/">cellxgene</a> for interactive visualization.</p></li>
+</ul>
+</section>
+</section>
+<section id="tips-and-other-considerations">
+<h2>Tips and other considerations<a class="headerlink" href="#tips-and-other-considerations" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>It’s ok to be confused</p></li>
+<li><p>There’s not always a good reason for why things are done the way they are (and this can make a good research direction!)</p></li>
+<li><p>While these resources represent a starting point, it’s important to read publications that apply these computational techniques and technologies. At first, the papers will contain jargon that does not make sense, and that’s ok.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Adam Gayoso
+            </div>
+            Made with 
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Getting started with single-cell genomics</a><ul>
+<li><a class="reference internal" href="#overview-of-single-cell-genomics">Overview of single-cell genomics</a><ul>
+<li><a class="reference internal" href="#videos">Videos</a></li>
+<li><a class="reference internal" href="#papers">Papers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-analysis">Data analysis</a><ul>
+<li><a class="reference internal" href="#id1">Papers</a></li>
+<li><a class="reference internal" href="#software-and-tutorials">Software and tutorials</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tips-and-other-considerations">Tips and other considerations</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    </body>
+</html>
