@@ -27,9 +27,8 @@ jobs:
       run: |
         pip install -r requirements.txt
     - run: sphinx-build -b dirhtml -v . _build
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh_pages
-        FOLDER: _build
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build
