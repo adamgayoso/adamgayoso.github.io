@@ -8,13 +8,14 @@
 **The Tabula Sapiens Consortium\***, Stephen R Quake
 *bioRxiv*, 2021. [[Paper]](https://www.biorxiv.org/content/10.1101/2021.07.19.452956v2.abstract)
 
-**PeakVI: A deep generative model for single cell chromatin accessibility analysis**
-Tal Ashuach, Daniel A. Reidenbach, **Adam Gayoso**, Nir Yosef.
-*bioRxiv*, 2021. [[bioRxiv]](https://doi.org/10.1101/2021.04.29.442020)
-
 <br>
 <h3>Journal Articles</h3>
 <br>
+
+
+**PeakVI: A deep generative model for single-cell chromatin accessibility analysis**
+Tal Ashuach, Daniel A. Reidenbach, **Adam Gayoso**, Nir Yosef.
+*Cell Reports Methods*, 2021. [[Paper]](https://doi.org/10.1016/j.crmeth.2022.100182)
 
 **A Python library for probabilistic analysis of single-cell omics data.**
 **Adam Gayoso\***, Romain Lopez\*, Galen Xing\*, Pierre Boyeau, Valeh Valiollah Pour Amiri, Justin Hong, Katherine Wu, Michael Jayasuriya, Edouard Mehlman, Maxime Langevin, Yining Liu, Jules Samaran, Gabriel Misrachi, Achille Nazaret, Oscar Clivio, Chenling Xu, Tal Ashuach, Mohammad Lotfollahi, Valentine Svensson, Eduardo da Veiga Beltrame, Vitalii Kleshchevnikov, Carlos Talavera-Lopez, Lior Pachter, Fabian J Theis, Aaron Streets, Michael I Jordan, Jeffrey Regier, and Nir Yosef.
