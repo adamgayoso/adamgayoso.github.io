@@ -46,7 +46,7 @@ adamgayoso [at] berkeley [dot] edu
 I am a PhD candidate in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://yoseflab.github.io/).
 I develop deep generative models for single-cell omics data that learn an expressive representation of the data and facilitate common analysis tasks. In my research, I use these models to refine our understanding of immune cells with the goal of characterizing cellular states across different contexts. I am also the co-creator of [scvi-tools](http://scvi-tools.org/), which is a Python package that provides: (1) accessible implementations of state-of-the-art single-cell probabilistic models and (2) the building blocks to rapidly develop new models.
 
-Starting in May 20222 I will be a Research Scientist Intern on the Science team at [DeepMind](https://www.deepmind.com/). Previously, I received my BS in Operations Research: Engineering Management Systems and MS in Computer Science from Columbia University. At Columbia, I developed computational models for single-cell
+Starting in May 2022 I will be a Research Scientist Intern on the Science team at [DeepMind](https://www.deepmind.com/). Previously, I received my BS in Operations Research: Engineering Management Systems and MS in Computer Science from Columbia University. At Columbia, I developed computational models for single-cell
 RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-areas/labs/dana-pe-er) including a [method](https://github.com/JonathanShor/DoubletDetection) to detect doublets in single-cell RNA-sequencing datasets.
 
 ----
