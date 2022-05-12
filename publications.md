@@ -1,16 +1,17 @@
 # Publications
 
-<br>
+<!-- <br>
 <h3>Preprints</h3>
-<br>
-
-**The Tabula Sapiens: a multiple organ single cell transcriptomic atlas of humans.**
-**The Tabula Sapiens Consortium\***, Stephen R Quake
-*bioRxiv*, 2021. [[Paper]](https://www.biorxiv.org/content/10.1101/2021.07.19.452956v2.abstract)
+<br> -->
 
 <br>
 <h3>Journal Articles</h3>
 <br>
+
+
+**The Tabula Sapiens: A multiple-organ, single-cell transcriptomic atlas of humans.**
+**The Tabula Sapiens Consortium\***
+*Science*, 2022. [[Paper]]https://www.science.org/doi/10.1126/science.abl4896)
 
 
 **PeakVI: A deep generative model for single-cell chromatin accessibility analysis**
