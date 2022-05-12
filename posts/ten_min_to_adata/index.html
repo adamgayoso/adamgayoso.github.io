@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/override.css" />
@@ -225,7 +225,7 @@ While the Scanpy documentation site has <a class="reference external" href="http
 <p>AnnData (“Annotated Data”) is specifically designed for tabular data. By this I mean that we have <span class="math notranslate nohighlight">\(N\)</span> observations (typically cells), each of which can be represented as <span class="math notranslate nohighlight">\(d\)</span>-dimensional vectors, where each dimension corresponds to a variable or feature (typically a gene). Both the rows and columns of this <span class="math notranslate nohighlight">\(N \times d\)</span> matrix are special in the sense that they are indexed. In scRNA-seq, each row corresponds to a cell with a barcode, and each column corresponds to one gene. Furthermore, for each cell and each gene we might have additional metadata, like (1) donor information for each cell, or (2) alternative gene symbols for each gene.
 Finally, we might have other unstructured metadata like color palletes we are using for plotting.
 Without going into every fancy Python-based data structure, you’ll have to take my word that no other alternative really exists that:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Handles sparsity</p></li>
 <li><p>Handles unstructured data</p></li>
 <li><p>Handles observation- and feature-level metadata</p></li>
@@ -248,7 +248,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1847/4088771229.py:5: FutureWarning: X.dtype being converted to np.float32 from int64. In the next version of anndata (0.9) conversion will not be automatic. Pass dtype explicitly to avoid this warning. Pass `AnnData(X, dtype=X.dtype, ...)` to get the future behavour.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1747/4088771229.py:5: FutureWarning: X.dtype being converted to np.float32 from int64. In the next version of anndata (0.9) conversion will not be automatic. Pass dtype explicitly to avoid this warning. Pass `AnnData(X, dtype=X.dtype, ...)` to get the future behavour.
   adata = anndata.AnnData(counts)
 </pre></div>
 </div>
@@ -266,7 +266,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type '&lt;class 'numpy.float32'&gt;'
-	with 126862 stored elements in Compressed Sparse Row format&gt;
+	with 126039 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -347,11 +347,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </tr>
 <tr>
 <th>Cell_1</th>
-<td>T</td>
+<td>Monocyte</td>
 </tr>
 <tr>
 <th>Cell_2</th>
-<td>T</td>
+<td>Monocyte</td>
 </tr>
 <tr>
 <th>Cell_3</th>
@@ -367,7 +367,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </tr>
 <tr>
 <th>Cell_95</th>
-<td>B</td>
+<td>Monocyte</td>
 </tr>
 <tr>
 <th>Cell_96</th>
@@ -375,15 +375,15 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </tr>
 <tr>
 <th>Cell_97</th>
-<td>Monocyte</td>
+<td>T</td>
 </tr>
 <tr>
 <th>Cell_98</th>
-<td>Monocyte</td>
+<td>B</td>
 </tr>
 <tr>
 <th>Cell_99</th>
-<td>Monocyte</td>
+<td>B</td>
 </tr>
 </tbody>
 </table></div>
@@ -416,7 +416,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 27 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 30 × 2000
     obs: 'cell_type'
 </pre></div>
 </div>
@@ -459,7 +459,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <p>A few more notes about <code class="docutils literal notranslate"><span class="pre">.obsm/.varm</span></code></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The “array-like” metadata can originate from a Pandas DataFrame, scipy sparse matrix, or numpy dense array.</p></li>
 <li><p>When using scanpy, their values (columns) are not easily plotted, where instead items from <code class="docutils literal notranslate"><span class="pre">.obs</span></code> are easily plotted on, e.g., UMAP plots.</p></li>
 </ol>
@@ -560,122 +560,122 @@ With overloaded keys:
 <tr>
 <th>Cell_0</th>
 <td>1.098612</td>
-<td>0.000000</td>
-<td>1.609438</td>
+<td>0.693147</td>
+<td>0.693147</td>
+<td>1.098612</td>
 <td>0.000000</td>
 <td>0.000000</td>
 <td>1.098612</td>
-<td>0.000000</td>
 <td>1.098612</td>
+<td>0.693147</td>
 <td>0.000000</td>
-<td>1.098612</td>
 <td>...</td>
-<td>1.386294</td>
+<td>0.000000</td>
 <td>1.098612</td>
-<td>0.693147</td>
-<td>0.693147</td>
+<td>0.000000</td>
 <td>0.000000</td>
 <td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
+<td>1.098612</td>
+<td>1.098612</td>
+<td>0.000000</td>
 <td>1.098612</td>
 <td>0.000000</td>
 </tr>
 <tr>
 <th>Cell_1</th>
 <td>0.693147</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>1.098612</td>
 <td>0.693147</td>
 <td>0.000000</td>
 <td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
+<td>0.693147</td>
+<td>0.693147</td>
+<td>0.693147</td>
+<td>0.693147</td>
+<td>0.693147</td>
+<td>0.693147</td>
 <td>...</td>
 <td>0.693147</td>
-<td>1.098612</td>
 <td>0.693147</td>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>1.386294</td>
-<td>1.098612</td>
+<td>0.693147</td>
 <td>0.693147</td>
 <td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.693147</td>
+<td>1.386294</td>
 </tr>
 <tr>
 <th>Cell_2</th>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>...</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>0.000000</td>
 <td>1.609438</td>
+<td>0.693147</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.693147</td>
+<td>0.693147</td>
+<td>1.386294</td>
+<td>0.693147</td>
+<td>0.000000</td>
+<td>1.386294</td>
+<td>...</td>
 <td>1.098612</td>
 <td>0.000000</td>
 <td>0.693147</td>
+<td>0.693147</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.098612</td>
+<td>0.000000</td>
 <td>0.693147</td>
 </tr>
 <tr>
 <th>Cell_3</th>
 <td>0.693147</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.098612</td>
 <td>0.693147</td>
 <td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
 <td>0.693147</td>
 <td>0.000000</td>
+<td>1.098612</td>
 <td>0.000000</td>
 <td>...</td>
 <td>0.000000</td>
-<td>0.000000</td>
 <td>0.693147</td>
-<td>0.000000</td>
 <td>0.693147</td>
-<td>1.098612</td>
+<td>0.693147</td>
 <td>0.000000</td>
 <td>0.000000</td>
 <td>0.693147</td>
 <td>0.693147</td>
+<td>1.386294</td>
+<td>1.386294</td>
 </tr>
 <tr>
 <th>Cell_4</th>
+<td>1.386294</td>
+<td>0.693147</td>
+<td>1.386294</td>
+<td>0.693147</td>
+<td>0.000000</td>
 <td>0.693147</td>
 <td>1.098612</td>
 <td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
 <td>1.098612</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>1.098612</td>
+<td>1.386294</td>
 <td>...</td>
 <td>0.000000</td>
-<td>0.000000</td>
 <td>0.693147</td>
 <td>1.098612</td>
 <td>0.000000</td>
 <td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
+<td>1.386294</td>
 <td>1.098612</td>
+<td>0.000000</td>
 <td>0.693147</td>
+<td>1.098612</td>
 </tr>
 <tr>
 <th>...</th>
@@ -704,121 +704,121 @@ With overloaded keys:
 <tr>
 <th>Cell_95</th>
 <td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
+<td>1.609438</td>
 <td>0.000000</td>
+<td>0.693147</td>
+<td>1.098612</td>
 <td>0.000000</td>
 <td>1.098612</td>
 <td>0.000000</td>
+<td>1.386294</td>
+<td>0.693147</td>
 <td>...</td>
-<td>1.386294</td>
+<td>0.693147</td>
+<td>0.000000</td>
+<td>0.000000</td>
 <td>1.098612</td>
-<td>0.000000</td>
-<td>0.000000</td>
+<td>0.693147</td>
 <td>0.000000</td>
 <td>0.693147</td>
+<td>1.609438</td>
 <td>1.386294</td>
 <td>0.693147</td>
-<td>1.098612</td>
-<td>0.000000</td>
 </tr>
 <tr>
 <th>Cell_96</th>
 <td>0.000000</td>
 <td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
 <td>0.693147</td>
 <td>0.000000</td>
-<td>0.000000</td>
+<td>1.098612</td>
+<td>1.791759</td>
+<td>1.098612</td>
+<td>0.693147</td>
 <td>0.693147</td>
 <td>0.693147</td>
 <td>...</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.000000</td>
 <td>0.000000</td>
 <td>1.098612</td>
-<td>1.386294</td>
+<td>0.000000</td>
+<td>0.693147</td>
+<td>0.000000</td>
+<td>0.000000</td>
 <td>1.386294</td>
 <td>0.000000</td>
+<td>0.693147</td>
+<td>0.693147</td>
 </tr>
 <tr>
 <th>Cell_97</th>
 <td>0.000000</td>
 <td>0.693147</td>
+<td>1.098612</td>
+<td>0.693147</td>
+<td>1.098612</td>
 <td>0.000000</td>
 <td>0.693147</td>
+<td>0.000000</td>
+<td>1.098612</td>
+<td>0.693147</td>
+<td>...</td>
+<td>1.098612</td>
+<td>0.000000</td>
+<td>0.693147</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>1.098612</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.693147</td>
+</tr>
+<tr>
+<th>Cell_98</th>
+<td>1.386294</td>
 <td>0.693147</td>
 <td>0.693147</td>
+<td>0.693147</td>
+<td>0.000000</td>
+<td>0.693147</td>
+<td>1.098612</td>
+<td>0.693147</td>
+<td>1.609438</td>
+<td>0.000000</td>
+<td>...</td>
+<td>0.000000</td>
+<td>0.000000</td>
 <td>0.693147</td>
 <td>0.000000</td>
 <td>1.386294</td>
 <td>0.000000</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.000000</td>
 <td>0.693147</td>
 <td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>1.098612</td>
-</tr>
-<tr>
-<th>Cell_98</th>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>0.693147</td>
 <td>1.098612</td>
 <td>0.000000</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>...</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>1.609438</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
 </tr>
 <tr>
 <th>Cell_99</th>
+<td>1.098612</td>
 <td>0.693147</td>
 <td>0.693147</td>
+<td>0.000000</td>
 <td>1.609438</td>
 <td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
 <td>1.098612</td>
 <td>0.000000</td>
+<td>0.693147</td>
+<td>0.693147</td>
 <td>...</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
 <td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
 <td>0.000000</td>
 <td>0.000000</td>
 <td>0.693147</td>
 <td>1.098612</td>
-<td>0.693147</td>
-<td>0.693147</td>
+<td>1.386294</td>
 <td>0.000000</td>
 </tr>
 </tbody>
