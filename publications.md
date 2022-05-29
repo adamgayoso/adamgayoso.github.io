@@ -1,8 +1,13 @@
 # Publications
 
-<!-- <br>
+<br>
 <h3>Preprints</h3>
-<br> -->
+<br>
+
+**An Empirical Bayes Method for Differential Expression Analysis of Single Cells with Deep Generative Models.**
+Pierre Boyeau, Jeffrey Regier, **Adam Gayoso**, Michael I. Jordan, Romain Lopez, Nir Yosef.
+*bioRxiv*, 2022. [[Paper]](https://www.biorxiv.org/content/10.1101/2022.05.27.493625v1)
+
 
 <br>
 <h3>Journal Articles</h3>
@@ -31,22 +36,18 @@ Mohammad Lotfollahi, Mohsen Naghipourfar, Malte D. Luecken, Matin Khajavi, Maren
 *Nature Biotechnology*, 2021. [[Paper]](https://www.nature.com/articles/s41587-021-01001-7)
 
 **Joint probabilistic modeling of single-cell multi-omic data with totalVI.**
-**Adam Gayoso\***, Zoë Steier*, Romain Lopez, Jeffrey Regier, Kristopher L Nazor, Aaron Streets, Nir Yosef.
+**Adam Gayoso\***, Zoë Steier\*, Romain Lopez, Jeffrey Regier, Kristopher L Nazor, Aaron Streets, Nir Yosef.
 *Nature Methods*, 2021. [[Paper]](https://www.nature.com/articles/s41592-020-01050-x.epdf?sharing_token=F_xpBUwgD5vHVAB5jvU0c9RgN0jAjWel9jnR3ZoTv0NDA6nPyssLQkWDcY8VB7gLKdlD8q3cqpF5ovLZjZTudaweTnzODEXCrkjJ2UJEEpOAhfOCwEZ0h0Y2WTkn_GOBfGUZhH-lzX_u_AswArGFGinU1pcuXPvuTkPrrQI4zko%3D)[[bioRxiv]](https://www.biorxiv.org/content/10.1101/2020.05.08.083337v2)
 
-**Interpretable factor models of single-cell RNA-seq via
-variational autoencoders.**
+**Interpretable factor models of single-cell RNA-seq via variational autoencoders.**
 Valentine Svensson, **Adam Gayoso**, Nir Yosef, Lior Pachter.
 *Bioinformatics*, 2020. [[Paper]](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa169/5807606?rss=1)
 
-**Characterization of cell fate probabilities
-in single-cell data with Palantir.**
+**Characterization of cell fate probabilities in single-cell data with Palantir.**
 Manu Setty, Vaidotas Kiseliovas, Jacob Levine, **Adam Gayoso**, Linas Mazutis, Dana Pe’er.
 *Nature Biotechnology*, 2019. [[Paper]](https://www.nature.com/articles/s41587-019-0068-4)
 
-**Stress-adaptive responses associated with high-level
-carbapenem resistance in kpc-producing klebsiella
-pneumoniae.**
+**Stress-adaptive responses associated with high-level carbapenem resistance in kpc-producing klebsiella pneumoniae.**
 Sheila Adams-Sapper, **Adam Gayoso**, Lee. W. Riley.
 *Journal of Pathogens*, 2018. [[Paper]](https://www.hindawi.com/journals/jpath/2018/3028290/abs/)
 
@@ -54,8 +55,7 @@ Sheila Adams-Sapper, **Adam Gayoso**, Lee. W. Riley.
 <h3>Review Articles</h3>
 <br>
 
-**Enhancing scientiﬁc discoveries in molecular biology with deep generative
-models.**
+**Enhancing scientiﬁc discoveries in molecular biology with deep generative models.**
 Romain Lopez, **Adam Gayoso**, Nir Yosef.
 *Molecular Systems Biology*, 2020. [[Paper]](https://www.embopress.org/doi/full/10.15252/msb.20199198)
 
@@ -63,8 +63,7 @@ Romain Lopez, **Adam Gayoso**, Nir Yosef.
 <h3>Refereed Workshop Papers</h3>
 <br>
 
-**A joint model of RNA expression and surface protein abundance in single
-cells.**
+**A joint model of RNA expression and surface protein abundance in single cells.**
 **Adam Gayoso**, Romain Lopez, Zo&euml; Steier, Jeffrey Regier, Aaron Streets, Nir Yosef.
 *Machine Learning in Computational Biology (MLCB)*, 2020. [[Paper]](https://www.biorxiv.org/content/10.1101/791947v1)
 
@@ -72,8 +71,7 @@ cells.**
 Oscar Clivio, Romain Lopez, Jeffrey Regier, **Adam Gayoso**, Michael I. Jordan, Nir Yosef.
 *Machine Learning in Computational Biology (MLCB), Spotlight talk*, 2020. [[Paper]](https://www.biorxiv.org/content/10.1101/794875v1)
 
-**Deep generative models for detecting differential expression in single
-cells.**
+**Deep generative models for detecting differential expression in single cells.**
 Pierre Boyeau, Romain Lopez, Jeffrey Regier, **Adam Gayoso**, Michael I. Jordan, Nir Yosef.
 *Machine Learning in Computational Biology (MLCB)*, 2020. [[Paper]](https://www.biorxiv.org/content/10.1101/794289v1)
 
