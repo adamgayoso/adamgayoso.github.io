@@ -66,6 +66,8 @@ myst_enable_extensions = [
 ]
 myst_heading_anchors = 3
 
+nb_output_stderr = "remove"
+
 # -- Options for HTML output -------------------------------------------
 
 # html_show_sourcelink = True
