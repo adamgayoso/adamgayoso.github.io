@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
         <title>From PCA to VAE - Adam Gayoso</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -185,7 +185,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,15 +200,15 @@
           </label>
         </div>
         <article role="main">
-          <p>@def title = “From PCA to VAE”
-@def date = Date(2020, 12, 06)
-@def tags = [“syntax”, “code”]
-@def description = “The classical PCA and contemporary VAE are closely related. Here we dive into this connection.”</p>
+          <p>&#64;def title = “From PCA to VAE”
+&#64;def date = Date(2020, 12, 06)
+&#64;def tags = [“syntax”, “code”]
+&#64;def description = “The classical PCA and contemporary VAE are closely related. Here we dive into this connection.”</p>
 <section id="from-pca-to-vae">
-<h1>From PCA to VAE<a class="headerlink" href="#from-pca-to-vae" title="Permalink to this headline">#</a></h1>
+<h1>From PCA to VAE<a class="headerlink" href="#from-pca-to-vae" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Principal_component_analysis">Principal components analysis</a> (PCA) is a dimensionality reduction technique that aims to preserve variability in the data. A Variational Autoencoder (VAE) \citep{kingma2014} is a deep learning approach to, among other things, generate novel images of handwritten digits and <a class="reference external" href="https://github.com/yzwxx/vae-celebA">celebrities</a>. So how are these two models related?</p>
 <section id="exploration-of-pca">
-<h2>Exploration of PCA<a class="headerlink" href="#exploration-of-pca" title="Permalink to this headline">#</a></h2>
+<h2>Exploration of PCA<a class="headerlink" href="#exploration-of-pca" title="Permalink to this heading">#</a></h2>
 <!-- https://www.cs.cmu.edu/~avrim/598/chap3only.pdf -->
 <p>To begin, let’s explore PCA.
 We assume we have a dataset <span class="math notranslate nohighlight">\(\mathcal{D} = \{x_i\}_{i=1}^N\)</span>, where <span class="math notranslate nohighlight">\(x_i \in \mathbb{R}^d\)</span>.
@@ -220,8 +221,10 @@ PCA learns a sequence of unit vectors such that:</p>
 <li><p>The squared distance of points to lines in direction of vectors is minimzed</p></li>
 </ol>
 <p>Let us unpack this. To find the first principal component, we solve the following optimization problem.</p>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
-\[\min_{u: \|u\|_2 = 1} \frac{1}{N}\sum_{i=1}^N \|x_i - (u^\top x_i)u\|_2^2\]</div></div>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\min_{u: \|u\|_2 = 1} \frac{1}{N}\sum_{i=1}^N \|x_i - (u^\top x_i)u\|_2^2\]</div>
+</div>
 <p>Another interpretation of PCA is that it projects the data onto lines (components) such that the variance of the resulting projected points is maximized. To see this consider</p>
 <!-- 1. PCA is an autoencoder
 2. PCA has a probabilistic analog
@@ -232,7 +235,7 @@ PCA learns a sequence of unit vectors such that:</p>
 </section>
 </section>
 <section id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
+<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
 <p>\biblabel{kingma2014}{Kingma et al. (2014)}
 Kingma, D. P., &amp; Welling, M. (2014).
 Auto-encoding variational bayes.
@@ -302,6 +305,7 @@ ICLR 2014</p>
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     <script src="../../_static/clipboard.min.js"></script>

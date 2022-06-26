@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
         <title>5, maybe 10 minutes to AnnData - Adam Gayoso</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -185,7 +185,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -200,17 +201,17 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="maybe-10-minutes-to-anndata">
-<h1>5, maybe 10 minutes to AnnData<a class="headerlink" href="#maybe-10-minutes-to-anndata" title="Permalink to this headline">#</a></h1>
+<h1>5, maybe 10 minutes to AnnData<a class="headerlink" href="#maybe-10-minutes-to-anndata" title="Permalink to this heading">#</a></h1>
 <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-p-2 sd-outline-muted sd-rounded-1 docutils">
 <div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
 <div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
 <div class="sd-container-fluid sd-sphinx-override docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg aria-hidden="true" class="sd-octicon sd-octicon-calendar" height="16.0px" version="1.1" viewbox="0 0 16 16" width="16.0px"><path d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z" fill-rule="evenodd"></path></svg></span>November 13, 2021</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>November 13, 2021</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg aria-hidden="true" class="sd-octicon sd-octicon-clock" height="16.0px" version="1.1" viewbox="0 0 16 16" width="16.0px"><path d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z" fill-rule="evenodd"></path></svg></span>5-10 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>5-10 min read</p>
 </div>
 </div>
 </div>
@@ -221,7 +222,7 @@
 Scanpy’s functionality heavily depends on the data being stored in an <a class="reference external" href="https://anndata.readthedocs.io/en/latest/">AnnData</a> object, which provides Scanpy a systematic way of storing and retrieving intermediate analysis results, like principal components scores, <a class="reference external" href="https://umap-learn.readthedocs.io/">UMAP</a> embeddings, cluster labels, etc.
 While the Scanpy documentation site has <a class="reference external" href="https://scanpy.readthedocs.io/en/stable/tutorials.html">tutorials</a> covering common use cases, there remains a lack of tutorials for AnnData specifically. Here I cover the basics.</p>
 <section id="why-anndata">
-<h2>Why AnnData?<a class="headerlink" href="#why-anndata" title="Permalink to this headline">#</a></h2>
+<h2>Why AnnData?<a class="headerlink" href="#why-anndata" title="Permalink to this heading">#</a></h2>
 <p>AnnData (“Annotated Data”) is specifically designed for tabular data. By this I mean that we have <span class="math notranslate nohighlight">\(N\)</span> observations (typically cells), each of which can be represented as <span class="math notranslate nohighlight">\(d\)</span>-dimensional vectors, where each dimension corresponds to a variable or feature (typically a gene). Both the rows and columns of this <span class="math notranslate nohighlight">\(N \times d\)</span> matrix are special in the sense that they are indexed. In scRNA-seq, each row corresponds to a cell with a barcode, and each column corresponds to one gene. Furthermore, for each cell and each gene we might have additional metadata, like (1) donor information for each cell, or (2) alternative gene symbols for each gene.
 Finally, we might have other unstructured metadata like color palletes we are using for plotting.
 Without going into every fancy Python-based data structure, you’ll have to take my word that no other alternative really exists that:</p>
@@ -233,7 +234,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </ol>
 </section>
 <section id="initializing-anndata">
-<h2>Initializing AnnData<a class="headerlink" href="#initializing-anndata" title="Permalink to this headline">#</a></h2>
+<h2>Initializing AnnData<a class="headerlink" href="#initializing-anndata" title="Permalink to this heading">#</a></h2>
 <!-- Perhaps [xarray](https://xarray.pydata.org/en/stable/) is the closest in terms of functionality, -->
 <p>Let’s start by building a basic AnnData object with some sparse count information, perhaps representing gene expression counts.</p>
 <div class="cell docutils container">
@@ -248,10 +249,6 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1835/4088771229.py:5: FutureWarning: X.dtype being converted to np.float32 from int64. In the next version of anndata (0.9) conversion will not be automatic. Pass dtype explicitly to avoid this warning. Pass `AnnData(X, dtype=X.dtype, ...)` to get the future behavour.
-  adata = anndata.AnnData(counts)
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AnnData object with n_obs × n_vars = 100 × 2000
 </pre></div>
 </div>
@@ -265,8 +262,8 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type '&lt;class 'numpy.float32'&gt;'
-	with 126531 stored elements in Compressed Sparse Row format&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.float32&#39;&gt;&#39;
+	with 126489 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -274,26 +271,26 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 <p>Now, we provide the index to both the <code class="docutils literal notranslate"><span class="pre">obs</span></code> and <code class="docutils literal notranslate"><span class="pre">var</span></code> axes using <code class="docutils literal notranslate"><span class="pre">.obs_names</span></code> (resp. <code class="docutils literal notranslate"><span class="pre">.var_names</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">obs_names</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">"Cell_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_obs</span><span class="p">)]</span>
-<span class="n">adata</span><span class="o">.</span><span class="n">var_names</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">"Gene_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_vars</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">obs_names</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Cell_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_obs</span><span class="p">)]</span>
+<span class="n">adata</span><span class="o">.</span><span class="n">var_names</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Gene_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_vars</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">obs_names</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index(['Cell_0', 'Cell_1', 'Cell_2', 'Cell_3', 'Cell_4', 'Cell_5', 'Cell_6',
-       'Cell_7', 'Cell_8', 'Cell_9'],
-      dtype='object')
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Cell_0&#39;, &#39;Cell_1&#39;, &#39;Cell_2&#39;, &#39;Cell_3&#39;, &#39;Cell_4&#39;, &#39;Cell_5&#39;, &#39;Cell_6&#39;,
+       &#39;Cell_7&#39;, &#39;Cell_8&#39;, &#39;Cell_9&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <section id="subsetting-anndata">
-<h3>Subsetting AnnData<a class="headerlink" href="#subsetting-anndata" title="Permalink to this headline">#</a></h3>
+<h3>Subsetting AnnData<a class="headerlink" href="#subsetting-anndata" title="Permalink to this heading">#</a></h3>
 <p>These index values can be used to subset the AnnData, which provides a <a class="reference external" href="https://falexwolf.de/blog/171223_AnnData_indexing_views_HDF5-backing/">view</a> of the AnnData object. We can imagine this to be useful to subset the AnnData to particular cell types or gene modules of interest. The rules for subsetting AnnData are quite similar to that of a Pandas DataFrame. You can use values in the <code class="docutils literal notranslate"><span class="pre">obs/var_names</span></code>, boolean masks, or cell index integers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="p">[[</span><span class="s2">"Cell_1"</span><span class="p">,</span> <span class="s2">"Cell_10"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"Gene_5"</span><span class="p">,</span> <span class="s2">"Gene_1900"</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="p">[[</span><span class="s2">&quot;Cell_1&quot;</span><span class="p">,</span> <span class="s2">&quot;Cell_10&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Gene_5&quot;</span><span class="p">,</span> <span class="s2">&quot;Gene_1900&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -306,21 +303,21 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </section>
 </section>
 <section id="adding-aligned-metadata">
-<h2>Adding aligned metadata<a class="headerlink" href="#adding-aligned-metadata" title="Permalink to this headline">#</a></h2>
+<h2>Adding aligned metadata<a class="headerlink" href="#adding-aligned-metadata" title="Permalink to this heading">#</a></h2>
 <section id="observation-variable-level">
-<h3>Observation/Variable level<a class="headerlink" href="#observation-variable-level" title="Permalink to this headline">#</a></h3>
+<h3>Observation/Variable level<a class="headerlink" href="#observation-variable-level" title="Permalink to this heading">#</a></h3>
 <p>So we have the core of our object and now we’d like to add metadata at both the observation and variable levels. This is pretty simple with AnnData, both <code class="docutils literal notranslate"><span class="pre">adata.obs</span></code> and <code class="docutils literal notranslate"><span class="pre">adata.var</span></code> are Pandas DataFrames.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"B"</span><span class="p">,</span> <span class="s2">"T"</span><span class="p">,</span> <span class="s2">"Monocyte"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_obs</span><span class="p">,))</span>
-<span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">"cell_type"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ct</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;Monocyte&quot;</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_obs</span><span class="p">,))</span>
+<span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;cell_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ct</span>
 <span class="n">adata</span><span class="o">.</span><span class="n">obs</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
-<style scoped="">
+<style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -333,60 +330,60 @@ Without going into every fancy Python-based data structure, you’ll have to tak
         text-align: right;
     }
 </style>
-<div class="table-wrapper"><table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>cell_type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>Cell_0</th>
-<td>Monocyte</td>
-</tr>
-<tr>
-<th>Cell_1</th>
-<td>B</td>
-</tr>
-<tr>
-<th>Cell_2</th>
-<td>Monocyte</td>
-</tr>
-<tr>
-<th>Cell_3</th>
-<td>T</td>
-</tr>
-<tr>
-<th>Cell_4</th>
-<td>Monocyte</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-</tr>
-<tr>
-<th>Cell_95</th>
-<td>Monocyte</td>
-</tr>
-<tr>
-<th>Cell_96</th>
-<td>B</td>
-</tr>
-<tr>
-<th>Cell_97</th>
-<td>Monocyte</td>
-</tr>
-<tr>
-<th>Cell_98</th>
-<td>T</td>
-</tr>
-<tr>
-<th>Cell_99</th>
-<td>T</td>
-</tr>
-</tbody>
-</table></div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cell_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Cell_0</th>
+      <td>Monocyte</td>
+    </tr>
+    <tr>
+      <th>Cell_1</th>
+      <td>Monocyte</td>
+    </tr>
+    <tr>
+      <th>Cell_2</th>
+      <td>T</td>
+    </tr>
+    <tr>
+      <th>Cell_3</th>
+      <td>T</td>
+    </tr>
+    <tr>
+      <th>Cell_4</th>
+      <td>Monocyte</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Cell_95</th>
+      <td>Monocyte</td>
+    </tr>
+    <tr>
+      <th>Cell_96</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>Cell_97</th>
+      <td>Monocyte</td>
+    </tr>
+    <tr>
+      <th>Cell_98</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>Cell_99</th>
+      <td>T</td>
+    </tr>
+  </tbody>
+</table>
 <p>100 rows × 1 columns</p>
 </div></div></div>
 </div>
@@ -399,25 +396,25 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AnnData object with n_obs × n_vars = 100 × 2000
-    obs: 'cell_type'
+    obs: &#39;cell_type&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="subsetting-using-metadata">
-<h3>Subsetting using metadata<a class="headerlink" href="#subsetting-using-metadata" title="Permalink to this headline">#</a></h3>
+<h3>Subsetting using metadata<a class="headerlink" href="#subsetting-using-metadata" title="Permalink to this heading">#</a></h3>
 <p>We can also subset the AnnData using these randomly generated cell types:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bdata</span> <span class="o">=</span> <span class="n">adata</span><span class="p">[</span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="o">.</span><span class="n">cell_type</span> <span class="o">==</span> <span class="s2">"B"</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bdata</span> <span class="o">=</span> <span class="n">adata</span><span class="p">[</span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="o">.</span><span class="n">cell_type</span> <span class="o">==</span> <span class="s2">&quot;B&quot;</span><span class="p">]</span>
 <span class="n">bdata</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 30 × 2000
-    obs: 'cell_type'
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 27 × 2000
+    obs: &#39;cell_type&#39;
 </pre></div>
 </div>
 </div>
@@ -425,13 +422,13 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </section>
 </section>
 <section id="observation-variable-level-matrices">
-<h2>Observation/Variable level matrices<a class="headerlink" href="#observation-variable-level-matrices" title="Permalink to this headline">#</a></h2>
+<h2>Observation/Variable level matrices<a class="headerlink" href="#observation-variable-level-matrices" title="Permalink to this heading">#</a></h2>
 <p>We might also have metadata at either level that has many dimensions to it, such as a UMAP embedding of the data. For this type of metadata, AnnData has the <code class="docutils literal notranslate"><span class="pre">.obsm/.varm</span></code> attributes. We use keys to identify the different matrices we insert. The restriction of <code class="docutils literal notranslate"><span class="pre">.obsm/.varm</span></code> are that <code class="docutils literal notranslate"><span class="pre">.obsm</span></code> matrices must length equal to the number of observations as <code class="docutils literal notranslate"><span class="pre">.n_obs</span></code> and <code class="docutils literal notranslate"><span class="pre">.varm</span></code> matrices must length equal to <code class="docutils literal notranslate"><span class="pre">.n_vars</span></code>. They can each independently have different number of dimensions.</p>
 <p>Let’s start with a randomly generated matrix that we can interpret as a UMAP embedding of the data we’d like to store, as well as some random gene-level metadata:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">obsm</span><span class="p">[</span><span class="s2">"X_umap"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_obs</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="n">adata</span><span class="o">.</span><span class="n">varm</span><span class="p">[</span><span class="s2">"gene_stuff"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_vars</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">obsm</span><span class="p">[</span><span class="s2">&quot;X_umap&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_obs</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">adata</span><span class="o">.</span><span class="n">varm</span><span class="p">[</span><span class="s2">&quot;gene_stuff&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">n_vars</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">adata</span><span class="o">.</span><span class="n">obsm</span>
 </pre></div>
 </div>
@@ -451,9 +448,9 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AnnData object with n_obs × n_vars = 100 × 2000
-    obs: 'cell_type'
-    obsm: 'X_umap'
-    varm: 'gene_stuff'
+    obs: &#39;cell_type&#39;
+    obsm: &#39;X_umap&#39;
+    varm: &#39;gene_stuff&#39;
 </pre></div>
 </div>
 </div>
@@ -465,58 +462,58 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </ol>
 </section>
 <section id="unstructured-metadata">
-<h2>Unstructured metadata<a class="headerlink" href="#unstructured-metadata" title="Permalink to this headline">#</a></h2>
+<h2>Unstructured metadata<a class="headerlink" href="#unstructured-metadata" title="Permalink to this heading">#</a></h2>
 <p>AnnData has <code class="docutils literal notranslate"><span class="pre">.uns</span></code>, which allows for any unstructured metadata. This can be anything, like a list or a dictionary with some general information that was useful in the analysis of our data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">uns</span><span class="p">[</span><span class="s2">"random"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">uns</span><span class="p">[</span><span class="s2">&quot;random&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">adata</span><span class="o">.</span><span class="n">uns</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OverloadedDict, wrapping:
-	OrderedDict([('random', [1, 2, 3])])
+	OrderedDict([(&#39;random&#39;, [1, 2, 3])])
 With overloaded keys:
-	['neighbors'].
+	[&#39;neighbors&#39;].
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="layers">
-<h2>Layers<a class="headerlink" href="#layers" title="Permalink to this headline">#</a></h2>
+<h2>Layers<a class="headerlink" href="#layers" title="Permalink to this heading">#</a></h2>
 <p>Finally, we may have different forms of our original core data, perhaps one that is normalized and one that is not. These can be stored in different layers in AnnData. For example, let’s log transform the original data and store it in a layer:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s2">"log_transformed"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">X</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s2">&quot;log_transformed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">X</span><span class="p">)</span>
 <span class="n">adata</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AnnData object with n_obs × n_vars = 100 × 2000
-    obs: 'cell_type'
-    uns: 'random'
-    obsm: 'X_umap'
-    varm: 'gene_stuff'
-    layers: 'log_transformed'
+    obs: &#39;cell_type&#39;
+    uns: &#39;random&#39;
+    obsm: &#39;X_umap&#39;
+    varm: &#39;gene_stuff&#39;
+    layers: &#39;log_transformed&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <section id="outputting-dataframes">
-<h3>Outputting DataFrames<a class="headerlink" href="#outputting-dataframes" title="Permalink to this headline">#</a></h3>
+<h3>Outputting DataFrames<a class="headerlink" href="#outputting-dataframes" title="Permalink to this heading">#</a></h3>
 <p>We can also ask AnnData to return us a DataFrame from one of the layers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">to_df</span><span class="p">(</span><span class="n">layer</span><span class="o">=</span><span class="s2">"log_transformed"</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">to_df</span><span class="p">(</span><span class="n">layer</span><span class="o">=</span><span class="s2">&quot;log_transformed&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
-<style scoped="">
+<style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -529,300 +526,300 @@ With overloaded keys:
         text-align: right;
     }
 </style>
-<div class="table-wrapper"><table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Gene_0</th>
-<th>Gene_1</th>
-<th>Gene_2</th>
-<th>Gene_3</th>
-<th>Gene_4</th>
-<th>Gene_5</th>
-<th>Gene_6</th>
-<th>Gene_7</th>
-<th>Gene_8</th>
-<th>Gene_9</th>
-<th>...</th>
-<th>Gene_1990</th>
-<th>Gene_1991</th>
-<th>Gene_1992</th>
-<th>Gene_1993</th>
-<th>Gene_1994</th>
-<th>Gene_1995</th>
-<th>Gene_1996</th>
-<th>Gene_1997</th>
-<th>Gene_1998</th>
-<th>Gene_1999</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>Cell_0</th>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>1.386294</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>...</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>1.098612</td>
-</tr>
-<tr>
-<th>Cell_1</th>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>...</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-</tr>
-<tr>
-<th>Cell_2</th>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>...</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.609438</td>
-<td>0.693147</td>
-</tr>
-<tr>
-<th>Cell_3</th>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>1.098612</td>
-</tr>
-<tr>
-<th>Cell_4</th>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>1.386294</td>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>...</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>1.609438</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.693147</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>Cell_95</th>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-</tr>
-<tr>
-<th>Cell_96</th>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>1.609438</td>
-<td>0.000000</td>
-<td>0.693147</td>
-</tr>
-<tr>
-<th>Cell_97</th>
-<td>1.609438</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>...</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.609438</td>
-<td>0.693147</td>
-<td>0.000000</td>
-</tr>
-<tr>
-<th>Cell_98</th>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>...</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.098612</td>
-</tr>
-<tr>
-<th>Cell_99</th>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.693147</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>...</td>
-<td>0.693147</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>1.098612</td>
-<td>0.000000</td>
-<td>1.098612</td>
-<td>1.386294</td>
-<td>0.693147</td>
-<td>0.000000</td>
-<td>0.693147</td>
-</tr>
-</tbody>
-</table></div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gene_0</th>
+      <th>Gene_1</th>
+      <th>Gene_2</th>
+      <th>Gene_3</th>
+      <th>Gene_4</th>
+      <th>Gene_5</th>
+      <th>Gene_6</th>
+      <th>Gene_7</th>
+      <th>Gene_8</th>
+      <th>Gene_9</th>
+      <th>...</th>
+      <th>Gene_1990</th>
+      <th>Gene_1991</th>
+      <th>Gene_1992</th>
+      <th>Gene_1993</th>
+      <th>Gene_1994</th>
+      <th>Gene_1995</th>
+      <th>Gene_1996</th>
+      <th>Gene_1997</th>
+      <th>Gene_1998</th>
+      <th>Gene_1999</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Cell_0</th>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Cell_1</th>
+      <td>1.386294</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
+      <td>...</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Cell_2</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Cell_3</th>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+    </tr>
+    <tr>
+      <th>Cell_4</th>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>1.945910</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.693147</td>
+      <td>1.609438</td>
+      <td>0.693147</td>
+      <td>1.386294</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.386294</td>
+      <td>1.386294</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Cell_95</th>
+      <td>1.098612</td>
+      <td>1.386294</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.609438</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+    </tr>
+    <tr>
+      <th>Cell_96</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.386294</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
+      <td>1.609438</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+    </tr>
+    <tr>
+      <th>Cell_97</th>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Cell_98</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
+      <td>...</td>
+      <td>1.098612</td>
+      <td>1.386294</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+    </tr>
+    <tr>
+      <th>Cell_99</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+    </tr>
+  </tbody>
+</table>
 <p>100 rows × 2000 columns</p>
 </div></div></div>
 </div>
@@ -830,7 +827,7 @@ With overloaded keys:
 </section>
 </section>
 <section id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">#</a></h2>
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
 <p>AnnData has become the standard for single-cell analysis in Python and for good reason – it’s straightforward to use and faciliatates more reproducible analyses with it’s key-based storage. It’s even becoming easier to convert to the popular R-based formats for single-cell analysis. There is still a lot that I don’t cover here. I do encourage looking through the AnnData <a class="reference external" href="https://anndata.readthedocs.io/en/latest/">API docs</a> for more useful properties/methods.</p>
 </section>
 </section>
@@ -913,6 +910,7 @@ With overloaded keys:
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
