@@ -146,7 +146,7 @@ adata
 We can also ask AnnData to return us a DataFrame from one of the layers:
 
 ```{code-cell}
-adata.to_df(layer="log_transformed")
+adata.to_df(layer="log_transformed").iloc[:, :5]
 ```
 
 
