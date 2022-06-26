@@ -263,7 +263,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.float32&#39;&gt;&#39;
-	with 126489 stored elements in Compressed Sparse Row format&gt;
+	with 126289 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -340,11 +340,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_2</th>
@@ -352,11 +352,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_3</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
     <tr>
       <th>Cell_4</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>...</th>
@@ -368,11 +368,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>B</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_97</th>
-      <td>Monocyte</td>
+      <td>B</td>
     </tr>
     <tr>
       <th>Cell_98</th>
@@ -413,7 +413,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 27 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 34 × 2000
     obs: &#39;cell_type&#39;
 </pre></div>
 </div>
@@ -507,7 +507,7 @@ With overloaded keys:
 <p>We can also ask AnnData to return us a DataFrame from one of the layers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">to_df</span><span class="p">(</span><span class="n">layer</span><span class="o">=</span><span class="s2">&quot;log_transformed&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">to_df</span><span class="p">(</span><span class="n">layer</span><span class="o">=</span><span class="s2">&quot;log_transformed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -535,22 +535,6 @@ With overloaded keys:
       <th>Gene_2</th>
       <th>Gene_3</th>
       <th>Gene_4</th>
-      <th>Gene_5</th>
-      <th>Gene_6</th>
-      <th>Gene_7</th>
-      <th>Gene_8</th>
-      <th>Gene_9</th>
-      <th>...</th>
-      <th>Gene_1990</th>
-      <th>Gene_1991</th>
-      <th>Gene_1992</th>
-      <th>Gene_1993</th>
-      <th>Gene_1994</th>
-      <th>Gene_1995</th>
-      <th>Gene_1996</th>
-      <th>Gene_1997</th>
-      <th>Gene_1998</th>
-      <th>Gene_1999</th>
     </tr>
   </thead>
   <tbody>
@@ -558,140 +542,44 @@ With overloaded keys:
       <th>Cell_0</th>
       <td>1.098612</td>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>1.098612</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>1.386294</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
       <td>0.693147</td>
       <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>1.386294</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
-      <td>1.098612</td>
-      <td>...</td>
-      <td>1.098612</td>
       <td>0.693147</td>
       <td>0.693147</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_2</th>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
       <td>1.098612</td>
       <td>0.693147</td>
       <td>0.693147</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_3</th>
       <td>1.098612</td>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
       <td>0.693147</td>
       <td>0.693147</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
-      <td>...</td>
       <td>0.000000</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_4</th>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>1.945910</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.693147</td>
-      <td>1.609438</td>
-      <td>0.693147</td>
-      <td>1.386294</td>
       <td>1.098612</td>
       <td>0.693147</td>
-      <td>0.000000</td>
       <td>0.693147</td>
       <td>1.386294</td>
-      <td>1.386294</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -700,127 +588,47 @@ With overloaded keys:
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>1.098612</td>
-      <td>1.386294</td>
-      <td>1.386294</td>
       <td>0.000000</td>
       <td>1.098612</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
-      <td>0.693147</td>
       <td>1.098612</td>
-      <td>...</td>
+      <td>1.098612</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>1.609438</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>0.693147</td>
       <td>0.000000</td>
-      <td>0.693147</td>
       <td>1.386294</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
-      <td>1.098612</td>
-      <td>1.609438</td>
-      <td>1.386294</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_97</th>
       <td>1.098612</td>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
       <td>0.693147</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>1.098612</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>1.386294</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>1.098612</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_98</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>1.098612</td>
       <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
-      <td>1.098612</td>
-      <td>...</td>
-      <td>1.098612</td>
-      <td>1.386294</td>
       <td>1.098612</td>
       <td>0.693147</td>
-      <td>1.386294</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
       <td>1.098612</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
       <td>1.098612</td>
       <td>0.000000</td>
-      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
     </tr>
   </tbody>
 </table>
-<p>100 rows × 2000 columns</p>
+<p>100 rows × 5 columns</p>
 </div></div></div>
 </div>
 <p>We see that the <code class="docutils literal notranslate"><span class="pre">.obs_names/.var_names</span></code> are used in the creation of this Pandas object.</p>
