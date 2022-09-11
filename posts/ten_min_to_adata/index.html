@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/override.css" />
     <link rel="stylesheet" type="text/css" href="https://use.typekit.net/ajj5weq.css" />
@@ -263,7 +263,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.float32&#39;&gt;&#39;
-	with 126554 stored elements in Compressed Sparse Row format&gt;
+	with 126037 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -348,15 +348,15 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_2</th>
-      <td>T</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_3</th>
-      <td>B</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_4</th>
-      <td>T</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>...</th>
@@ -364,11 +364,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>B</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_97</th>
@@ -376,11 +376,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_98</th>
-      <td>B</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>Monocyte</td>
+      <td>B</td>
     </tr>
   </tbody>
 </table>
@@ -413,7 +413,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 40 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 35 × 2000
     obs: &#39;cell_type&#39;
 </pre></div>
 </div>
@@ -541,42 +541,42 @@ With overloaded keys:
     <tr>
       <th>Cell_0</th>
       <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
+      <td>0.000000</td>
       <td>1.098612</td>
+      <td>0.000000</td>
       <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_2</th>
       <td>0.693147</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
       <td>0.000000</td>
-      <td>1.098612</td>
+      <td>1.791759</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_3</th>
+      <td>1.386294</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>0.000000</td>
-      <td>1.609438</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_4</th>
-      <td>0.693147</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>1.609438</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
     </tr>
     <tr>
       <th>...</th>
@@ -589,42 +589,42 @@ With overloaded keys:
     <tr>
       <th>Cell_95</th>
       <td>0.693147</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
       <td>0.000000</td>
       <td>0.693147</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>0.693147</td>
       <td>0.000000</td>
       <td>0.693147</td>
-      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_97</th>
-      <td>0.693147</td>
-      <td>1.098612</td>
       <td>0.000000</td>
-      <td>1.098612</td>
-      <td>1.791759</td>
+      <td>0.693147</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_98</th>
+      <td>0.000000</td>
       <td>1.098612</td>
       <td>0.693147</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
+      <td>1.386294</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>0.000000</td>
+      <td>1.098612</td>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
       <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
     </tr>
   </tbody>
 </table>
