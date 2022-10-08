@@ -4,6 +4,10 @@
 <h3>Preprints</h3>
 <br>
 
+**Deep generative modeling for quantifying sample-level heterogeneity in single-cell omics.**
+Pierre Boyeau\*, Justin Hong\*, **Adam Gayoso**, Michael I. Jordan, Elham Azizi, Nir Yosef.
+*bioRxiv* 2022. [[Paper]](https://www.biorxiv.org/content/10.1101/2022.10.04.510898v1)
+
 **Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells.**
 **Adam Gayoso\***, Philipp Weiler\*, Mohammad Lotfollahi, Dominik Klein, Justin Hong,
 Aaron Streets, Fabian J. Theis, and Nir Yosef.
