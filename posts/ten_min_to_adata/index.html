@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>5, maybe 10 minutes to AnnData - Adam Gayoso</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -263,7 +263,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.float32&#39;&gt;&#39;
-	with 126289 stored elements in Compressed Sparse Row format&gt;
+	with 126469 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -340,15 +340,15 @@ Without going into every fancy Python-based data structure, you’ll have to tak
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>Monocyte</td>
+      <td>B</td>
     </tr>
     <tr>
       <th>Cell_2</th>
-      <td>B</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_3</th>
@@ -368,7 +368,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>B</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_97</th>
@@ -376,11 +376,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_98</th>
-      <td>B</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
   </tbody>
 </table>
@@ -413,7 +413,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 26 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 37 × 2000
     obs: &#39;cell_type&#39;
 </pre></div>
 </div>
@@ -540,41 +540,41 @@ With overloaded keys:
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>1.098612</td>
       <td>0.693147</td>
-      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>1.386294</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_2</th>
-      <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>0.693147</td>
       <td>0.000000</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_3</th>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
+      <td>1.098612</td>
       <td>1.386294</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_4</th>
       <td>0.693147</td>
       <td>0.693147</td>
-      <td>1.098612</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
     </tr>
@@ -588,43 +588,43 @@ With overloaded keys:
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>0.000000</td>
+      <td>1.386294</td>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>0.693147</td>
-      <td>0.693147</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.386294</td>
       <td>0.693147</td>
       <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_97</th>
-      <td>1.386294</td>
       <td>0.693147</td>
-      <td>0.693147</td>
-      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_98</th>
-      <td>1.098612</td>
-      <td>1.386294</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
       <td>1.098612</td>
       <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>1.386294</td>
       <td>0.693147</td>
       <td>1.098612</td>
+      <td>1.098612</td>
       <td>0.693147</td>
-      <td>1.386294</td>
+      <td>0.693147</td>
     </tr>
   </tbody>
 </table>
@@ -728,7 +728,7 @@ With overloaded keys:
     <script src="../../_static/design-tabs.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-116702308-1"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-WZL1ZQLZ7K"></script>
     <script src="../../_static/google_analytics_tracker.js"></script>
     </body>
 </html>
