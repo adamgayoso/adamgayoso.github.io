@@ -132,7 +132,7 @@ html_css_files = [
 ]
 html_css_files += ["https://use.typekit.net/ajj5weq.css"]
 html_js_files = [
-    'https://www.googletagmanager.com/gtag/js?id=UA-116702308-1',
+    'https://www.googletagmanager.com/gtag/js?id=G-WZL1ZQLZ7K',
     'google_analytics_tracker.js',
 ]
 html_show_sphinx = False
