@@ -9,15 +9,14 @@
 Aaron Streets, Fabian J. Theis, and Nir Yosef.
 *bioRxiv*, 2022. [[Paper]](https://www.biorxiv.org/content/10.1101/2022.08.12.503709v1)
 
-
-**An Empirical Bayes Method for Differential Expression Analysis of Single Cells with Deep Generative Models.**
-Pierre Boyeau, Jeffrey Regier, **Adam Gayoso**, Michael I. Jordan, Romain Lopez, Nir Yosef.
-*bioRxiv*, 2022. [[Paper]](https://www.biorxiv.org/content/10.1101/2022.05.27.493625v1)
-
 <br>
 <h3>Journal Articles</h3>
 <br>
 
+
+**An Empirical Bayes Method for Differential Expression Analysis of Single Cells with Deep Generative Models.**
+Pierre Boyeau, Jeffrey Regier, **Adam Gayoso**, Michael I. Jordan, Romain Lopez, Nir Yosef.
+*Proceedings of the National Academy of Sciences (in press)*, 2023. [[Preprint]](https://www.biorxiv.org/content/10.1101/2022.05.27.493625v1)
 
 **The Tabula Sapiens: A multiple-organ, single-cell transcriptomic atlas of humans.**
 **The Tabula Sapiens Consortium\***
