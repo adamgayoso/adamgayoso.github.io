@@ -13,6 +13,9 @@ Aaron Streets, Fabian J. Theis, and Nir Yosef.
 <h3>Journal Articles</h3>
 <br>
 
+**The scverse project provides a computational ecosystem for single-cell omics data analysis**<br>
+Isaac Virshup*, Danila Bredikhin*, Lukas Heumos*, Giovanni Palla*, Gregor Sturm*, **Adam Gayoso\***, Ilia Kats, Mikaela Koutrouli, Scverse Community, Bonnie Berger, Dana Pe’er, Aviv Regev, Sarah A. Teichmann, Francesca Finotello, F. Alexander Wolf, Nir Yosef, Oliver Stegle & Fabian J. Theis<br>
+*Nature Biotechnology*, 2023. [[Paper]](https://www.nature.com/articles/s41587-023-01733-8)
 
 **An Empirical Bayes Method for Differential Expression Analysis of Single Cells with Deep Generative Models.**<br>
 Pierre Boyeau, Jeffrey Regier, **Adam Gayoso**, Michael I. Jordan, Romain Lopez, Nir Yosef.<br>
