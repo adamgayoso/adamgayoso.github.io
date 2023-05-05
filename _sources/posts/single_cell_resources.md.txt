@@ -6,7 +6,7 @@
 :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 ```
 
-```{admonition} Update
+```{admonition} Update (May 4, 2023)
 I now recommend the sc-best-practices [book](https://www.sc-best-practices.org/preamble.html) for a more comprehensive set of resources.
 ```
 
