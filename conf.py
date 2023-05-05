@@ -14,7 +14,7 @@ from typing import Any, Dict
 #
 
 project = "Personal website"
-copyright = "2022, Adam Gayoso"
+copyright = "2023, Adam Gayoso"
 author = "Adam Gayoso"
 
 # -- General configuration ---------------------------------------------------
