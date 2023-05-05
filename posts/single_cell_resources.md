@@ -6,6 +6,10 @@
 :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 ```
 
+```{admonition} Update
+I now recommend the sc-best-practices [book](https://www.sc-best-practices.org/preamble.html) for a more comprehensive set of resources.
+```
+
 I started working with single-cell RNA-sequencing (scRNA-seq) data in 2016 during my Master's. As the field was rapidly proliferating at the time, there were a lack of resources available to quickly learn about how single-cell data are generated as well as best practices for how it should be analyzed. As single-cell genomics has become more routine, there are now so many resources that it can be hard to know where to start. Here I provide some of my favorite resources that I regularly share with undergraduates and new PhD students. This intentionally short list of resources is intended to quickly acclimate those with computational backgrounds; however, they are all of general interest. I will continue to update this post as new material becomes available. For a more comprehensive set of resources, I recommend [Ming Tang's](https://twitter.com/tangming2005) [analysis notes](https://github.com/crazyhottommy/scRNAseq-analysis-notes).
 
 ## Overview of single-cell genomics
