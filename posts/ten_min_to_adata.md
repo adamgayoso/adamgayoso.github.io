@@ -20,7 +20,7 @@ kernelspec:
 :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 ```
 
-```{admonition} Update
+```{admonition} Update (May 4, 2023)
 I now recommend the default AnnData [tutorial](https://anndata.readthedocs.io/en/latest/tutorials/notebooks/getting-started.html) and scverse [tutorial](https://scverse-tutorials.readthedocs.io/en/latest/notebooks/anndata_getting_started.html).
 ```
 
