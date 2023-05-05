@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/override.css" />
     <link rel="stylesheet" type="text/css" href="https://use.typekit.net/ajj5weq.css" />
@@ -218,6 +218,10 @@
 </div>
 </div>
 </div>
+<div class="admonition-update-may-4-2023 admonition">
+<p class="admonition-title">Update (May 4, 2023)</p>
+<p>I now recommend the default AnnData <a class="reference external" href="https://anndata.readthedocs.io/en/latest/tutorials/notebooks/getting-started.html">tutorial</a> and scverse <a class="reference external" href="https://scverse-tutorials.readthedocs.io/en/latest/notebooks/anndata_getting_started.html">tutorial</a>.</p>
+</div>
 <p>I regularly use <a class="reference external" href="https://scanpy.readthedocs.io">Scanpy</a> to analyze single-cell genomics data.
 Scanpy’s functionality heavily depends on the data being stored in an <a class="reference external" href="https://anndata.readthedocs.io/en/latest/">AnnData</a> object, which provides Scanpy a systematic way of storing and retrieving intermediate analysis results, like principal components scores, <a class="reference external" href="https://umap-learn.readthedocs.io/">UMAP</a> embeddings, cluster labels, etc.
 While the Scanpy documentation site has <a class="reference external" href="https://scanpy.readthedocs.io/en/stable/tutorials.html">tutorials</a> covering common use cases, there remains a lack of tutorials for AnnData specifically. Here I cover the basics.</p>
@@ -262,8 +266,8 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.float32&#39;&gt;&#39;
-	with 126358 stored elements in Compressed Sparse Row format&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.int64&#39;&gt;&#39;
+	with 126503 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -340,15 +344,15 @@ Without going into every fancy Python-based data structure, you’ll have to tak
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>B</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>B</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_2</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_3</th>
@@ -364,7 +368,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>T</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_96</th>
@@ -372,7 +376,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_97</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
     <tr>
       <th>Cell_98</th>
@@ -380,7 +384,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>B</td>
+      <td>T</td>
     </tr>
   </tbody>
 </table>
@@ -413,7 +417,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 36 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 34 × 2000
     obs: &#39;cell_type&#39;
 </pre></div>
 </div>
@@ -472,10 +476,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OverloadedDict, wrapping:
-	OrderedDict([(&#39;random&#39;, [1, 2, 3])])
-With overloaded keys:
-	[&#39;neighbors&#39;].
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OrderedDict([(&#39;random&#39;, [1, 2, 3])])
 </pre></div>
 </div>
 </div>
@@ -540,42 +541,42 @@ With overloaded keys:
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>1.386294</td>
-      <td>1.386294</td>
+      <td>0.000000</td>
       <td>1.098612</td>
       <td>0.000000</td>
-      <td>0.693147</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>1.386294</td>
-      <td>1.098612</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_2</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
+      <td>1.098612</td>
       <td>1.386294</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_3</th>
       <td>0.000000</td>
-      <td>1.098612</td>
       <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.693147</td>
-      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_4</th>
-      <td>0.693147</td>
-      <td>0.693147</td>
+      <td>0.000000</td>
       <td>0.693147</td>
       <td>0.000000</td>
+      <td>1.386294</td>
       <td>0.693147</td>
     </tr>
     <tr>
@@ -588,41 +589,41 @@ With overloaded keys:
     </tr>
     <tr>
       <th>Cell_95</th>
+      <td>0.000000</td>
       <td>0.693147</td>
       <td>0.693147</td>
       <td>0.693147</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_96</th>
+      <td>0.693147</td>
       <td>0.000000</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
       <td>1.386294</td>
       <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_97</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.693147</td>
+      <td>1.791759</td>
       <td>0.000000</td>
-      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_98</th>
-      <td>1.386294</td>
+      <td>0.693147</td>
       <td>0.693147</td>
       <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.693147</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_99</th>
       <td>0.000000</td>
-      <td>0.000000</td>
       <td>1.098612</td>
+      <td>0.693147</td>
       <td>0.693147</td>
       <td>0.693147</td>
     </tr>
