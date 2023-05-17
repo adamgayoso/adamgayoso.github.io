@@ -19,7 +19,7 @@ Isaac Virshup*, Danila Bredikhin*, Lukas Heumos*, Giovanni Palla*, Gregor Sturm*
 
 **An Empirical Bayes Method for Differential Expression Analysis of Single Cells with Deep Generative Models.**<br>
 Pierre Boyeau, Jeffrey Regier, **Adam Gayoso**, Michael I. Jordan, Romain Lopez, Nir Yosef.<br>
-*Proceedings of the National Academy of Sciences (in press)*, 2023. [[Preprint]](https://www.biorxiv.org/content/10.1101/2022.05.27.493625v1)
+*Proceedings of the National Academy of Sciences (in press)*, 2023. [[Paper]](https://www.pnas.org/doi/10.1073/pnas.2209124120)
 
 **The Tabula Sapiens: A multiple-organ, single-cell transcriptomic atlas of humans.**<br>
 **The Tabula Sapiens Consortium\***<br>
