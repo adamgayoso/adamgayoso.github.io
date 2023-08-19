@@ -1,17 +1,17 @@
 # Publications
 
-<br>
+<!-- <br>
 <h3>Preprints</h3>
+<br> -->
+
+<br>
+<h3>Journal Articles</h3>
 <br>
 
 **Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells.**
 **Adam Gayoso\***, Philipp Weiler\*, Mohammad Lotfollahi, Dominik Klein, Justin Hong,
 Aaron Streets, Fabian J. Theis, and Nir Yosef.
-*bioRxiv*, 2022. [[Paper]](https://www.biorxiv.org/content/10.1101/2022.08.12.503709v1)
-
-<br>
-<h3>Journal Articles</h3>
-<br>
+*Nature Methods (in press)*, 2023. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2022.08.12.503709v1)
 
 **The scverse project provides a computational ecosystem for single-cell omics data analysis**<br>
 Isaac Virshup*, Danila Bredikhin*, Lukas Heumos*, Giovanni Palla*, Gregor Sturm*, **Adam Gayoso\***, Ilia Kats, Mikaela Koutrouli, Scverse Community, Bonnie Berger, Dana Pe’er, Aviv Regev, Sarah A. Teichmann, Francesca Finotello, F. Alexander Wolf, Nir Yosef, Oliver Stegle & Fabian J. Theis<br>
