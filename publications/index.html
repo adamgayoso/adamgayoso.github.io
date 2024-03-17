@@ -146,7 +146,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -192,7 +192,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -203,13 +203,12 @@
 <!-- <br>
 <h3>Preprints</h3>
 <br> -->
-<br>
-<h3>Journal Articles</h3>
-<br>
+<section id="journal-articles">
+<h2>Journal Articles<a class="headerlink" href="#journal-articles" title="Link to this heading">#</a></h2>
 <p><strong>Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells.</strong>
 <strong>Adam Gayoso*</strong>, Philipp Weiler*, Mohammad Lotfollahi, Dominik Klein, Justin Hong,
 Aaron Streets, Fabian J. Theis, and Nir Yosef.
-<em>Nature Methods (in press)</em>, 2023. <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.08.12.503709v1">[bioRxiv]</a></p>
+<em>Nature Methods (in press)</em>, 2023. <a class="reference external" href="https://www.nature.com/articles/s41592-023-01994-w">[Paper]</a></p>
 <p><strong>The scverse project provides a computational ecosystem for single-cell omics data analysis</strong><br>
 Isaac Virshup*, Danila Bredikhin*, Lukas Heumos*, Giovanni Palla*, Gregor Sturm*, <strong>Adam Gayoso*</strong>, Ilia Kats, Mikaela Koutrouli, Scverse Community, Bonnie Berger, Dana Pe’er, Aviv Regev, Sarah A. Teichmann, Francesca Finotello, F. Alexander Wolf, Nir Yosef, Oliver Stegle &amp; Fabian J. Theis<br>
 <em>Nature Biotechnology</em>, 2023. <a class="reference external" href="https://www.nature.com/articles/s41587-023-01733-8">[Paper]</a></p>
@@ -243,15 +242,15 @@ Manu Setty, Vaidotas Kiseliovas, Jacob Levine, <strong>Adam Gayoso</strong>, Lin
 <p><strong>Stress-adaptive responses associated with high-level carbapenem resistance in kpc-producing klebsiella pneumoniae.</strong><br>
 Sheila Adams-Sapper, <strong>Adam Gayoso</strong>, Lee. W. Riley.<br>
 <em>Journal of Pathogens</em>, 2018. <a class="reference external" href="https://www.hindawi.com/journals/jpath/2018/3028290/abs/">[Paper]</a></p>
-<br>
-<h3>Review Articles</h3>
-<br>
+</section>
+<section id="review-articles">
+<h2>Review Articles<a class="headerlink" href="#review-articles" title="Link to this heading">#</a></h2>
 <p><strong>Enhancing scientiﬁc discoveries in molecular biology with deep generative models.</strong><br>
 Romain Lopez, <strong>Adam Gayoso</strong>, Nir Yosef.<br>
 <em>Molecular Systems Biology</em>, 2020. <a class="reference external" href="https://www.embopress.org/doi/full/10.15252/msb.20199198">[Paper]</a></p>
-<br>
-<h3>Refereed Workshop Papers</h3>
-<br>
+</section>
+<section id="refereed-workshop-papers">
+<h2>Refereed Workshop Papers<a class="headerlink" href="#refereed-workshop-papers" title="Link to this heading">#</a></h2>
 <p><strong>Deep generative modeling for quantifying sample-level heterogeneity in single-cell omics.</strong><br>
 Pierre Boyeau*, Justin Hong*, <strong>Adam Gayoso</strong>, Michael I. Jordan, Elham Azizi, Nir Yosef.<br>
 <em>Machine Learning in Computational Biology (MLCB), Oral presentation</em> 2022. <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.10.04.510898v1">[Paper]</a></p>
@@ -265,6 +264,7 @@ Oscar Clivio, Romain Lopez, Jeffrey Regier, <strong>Adam Gayoso</strong>, Michae
 Pierre Boyeau, Romain Lopez, Jeffrey Regier, <strong>Adam Gayoso</strong>, Michael I. Jordan, Nir Yosef.<br>
 <em>Machine Learning in Computational Biology (MLCB)</em>, 2020. <a class="reference external" href="https://www.biorxiv.org/content/10.1101/794289v1">[Paper]</a></p>
 <hr class="docutils" />
+</section>
 </section>
 
         </article>
@@ -296,7 +296,7 @@ Pierre Boyeau, Romain Lopez, Jeffrey Regier, <strong>Adam Gayoso</strong>, Micha
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Adam Gayoso
+                Copyright &#169; 2024, Adam Gayoso
             </div>
             Made with 
             <a href="https://github.com/pradyunsg/furo">Furo</a>
@@ -319,8 +319,29 @@ Pierre Boyeau, Romain Lopez, Jeffrey Regier, <strong>Adam Gayoso</strong>, Micha
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Publications</a><ul>
+<li><a class="reference internal" href="#journal-articles">Journal Articles</a></li>
+<li><a class="reference internal" href="#review-articles">Review Articles</a></li>
+<li><a class="reference internal" href="#refereed-workshop-papers">Refereed Workshop Papers</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

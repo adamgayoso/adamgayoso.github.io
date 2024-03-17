@@ -4,14 +4,12 @@
 <h3>Preprints</h3>
 <br> -->
 
-<br>
-<h3>Journal Articles</h3>
-<br>
+## Journal Articles
 
 **Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells.**
 **Adam Gayoso\***, Philipp Weiler\*, Mohammad Lotfollahi, Dominik Klein, Justin Hong,
 Aaron Streets, Fabian J. Theis, and Nir Yosef.
-*Nature Methods (in press)*, 2023. [[bioRxiv]](https://www.biorxiv.org/content/10.1101/2022.08.12.503709v1)
+*Nature Methods (in press)*, 2023. [[Paper]](https://www.nature.com/articles/s41592-023-01994-w)
 
 **The scverse project provides a computational ecosystem for single-cell omics data analysis**<br>
 Isaac Virshup*, Danila Bredikhin*, Lukas Heumos*, Giovanni Palla*, Gregor Sturm*, **Adam Gayoso\***, Ilia Kats, Mikaela Koutrouli, Scverse Community, Bonnie Berger, Dana Pe’er, Aviv Regev, Sarah A. Teichmann, Francesca Finotello, F. Alexander Wolf, Nir Yosef, Oliver Stegle & Fabian J. Theis<br>
@@ -58,17 +56,14 @@ Manu Setty, Vaidotas Kiseliovas, Jacob Levine, **Adam Gayoso**, Linas Mazutis, D
 Sheila Adams-Sapper, **Adam Gayoso**, Lee. W. Riley.<br>
 *Journal of Pathogens*, 2018. [[Paper]](https://www.hindawi.com/journals/jpath/2018/3028290/abs/)
 
-<br>
-<h3>Review Articles</h3>
-<br>
+## Review Articles
 
 **Enhancing scientiﬁc discoveries in molecular biology with deep generative models.**<br>
 Romain Lopez, **Adam Gayoso**, Nir Yosef.<br>
 *Molecular Systems Biology*, 2020. [[Paper]](https://www.embopress.org/doi/full/10.15252/msb.20199198)
 
-<br>
-<h3>Refereed Workshop Papers</h3>
-<br>
+
+## Refereed Workshop Papers
 
 **Deep generative modeling for quantifying sample-level heterogeneity in single-cell omics.**<br>
 Pierre Boyeau\*, Justin Hong\*, **Adam Gayoso**, Michael I. Jordan, Elham Azizi, Nir Yosef.<br>
