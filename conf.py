@@ -131,6 +131,11 @@ html_css_files = [
       "css/override.css",
 ]
 html_js_files = [
-    'google_analytics_tracker.js',
+    (
+        "https://gc.zgo.at/count.js",
+        # Replace with your own goatcounter url
+        {"async": "async", "data-goatcounter": "https://smtp123.goatcounter.com/count"},
+    )
 ]
+
 html_show_sphinx = False
