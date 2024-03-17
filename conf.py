@@ -79,7 +79,7 @@ html_favicon = "./_assets/favicon.ico"
 html_theme_options = {
     "sidebar_hide_name": False,
     "light_css_variables": {
-        "font-stack": "acumin-pro, sans-serif",
+        # "font-stack": "acumin-pro, sans-serif",
         "color-background-primary": "#fffff8",
         "color-background-secondary": "#fffff8",
         "color-background-hover": "#F5F3ED",
@@ -130,9 +130,7 @@ html_static_path = ["_static"]
 html_css_files = [
       "css/override.css",
 ]
-html_css_files += ["https://use.typekit.net/ajj5weq.css"]
 html_js_files = [
-    'https://www.googletagmanager.com/gtag/js?id=G-WZL1ZQLZ7K',
     'google_analytics_tracker.js',
 ]
 html_show_sphinx = False
