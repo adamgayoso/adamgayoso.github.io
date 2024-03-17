@@ -1,21 +1,20 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2023.03.27 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>5, maybe 10 minutes to AnnData - Adam Gayoso</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/override.css" />
-    <link rel="stylesheet" type="text/css" href="https://use.typekit.net/ajj5weq.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/override.css?v=e89897b8" />
     
     
 
@@ -24,7 +23,6 @@
   body {
     --color-code-background: #f8f8f8;
   --color-code-foreground: black;
-  --font-stack: acumin-pro, sans-serif;
   --color-background-primary: #fffff8;
   --color-background-secondary: #fffff8;
   --color-background-hover: #F5F3ED;
@@ -201,7 +199,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="maybe-10-minutes-to-anndata">
-<h1>5, maybe 10 minutes to AnnData<a class="headerlink" href="#maybe-10-minutes-to-anndata" title="Permalink to this heading">#</a></h1>
+<h1>5, maybe 10 minutes to AnnData<a class="headerlink" href="#maybe-10-minutes-to-anndata" title="Link to this heading">#</a></h1>
 <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 sd-p-2 sd-outline-muted sd-rounded-1 docutils">
 <div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
 <div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
@@ -226,7 +224,7 @@
 Scanpy’s functionality heavily depends on the data being stored in an <a class="reference external" href="https://anndata.readthedocs.io/en/latest/">AnnData</a> object, which provides Scanpy a systematic way of storing and retrieving intermediate analysis results, like principal components scores, <a class="reference external" href="https://umap-learn.readthedocs.io/">UMAP</a> embeddings, cluster labels, etc.
 While the Scanpy documentation site has <a class="reference external" href="https://scanpy.readthedocs.io/en/stable/tutorials.html">tutorials</a> covering common use cases, there remains a lack of tutorials for AnnData specifically. Here I cover the basics.</p>
 <section id="why-anndata">
-<h2>Why AnnData?<a class="headerlink" href="#why-anndata" title="Permalink to this heading">#</a></h2>
+<h2>Why AnnData?<a class="headerlink" href="#why-anndata" title="Link to this heading">#</a></h2>
 <p>AnnData (“Annotated Data”) is specifically designed for tabular data. By this I mean that we have <span class="math notranslate nohighlight">\(N\)</span> observations (typically cells), each of which can be represented as <span class="math notranslate nohighlight">\(d\)</span>-dimensional vectors, where each dimension corresponds to a variable or feature (typically a gene). Both the rows and columns of this <span class="math notranslate nohighlight">\(N \times d\)</span> matrix are special in the sense that they are indexed. In scRNA-seq, each row corresponds to a cell with a barcode, and each column corresponds to one gene. Furthermore, for each cell and each gene we might have additional metadata, like (1) donor information for each cell, or (2) alternative gene symbols for each gene.
 Finally, we might have other unstructured metadata like color palletes we are using for plotting.
 Without going into every fancy Python-based data structure, you’ll have to take my word that no other alternative really exists that:</p>
@@ -238,7 +236,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </ol>
 </section>
 <section id="initializing-anndata">
-<h2>Initializing AnnData<a class="headerlink" href="#initializing-anndata" title="Permalink to this heading">#</a></h2>
+<h2>Initializing AnnData<a class="headerlink" href="#initializing-anndata" title="Link to this heading">#</a></h2>
 <!-- Perhaps [xarray](https://xarray.pydata.org/en/stable/) is the closest in terms of functionality, -->
 <p>Let’s start by building a basic AnnData object with some sparse count information, perhaps representing gene expression counts.</p>
 <div class="cell docutils container">
@@ -267,7 +265,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.int64&#39;&gt;&#39;
-	with 126426 stored elements in Compressed Sparse Row format&gt;
+	with 126726 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -290,7 +288,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <section id="subsetting-anndata">
-<h3>Subsetting AnnData<a class="headerlink" href="#subsetting-anndata" title="Permalink to this heading">#</a></h3>
+<h3>Subsetting AnnData<a class="headerlink" href="#subsetting-anndata" title="Link to this heading">#</a></h3>
 <p>These index values can be used to subset the AnnData, which provides a <a class="reference external" href="https://falexwolf.de/blog/171223_AnnData_indexing_views_HDF5-backing/">view</a> of the AnnData object. We can imagine this to be useful to subset the AnnData to particular cell types or gene modules of interest. The rules for subsetting AnnData are quite similar to that of a Pandas DataFrame. You can use values in the <code class="docutils literal notranslate"><span class="pre">obs/var_names</span></code>, boolean masks, or cell index integers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -307,9 +305,9 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </section>
 </section>
 <section id="adding-aligned-metadata">
-<h2>Adding aligned metadata<a class="headerlink" href="#adding-aligned-metadata" title="Permalink to this heading">#</a></h2>
+<h2>Adding aligned metadata<a class="headerlink" href="#adding-aligned-metadata" title="Link to this heading">#</a></h2>
 <section id="observation-variable-level">
-<h3>Observation/Variable level<a class="headerlink" href="#observation-variable-level" title="Permalink to this heading">#</a></h3>
+<h3>Observation/Variable level<a class="headerlink" href="#observation-variable-level" title="Link to this heading">#</a></h3>
 <p>So we have the core of our object and now we’d like to add metadata at both the observation and variable levels. This is pretty simple with AnnData, both <code class="docutils literal notranslate"><span class="pre">adata.obs</span></code> and <code class="docutils literal notranslate"><span class="pre">adata.var</span></code> are Pandas DataFrames.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -352,7 +350,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_2</th>
-      <td>T</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_3</th>
@@ -360,7 +358,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_4</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>...</th>
@@ -368,7 +366,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
     <tr>
       <th>Cell_96</th>
@@ -380,11 +378,11 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_98</th>
-      <td>T</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
   </tbody>
 </table>
@@ -407,7 +405,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </section>
 <section id="subsetting-using-metadata">
-<h3>Subsetting using metadata<a class="headerlink" href="#subsetting-using-metadata" title="Permalink to this heading">#</a></h3>
+<h3>Subsetting using metadata<a class="headerlink" href="#subsetting-using-metadata" title="Link to this heading">#</a></h3>
 <p>We can also subset the AnnData using these randomly generated cell types:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -417,7 +415,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 36 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 30 × 2000
     obs: &#39;cell_type&#39;
 </pre></div>
 </div>
@@ -426,7 +424,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </section>
 </section>
 <section id="observation-variable-level-matrices">
-<h2>Observation/Variable level matrices<a class="headerlink" href="#observation-variable-level-matrices" title="Permalink to this heading">#</a></h2>
+<h2>Observation/Variable level matrices<a class="headerlink" href="#observation-variable-level-matrices" title="Link to this heading">#</a></h2>
 <p>We might also have metadata at either level that has many dimensions to it, such as a UMAP embedding of the data. For this type of metadata, AnnData has the <code class="docutils literal notranslate"><span class="pre">.obsm/.varm</span></code> attributes. We use keys to identify the different matrices we insert. The restriction of <code class="docutils literal notranslate"><span class="pre">.obsm/.varm</span></code> are that <code class="docutils literal notranslate"><span class="pre">.obsm</span></code> matrices must length equal to the number of observations as <code class="docutils literal notranslate"><span class="pre">.n_obs</span></code> and <code class="docutils literal notranslate"><span class="pre">.varm</span></code> matrices must length equal to <code class="docutils literal notranslate"><span class="pre">.n_vars</span></code>. They can each independently have different number of dimensions.</p>
 <p>Let’s start with a randomly generated matrix that we can interpret as a UMAP embedding of the data we’d like to store, as well as some random gene-level metadata:</p>
 <div class="cell docutils container">
@@ -466,7 +464,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </ol>
 </section>
 <section id="unstructured-metadata">
-<h2>Unstructured metadata<a class="headerlink" href="#unstructured-metadata" title="Permalink to this heading">#</a></h2>
+<h2>Unstructured metadata<a class="headerlink" href="#unstructured-metadata" title="Link to this heading">#</a></h2>
 <p>AnnData has <code class="docutils literal notranslate"><span class="pre">.uns</span></code>, which allows for any unstructured metadata. This can be anything, like a list or a dictionary with some general information that was useful in the analysis of our data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -483,7 +481,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </section>
 <section id="layers">
-<h2>Layers<a class="headerlink" href="#layers" title="Permalink to this heading">#</a></h2>
+<h2>Layers<a class="headerlink" href="#layers" title="Link to this heading">#</a></h2>
 <p>Finally, we may have different forms of our original core data, perhaps one that is normalized and one that is not. These can be stored in different layers in AnnData. For example, let’s log transform the original data and store it in a layer:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -504,7 +502,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <section id="outputting-dataframes">
-<h3>Outputting DataFrames<a class="headerlink" href="#outputting-dataframes" title="Permalink to this heading">#</a></h3>
+<h3>Outputting DataFrames<a class="headerlink" href="#outputting-dataframes" title="Link to this heading">#</a></h3>
 <p>We can also ask AnnData to return us a DataFrame from one of the layers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -541,42 +539,42 @@ Without going into every fancy Python-based data structure, you’ll have to tak
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
       <td>1.098612</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>0.693147</td>
+      <td>1.386294</td>
       <td>0.000000</td>
-      <td>0.693147</td>
-      <td>1.098612</td>
       <td>0.000000</td>
+      <td>1.609438</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_2</th>
       <td>0.000000</td>
-      <td>1.098612</td>
+      <td>0.693147</td>
       <td>0.693147</td>
       <td>0.000000</td>
-      <td>0.000000</td>
+      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_3</th>
-      <td>1.098612</td>
-      <td>0.693147</td>
-      <td>1.609438</td>
-      <td>1.098612</td>
-      <td>0.693147</td>
-    </tr>
-    <tr>
-      <th>Cell_4</th>
+      <td>1.386294</td>
       <td>0.693147</td>
       <td>1.098612</td>
       <td>0.000000</td>
       <td>1.098612</td>
+    </tr>
+    <tr>
+      <th>Cell_4</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
       <td>0.693147</td>
     </tr>
     <tr>
@@ -589,43 +587,43 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>1.098612</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>1.609438</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
       <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_97</th>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_98</th>
       <td>0.693147</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>1.098612</td>
+      <td>1.386294</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>0.693147</td>
       <td>0.000000</td>
+      <td>1.098612</td>
       <td>0.693147</td>
       <td>1.098612</td>
-      <td>1.386294</td>
+      <td>0.000000</td>
     </tr>
   </tbody>
 </table>
@@ -636,7 +634,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </section>
 </section>
 <section id="wrapping-up">
-<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Link to this heading">#</a></h2>
 <p>AnnData has become the standard for single-cell analysis in Python and for good reason – it’s straightforward to use and faciliatates more reproducible analyses with it’s key-based storage. It’s even becoming easier to convert to the popular R-based formats for single-cell analysis. There is still a lot that I don’t cover here. I do encourage looking through the AnnData <a class="reference external" href="https://anndata.readthedocs.io/en/latest/">API docs</a> for more useful properties/methods.</p>
 </section>
 </section>
@@ -716,20 +714,16 @@ Without going into every fancy Python-based data structure, you’ll have to tak
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/furo.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/tabs.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+</div><script src="../../_static/documentation_options.js?v=d4c685ee"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-WZL1ZQLZ7K"></script>
-    <script src="../../_static/google_analytics_tracker.js"></script>
+    <script src="../../_static/google_analytics_tracker.js?v=fb7a2d6c"></script>
     </body>
 </html>
