@@ -240,13 +240,7 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/posts/ten_min_to_adata.md.txt" title="View this page">
-    <svg><use href="#svg-eye"></use></svg>
-    <span class="visually-hidden">View this page</span>
-  </a>
-</div>
-<div class="theme-toggle-container theme-toggle-content">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
@@ -328,7 +322,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;100x2000 sparse matrix of type &#39;&lt;class &#39;numpy.int64&#39;&gt;&#39;
-	with 126235 stored elements in Compressed Sparse Row format&gt;
+	with 126393 stored elements in Compressed Sparse Row format&gt;
 </pre></div>
 </div>
 </div>
@@ -405,23 +399,23 @@ Without going into every fancy Python-based data structure, you’ll have to tak
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>T</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>B</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_2</th>
-      <td>T</td>
-    </tr>
-    <tr>
-      <th>Cell_3</th>
       <td>B</td>
     </tr>
     <tr>
-      <th>Cell_4</th>
+      <th>Cell_3</th>
       <td>Monocyte</td>
+    </tr>
+    <tr>
+      <th>Cell_4</th>
+      <td>B</td>
     </tr>
     <tr>
       <th>...</th>
@@ -429,15 +423,15 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>Monocyte</td>
-    </tr>
-    <tr>
-      <th>Cell_96</th>
       <td>B</td>
     </tr>
     <tr>
-      <th>Cell_97</th>
+      <th>Cell_96</th>
       <td>Monocyte</td>
+    </tr>
+    <tr>
+      <th>Cell_97</th>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_98</th>
@@ -445,7 +439,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
   </tbody>
 </table>
@@ -478,7 +472,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 33 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 26 × 2000
     obs: &#39;cell_type&#39;
 </pre></div>
 </div>
@@ -602,43 +596,43 @@ Without going into every fancy Python-based data structure, you’ll have to tak
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>1.098612</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>1.386294</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_1</th>
       <td>0.000000</td>
-      <td>1.098612</td>
       <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.693147</td>
-      <td>1.386294</td>
     </tr>
     <tr>
       <th>Cell_2</th>
+      <td>1.098612</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>1.098612</td>
-      <td>0.000000</td>
       <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_3</th>
       <td>0.000000</td>
-      <td>1.098612</td>
-      <td>1.609438</td>
       <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.000000</td>
       <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_4</th>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.693147</td>
       <td>0.000000</td>
       <td>1.098612</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>...</th>
@@ -651,42 +645,42 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     <tr>
       <th>Cell_95</th>
       <td>1.098612</td>
-      <td>1.386294</td>
       <td>0.000000</td>
-      <td>0.693147</td>
+      <td>1.386294</td>
+      <td>1.386294</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_96</th>
       <td>0.693147</td>
-      <td>1.609438</td>
       <td>0.000000</td>
       <td>0.693147</td>
-      <td>0.693147</td>
+      <td>1.098612</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_97</th>
       <td>0.000000</td>
       <td>1.098612</td>
-      <td>1.098612</td>
       <td>0.000000</td>
       <td>0.693147</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_98</th>
       <td>0.000000</td>
       <td>0.693147</td>
+      <td>0.693147</td>
       <td>0.000000</td>
-      <td>1.098612</td>
-      <td>1.098612</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_99</th>
       <td>1.098612</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.386294</td>
       <td>0.693147</td>
+      <td>1.098612</td>
+      <td>1.098612</td>
     </tr>
   </tbody>
 </table>
