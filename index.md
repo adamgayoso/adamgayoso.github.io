@@ -34,12 +34,13 @@ adamgayoso [at] google [dot] com
     <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
 </svg>
 </a>
+<a class="muted-link" style="text-decoration:none" href="https://scholar.google.com/citations?user=TNqOADUAAAAJ&hl=en">
+<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg>
+</a>
 </div>
 :::
 ::::
 ----
-
-<h2>About</h2>
 
 I am a Research Scientist at [Google DeepMind](https://www.deepmind.com/). Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://yoseflab.github.io/).
 During my PhD, I developed deep generative models for single-cell omics data that learn an expressive representation of the data and facilitate common analysis tasks. I used these models to refine our understanding of the heterogeneity of CD8<sup>+</sup> T cells in the context of acute infection. I am also the co-creator of [scvi-tools](http://scvi-tools.org/), which is a Python package that provides: (1) accessible implementations of state-of-the-art single-cell probabilistic models and (2) the building blocks to rapidly develop new models.
@@ -55,7 +56,7 @@ RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-are
 :maxdepth: 1
 :titlesonly: true
 
-publications
+publications <https://scholar.google.com/citations?user=TNqOADUAAAAJ&hl=en>
 blog
 CV <https://adamgayoso.com/_static/CV_Adam_Gayoso.pdf>
 ```
