@@ -32,6 +32,7 @@ extensions = [
     "sphinx_design",
     "sphinx_inline_tabs",
     "myst_nb",
+    "sphinxext.opengraph",
 ]
 templates_path = ["_templates"]
 
@@ -156,3 +157,7 @@ html_js_files = [
 ]
 
 html_show_sphinx = False
+
+
+ogp_site_url = "https://adamgayoso.com/"
+ogp_image = "https://adamgayoso.com/_images/adam_square.jpeg"
