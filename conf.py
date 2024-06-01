@@ -77,7 +77,7 @@ html_theme = "furo"
 html_title = "Adam Gayoso"
 html_favicon = "./_assets/favicon.ico"
 html_theme_options = {
-    "top_of_page_buttons": None,
+    "top_of_page_buttons": [],
     "sidebar_hide_name": False,
     "light_css_variables": {
         # "font-stack": "acumin-pro, sans-serif",
