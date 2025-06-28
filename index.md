@@ -42,7 +42,9 @@ adamgayoso [at] google [dot] com
 ::::
 ----
 
-I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/) working on genomics. Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef]([https://yoseflab.github.io/](https://www.weizmann.ac.il/immunology/yosef/). During my PhD, I developed deep generative models for single-cell omics data that facilitate common analysis tasks. I am also the co-creator of [scvi-tools](http://scvi-tools.org/), which is a Python package that provides: (1) accessible implementations of state-of-the-art single-cell probabilistic models and (2) the building blocks to rapidly develop new models. 
+I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/) working on genomics. My projects at GDM include [AlphaGenome](https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/). 
+
+Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://www.weizmann.ac.il/immunology/yosef/). During my PhD, I developed deep generative models for single-cell omics data that facilitate common analysis tasks. I am also the co-creator of [scvi-tools](http://scvi-tools.org/), which is a Python package that provides: (1) accessible implementations of state-of-the-art single-cell probabilistic models and (2) the building blocks to rapidly develop new models. 
 
 Before my PhD, I received my BS in Operations Research: Engineering Management Systems and MS in Computer Science from Columbia University, where I developed computational models for single-cell RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-areas/labs/dana-pe-er).
 
