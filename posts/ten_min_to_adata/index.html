@@ -13,15 +13,15 @@
 <meta name="description" content="November 13, 2021 5-10 min read I regularly use Scanpy to analyze single-cell genomics data. Scanpy’s functionality heavily depends on the data being stored in an AnnData object, which provides Sca..." />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
         <title>5, maybe 10 minutes to AnnData - Adam Gayoso</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/override.css?v=e89897b8" />
     
     
@@ -29,8 +29,8 @@
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   --color-background-primary: #fffff8;
   --color-background-secondary: #fffff8;
   --color-background-hover: #F5F3ED;
@@ -42,14 +42,14 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
       }
     }
@@ -209,7 +209,6 @@
       
       <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../../">
   
-  
   <span class="sidebar-brand-text">Adam Gayoso</span>
   
 </a><div class="sidebar-tree">
@@ -316,7 +315,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Compressed Sparse Row sparse matrix of dtype &#39;int64&#39;
-	with 126458 stored elements and shape (100, 2000)&gt;
+	with 126208 stored elements and shape (100, 2000)&gt;
 </pre></div>
 </div>
 </div>
@@ -393,23 +392,23 @@ Without going into every fancy Python-based data structure, you’ll have to tak
   <tbody>
     <tr>
       <th>Cell_0</th>
-      <td>Monocyte</td>
-    </tr>
-    <tr>
-      <th>Cell_1</th>
-      <td>Monocyte</td>
-    </tr>
-    <tr>
-      <th>Cell_2</th>
       <td>T</td>
     </tr>
     <tr>
-      <th>Cell_3</th>
+      <th>Cell_1</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>Cell_2</th>
       <td>Monocyte</td>
     </tr>
     <tr>
+      <th>Cell_3</th>
+      <td>B</td>
+    </tr>
+    <tr>
       <th>Cell_4</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>...</th>
@@ -417,23 +416,23 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>Monocyte</td>
+      <td>T</td>
     </tr>
     <tr>
       <th>Cell_96</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
     <tr>
       <th>Cell_97</th>
-      <td>B</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_98</th>
-      <td>B</td>
+      <td>Monocyte</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>T</td>
+      <td>B</td>
     </tr>
   </tbody>
 </table>
@@ -466,7 +465,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 27 × 2000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>View of AnnData object with n_obs × n_vars = 37 × 2000
     obs: &#39;cell_type&#39;
 </pre></div>
 </div>
@@ -591,41 +590,41 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     <tr>
       <th>Cell_0</th>
       <td>0.693147</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
       <td>1.098612</td>
+      <td>0.000000</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_1</th>
-      <td>1.098612</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.693147</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_2</th>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>1.098612</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>1.386294</td>
+      <td>0.000000</td>
+      <td>1.609438</td>
     </tr>
     <tr>
       <th>Cell_3</th>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>1.609438</td>
+      <td>1.386294</td>
       <td>0.693147</td>
       <td>0.000000</td>
+      <td>0.693147</td>
+      <td>1.609438</td>
     </tr>
     <tr>
       <th>Cell_4</th>
-      <td>0.000000</td>
       <td>1.098612</td>
       <td>0.693147</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
       <td>0.693147</td>
     </tr>
     <tr>
@@ -638,42 +637,42 @@ Without going into every fancy Python-based data structure, you’ll have to tak
     </tr>
     <tr>
       <th>Cell_95</th>
-      <td>1.098612</td>
       <td>0.000000</td>
-      <td>1.098612</td>
       <td>0.693147</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_96</th>
+      <td>0.693147</td>
       <td>0.000000</td>
       <td>0.693147</td>
-      <td>1.098612</td>
-      <td>0.000000</td>
+      <td>0.693147</td>
       <td>0.693147</td>
     </tr>
     <tr>
       <th>Cell_97</th>
-      <td>0.693147</td>
-      <td>0.693147</td>
-      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.693147</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>1.098612</td>
     </tr>
     <tr>
       <th>Cell_98</th>
+      <td>0.000000</td>
       <td>0.693147</td>
       <td>1.098612</td>
       <td>0.693147</td>
       <td>0.693147</td>
-      <td>0.000000</td>
     </tr>
     <tr>
       <th>Cell_99</th>
-      <td>0.000000</td>
-      <td>1.386294</td>
-      <td>1.098612</td>
       <td>0.693147</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.098612</td>
       <td>0.693147</td>
     </tr>
   </tbody>
@@ -774,7 +773,7 @@ Without going into every fancy Python-based data structure, you’ll have to tak
 </div><script src="../../_static/documentation_options.js?v=d4c685ee"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/tabs.js?v=3ee01567"></script>
