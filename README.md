@@ -38,7 +38,8 @@ posts/*.md               one file per post
 posts/_outputs/*.json    cached notebook outputs (committed)
 templates/               base.html + one template per page type
 static/css/site.css      all the styling
-_assets/                 favicons and the og:image
+_assets/                 favicons
+make_favicons.py         regenerates the favicon set (rarely needed)
 build.py                 the build
 execute.py               runs post code cells, writes the output cache
 ```
@@ -85,6 +86,15 @@ uv run execute.py <slug>     # or with no argument for every post
 A cell whose output isn't cached still renders, just without its output, and
 the build prints a warning naming the post. `execute.py` carries its own
 dependency block — add whatever a post imports to it.
+
+## The favicon
+
+The letter "A" in Charter, reversed out of the site amber. `make_favicons.py`
+generates the whole set — `.ico` (16/32/48), 16 and 32 PNGs, a full-bleed
+180px `apple-touch-icon` for iOS, android 192/512, and an SVG whose letter is
+an extracted outline rather than a `font-family`, so it renders the same
+without Charter installed. The output is committed; run the script only to
+change the design.
 
 ## Deploying
 
