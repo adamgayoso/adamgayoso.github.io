@@ -52,7 +52,10 @@ ROOT = Path(__file__).parent
 BUILD = ROOT / "_build"
 POSTS = ROOT / "posts"
 CACHE = POSTS / "_outputs"
-BASE_URL = "https://adamgayoso.com"
+# The host that actually serves the pages. adamgayoso.com is a registrar
+# forward to this address, so canonical and og:url have to name this one --
+# pointing them at the apex would make every canonical URL a redirect.
+BASE_URL = "https://adamgayoso.github.io"
 
 # Directories copied verbatim into the build. `_assets` holds the favicons that
 # site.webmanifest points at, so the paths have to stay put.
