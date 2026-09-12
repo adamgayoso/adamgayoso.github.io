@@ -8,6 +8,7 @@
   --rule:   #e2ded0;
   --surface: #faf8ec;
   --chip:    #f2efe1;
+  --err:     #b3402b;
 
   --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
   --mono: ui-monospace, "SF Mono", "IBM Plex Mono", Menlo, Consolas, monospace;
@@ -17,8 +18,12 @@
   --gutter: 2rem;
 }
 
+/* Three states: no attribute follows the OS, [data-theme] wins either way.
+   The dark palette is written twice on purpose -- plain CSS has no way to
+   share a declaration block between a media query and an attribute
+   selector. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg:     #14120e;
     --text:   #e9e4d8;
     --muted:  #9a9284;
@@ -26,7 +31,19 @@
     --rule:   #302b22;
     --surface: #1c1915;
     --chip:    #26221a;
+    --err:     #e08163;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg:     #14120e;
+  --text:   #e9e4d8;
+  --muted:  #9a9284;
+  --accent: #d9a748;
+  --rule:   #302b22;
+  --surface: #1c1915;
+  --chip:    #26221a;
+  --err:     #e08163;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -321,11 +338,7 @@ pre.cell-text, pre.cell-stderr {
   word-break: break-word;
 }
 
-pre.cell-stderr { color: #b3402b; }
-
-@media (prefers-color-scheme: dark) {
-  pre.cell-stderr { color: #e08163; }
-}
+pre.cell-stderr { color: var(--err); }
 
 .cell-image { max-width: 100%; height: auto; }
 
@@ -458,4 +471,61 @@ footer .contact span { opacity: 0.55; }
   main { padding: 3rem 1.25rem 0; }
   h1 { font-size: 1.8rem; }
   footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+
+/* ------------------------------------------------------------------ theme */
+
+#theme-toggle {
+  position: fixed;
+  top: 1.1rem;
+  right: 1.1rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#theme-toggle:hover {
+  color: var(--accent);
+  background: var(--chip);
+}
+
+#theme-toggle:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+#theme-toggle svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
+}
+
+/* Show the icon for the theme you would switch TO. Same three states as the
+   palette: bare :root is light, the media query covers "following the OS",
+   and [data-theme] overrides both. */
+#theme-toggle .icon-sun { display: none; }
+#theme-toggle .icon-moon { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) #theme-toggle .icon-moon { display: none; }
+  :root:not([data-theme="light"]) #theme-toggle .icon-sun { display: block; }
+}
+
+:root[data-theme="dark"] #theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] #theme-toggle .icon-sun { display: block; }
+:root[data-theme="light"] #theme-toggle .icon-moon { display: block; }
+:root[data-theme="light"] #theme-toggle .icon-sun { display: none; }
+
+@media (max-width: 700px) {
+  #theme-toggle { top: 0.6rem; right: 0.6rem; }
 }

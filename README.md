@@ -17,6 +17,19 @@ Rebuild in another shell and refresh — the server reads `_build/` directly, so
 it needs no restart. Browsers cache `static/css/site.css` aggressively; if a
 style change doesn't show up, hard-refresh (Cmd+Shift+R).
 
+## Theming
+
+Light and dark palettes are CSS variables in three states: with no explicit
+choice the page follows `prefers-color-scheme`, and the sun/moon button
+(top right) writes `data-theme` on `<html>` plus a `localStorage` entry that
+overrides the OS in either direction. A tiny inline script in `<head>` applies
+the stored choice before first paint so it does not flash the wrong theme.
+
+Anything colour-related therefore has to be a variable, not a value inside a
+`prefers-color-scheme` block, or it will not follow the button. `pygments.css`
+is emitted three times over for this reason — light, plus the dark theme scoped
+to both the media query and `[data-theme="dark"]`.
+
 ## Layout
 
 ```

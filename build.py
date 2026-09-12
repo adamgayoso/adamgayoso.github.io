@@ -405,14 +405,20 @@ def build() -> None:
     # the cream and the dark background.
     css_dir = BUILD / "static" / "css"
     css_dir.mkdir(parents=True, exist_ok=True)
+    # get_style_defs takes the selector to prefix each rule with, which is how
+    # the dark theme gets scoped to both "following the OS" and the explicit
+    # [data-theme] the toggle sets. Without the second block, syntax colours
+    # would stay light when a light-OS visitor switches to dark.
     light = HtmlFormatter(style="friendly", cssclass="highlight").get_style_defs(
         ".highlight"
     )
-    dark = HtmlFormatter(style="gruvbox-dark", cssclass="highlight").get_style_defs(
-        ".highlight"
-    )
+    dark = HtmlFormatter(style="gruvbox-dark", cssclass="highlight")
     (css_dir / "pygments.css").write_text(
-        f"{light}\n\n@media (prefers-color-scheme: dark) {{\n{dark}\n}}\n"
+        f"{light}\n\n"
+        "@media (prefers-color-scheme: dark) {\n"
+        f'{dark.get_style_defs(":root:not([data-theme=\'light\']) .highlight")}\n'
+        "}\n\n"
+        f'{dark.get_style_defs(":root[data-theme=\'dark\'] .highlight")}\n'
     )
 
     for tree in STATIC_TREES:
