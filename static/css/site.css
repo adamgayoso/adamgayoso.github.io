@@ -43,6 +43,13 @@ body {
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
+  /* Old-style figures: numerals sit in the line rather than above it. Charter
+     and Georgia both have them; code and chips opt back out below. */
+  font-variant-numeric: oldstyle-nums;
+}
+
+code, kbd, samp, pre, .aux, .cell-input, .cell-output, .cell-html {
+  font-variant-numeric: normal;
 }
 
 /* Tufte uses italics and small caps rather than bold for emphasis. */
@@ -79,6 +86,19 @@ a {
 
 a:hover {
   border-bottom-color: var(--accent);
+}
+
+/* Body copy keeps its text colour and marks links with an amber rule only.
+   At this link density, amber text everywhere speckles the paragraph. The
+   :not(.aux) keeps the code/docs chips out of it. */
+.prose a:not(.aux), article a:not(.aux) {
+  color: inherit;
+  border-bottom: 1px solid var(--accent);
+}
+
+.prose a:not(.aux):hover, article a:not(.aux):hover {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
 strong { font-weight: 600; }
@@ -185,7 +205,6 @@ body.post article > * {
 .listing .date {
   order: -1;
   font-size: 0.8rem;
-  font-variant-numeric: oldstyle-nums;
   color: var(--muted);
   letter-spacing: 0.02em;
 }
@@ -362,6 +381,7 @@ footer {
 body.post footer {
   max-width: calc(var(--measure) + var(--gutter) + var(--margin-col) + 3rem);
 }
+
 
 footer nav {
   display: flex;
