@@ -425,6 +425,12 @@ def build() -> None:
     if (ROOT / "_assets" / "favicon.ico").exists():
         shutil.copy(ROOT / "_assets" / "favicon.ico", BUILD / "favicon.ico")
 
+    # GitHub Pages runs Jekyll unless told otherwise, and Jekyll skips
+    # directories whose names begin with an underscore -- which would drop
+    # _assets and every favicon with it. The deploy action adds this too; doing
+    # it here means the build output is correct wherever it is served from.
+    (BUILD / ".nojekyll").touch()
+
     print(f"done -> {BUILD.relative_to(ROOT)}")
 
 

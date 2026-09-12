@@ -3,23 +3,29 @@ on:
   push:
     branches:
       - dev
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         persist-credentials: false
 
     - name: Install uv
-      uses: astral-sh/setup-uv@v5
+      uses: astral-sh/setup-uv@v7
       with:
         enable-cache: true
 
     # build.py declares its own dependencies inline (PEP 723), so there is
-    # nothing to install here. Notebook outputs come from the committed cache
-    # in posts/_outputs -- CI never executes code cells.
+    # nothing to install here -- uv resolves them, and fetches a Python if the
+    # runner's is too old. Notebook outputs come from the committed cache in
+    # posts/_outputs, so CI never executes code cells.
     - name: Build
       run: uv run build.py
 
