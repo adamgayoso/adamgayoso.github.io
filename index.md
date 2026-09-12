@@ -2,11 +2,11 @@
 title: Adam Gayoso
 ---
 
-I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/) working on genomics. My projects at GDM include [AlphaGenome](https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/).
+I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/), where I work on genomics. My projects at GDM include [AlphaGenome](https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/), a model that predicts how genetic variants affect regulatory activity directly from DNA sequence.
 
-Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://www.weizmann.ac.il/immunology/yosef/). During my PhD, I developed deep generative models for single-cell omics data that facilitate common analysis tasks. I am also the co-creator of [scvi-tools](http://scvi-tools.org/), which is a Python package that provides: (1) accessible implementations of state-of-the-art single-cell probabilistic models and (2) the building blocks to rapidly develop new models.
+Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley, co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://www.weizmann.ac.il/immunology/yosef/). There I developed [scvi-tools](http://scvi-tools.org/), a Python library for probabilistic analysis of single-cell omics data: it provides ready-to-use implementations of published models alongside the building blocks for new ones. Models I designed with it include [totalVI](https://doi.org/10.1038/s41592-020-01050-x), for joint analysis of multimodal single-cell measurements, and [veloVI](https://doi.org/10.1038/s41592-023-01994-w), for modeling transcriptional dynamics.
 
-Before my PhD, I received my BS in Operations Research: Engineering Management Systems and MS in Computer Science from Columbia University, where I developed computational models for single-cell RNA-sequencing data with the [Dana Pe'er Lab](https://www.mskcc.org/research-areas/labs/dana-pe-er).
+Before that, I studied operations research and computer science at Columbia University, where I was introduced to single-cell genomics in the [Dana Pe'er Lab](https://www.mskcc.org/research-areas/labs/dana-pe-er).
 
 <!-- Worth adding here: one sentence on a non-work interest. Every one of the
      reference sites has one (Hie's early modern poetry, Hsu's Middle English,
