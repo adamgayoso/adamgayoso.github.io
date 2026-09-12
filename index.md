@@ -14,6 +14,6 @@ Before my PhD, I received my BS in Operations Research: Engineering Management S
 
 ## Selected work
 
-- [AlphaGenome](https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/) — a model for predicting how genetic variants affect regulatory activity across the genome.
-- [scvi-tools](http://scvi-tools.org/) — probabilistic models for single-cell omics, and a framework for building new ones. Co-creator.
+- [AlphaGenome](https://www.nature.com/articles/s41586-025-10014-0) — a unified DNA sequence model predicting how genetic variants affect regulatory activity across the genome. *Nature*, 2026. <a class="aux" href="https://github.com/google-deepmind/alphagenome">code</a> <a class="aux" href="https://www.alphagenomedocs.com/">docs</a>
+- [scvi-tools](https://doi.org/10.1038/s41587-021-01206-w) — probabilistic models for single-cell omics, and a framework for building new ones. Co-creator. *Nature Biotechnology*, 2022. <a class="aux" href="https://github.com/scverse/scvi-tools">code</a> <a class="aux" href="https://scvi-tools.org/">docs</a>
 - [Publications](https://scholar.google.com/citations?user=TNqOADUAAAAJ&hl=en) on Google Scholar.

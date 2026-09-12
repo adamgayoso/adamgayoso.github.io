@@ -7,6 +7,7 @@
   --accent: #a46f0d;
   --rule:   #e2ded0;
   --surface: #faf8ec;
+  --chip:    #f2efe1;
 
   --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
   --mono: ui-monospace, "SF Mono", "IBM Plex Mono", Menlo, Consolas, monospace;
@@ -24,6 +25,7 @@
     --accent: #d9a748;
     --rule:   #302b22;
     --surface: #1c1915;
+    --chip:    #26221a;
   }
 }
 
@@ -141,6 +143,30 @@ body.post article > * {
   font-style: italic;
   font-size: 0.95rem;
   margin: -1rem 0 2.2rem;
+}
+
+/* Secondary links -- code, docs -- next to a primary citation link. A filled
+   chip, kept in the typographic register by small mono type and a 3px radius
+   rather than a pill shape. Contrast checked in both themes (4.8:1 light,
+   5.1:1 dark). */
+.aux {
+  font-family: var(--mono);
+  font-size: 0.68em;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  background: var(--chip);
+  border: 0;
+  border-bottom: 0;
+  border-radius: 3px;
+  padding: 0.2em 0.5em;
+  margin-left: 0.25em;
+  white-space: nowrap;
+  vertical-align: 0.1em;
+}
+
+.aux:hover {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--chip));
 }
 
 /* ----------------------------------------------------------------- listing */
