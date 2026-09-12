@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} · Adam Gayoso{% endblock %}
+{% block description %}{{ page.meta.summary or page.title }}{% endblock %}
+{% block canonical %}{{ page.url }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block body_class %}post{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/pygments.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [
+          {left: '\\[', right: '\\]', display: true},
+          {left: '\\(', right: '\\)', display: false}]})"></script>
+{% endblock %}
+
+{% block content %}
+<article>
+  <p class="back"><a href="/">Adam Gayoso</a></p>
+  <h1>{{ page.title }}</h1>
+  {% if page.date_display %}
+  <p class="byline"><time datetime="{{ page.date }}">{{ page.date_display }}</time></p>
+  {% endif %}
+  {{ page.body | safe }}
+</article>
+{% endblock %}

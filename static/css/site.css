@@ -1,0 +1,415 @@
+/* adamgayoso.com */
+
+:root {
+  --bg:     #fffff8;
+  --text:   #111111;
+  --muted:  #6f6759;
+  --accent: #a46f0d;
+  --rule:   #e2ded0;
+  --surface: #faf8ec;
+
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --mono: ui-monospace, "SF Mono", "IBM Plex Mono", Menlo, Consolas, monospace;
+
+  --measure: 38rem;
+  --margin-col: 15rem;
+  --gutter: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #14120e;
+    --text:   #e9e4d8;
+    --muted:  #9a9284;
+    --accent: #d9a748;
+    --rule:   #302b22;
+    --surface: #1c1915;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tufte uses italics and small caps rather than bold for emphasis. */
+h1, h2, h3 {
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin: 0 0 1.6rem;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 1.45rem;
+  margin: 2.8rem 0 0.8rem;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.15rem;
+  margin: 2rem 0 0.6rem;
+}
+
+p { margin: 0 0 1.2rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+strong { font-weight: 600; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+sup { line-height: 0; }
+
+code, kbd, samp {
+  font-family: var(--mono);
+  font-size: 0.84em;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--rule);
+  font-style: italic;
+  color: var(--muted);
+}
+
+ul, ol { margin: 0 0 1.2rem; padding-left: 1.4rem; }
+li { margin-bottom: 0.35rem; }
+
+/* ------------------------------------------------------------------ layout */
+
+main { padding: 4.5rem 1.5rem 0; }
+
+body.home main {
+  max-width: calc(var(--measure) + 3rem);
+  margin: 0 auto;
+}
+
+/* Posts use the asymmetric Tufte measure: text left, notes and wide figures
+   in the right margin. */
+body.post main {
+  max-width: calc(var(--measure) + var(--gutter) + var(--margin-col) + 3rem);
+  margin: 0 auto;
+}
+
+body.post article > * {
+  max-width: var(--measure);
+}
+
+.prose > :last-child, article > :last-child { margin-bottom: 0; }
+
+.back {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.back a { color: var(--muted); border-bottom-color: transparent; }
+.back a:hover { color: var(--accent); }
+
+.byline {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin: -1rem 0 2.2rem;
+}
+
+/* ----------------------------------------------------------------- listing */
+
+.listing ul { list-style: none; padding: 0; margin: 0; }
+
+.listing li {
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing li > a { border-bottom-color: transparent; }
+.listing li > a:hover { border-bottom-color: var(--accent); }
+
+.listing .date {
+  order: -1;
+  font-size: 0.8rem;
+  font-variant-numeric: oldstyle-nums;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.listing .summary {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-top: 0.15rem;
+}
+
+/* --------------------------------------------------------------- sidenotes */
+
+/* Written as ordinary [^1] markdown footnotes; build.py relocates them. */
+.sidenote-number {
+  counter-increment: sidenote;
+  display: inline;
+}
+
+.sidenote-number::after {
+  content: counter(sidenote);
+  font-size: 0.7rem;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--accent);
+  cursor: pointer;
+  padding-left: 0.1em;
+}
+
+body { counter-reset: sidenote; }
+
+.sidenote {
+  float: right;
+  clear: right;
+  width: var(--margin-col);
+  margin-right: calc(-1 * (var(--margin-col) + var(--gutter)));
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--muted);
+  position: relative;
+}
+
+.sidenote::before {
+  content: counter(sidenote) " ";
+  font-size: 0.7rem;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--accent);
+}
+
+/* The checkbox only does anything at narrow widths. */
+input.margin-toggle { display: none; }
+
+/* ----------------------------------------------------------------- figures */
+
+figure {
+  margin: 2rem 0;
+  max-width: var(--measure);
+}
+
+figure img { max-width: 100%; height: auto; display: block; }
+
+figcaption {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+figure.fullwidth {
+  max-width: calc(var(--measure) + var(--gutter) + var(--margin-col));
+}
+
+figure.margin-figure {
+  float: right;
+  clear: right;
+  width: var(--margin-col);
+  max-width: var(--margin-col);
+  margin-right: calc(-1 * (var(--margin-col) + var(--gutter)));
+  margin-top: 0.35rem;
+}
+
+/* -------------------------------------------------------------- code cells */
+
+.cell { margin: 1.6rem 0; }
+
+.cell-input, pre.cell-text, pre.cell-stderr, .highlight pre {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.cell-input {
+  border-left: 2px solid var(--accent);
+  background: var(--surface);
+}
+
+.cell-input .highlight, .cell-input pre {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  background: transparent !important;
+}
+
+.cell-output { margin-top: 0.5rem; }
+
+pre.cell-text, pre.cell-stderr {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  color: var(--muted);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+pre.cell-stderr { color: #b3402b; }
+
+@media (prefers-color-scheme: dark) {
+  pre.cell-stderr { color: #e08163; }
+}
+
+.cell-image { max-width: 100%; height: auto; }
+
+.cell-html { overflow-x: auto; font-size: 0.85rem; }
+
+.cell-html table {
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+.cell-html th, .cell-html td {
+  padding: 0.2rem 0.6rem 0.2rem 0;
+  text-align: left;
+  border: 0;
+}
+
+.cell-html thead th { border-bottom: 1px solid var(--rule); }
+
+/* ------------------------------------------------------------------- notes */
+
+aside.note {
+  margin: 1.8rem 0;
+  padding: 0.9rem 1.1rem;
+  background: var(--surface);
+  border-left: 2px solid var(--rule);
+  font-size: 0.95rem;
+}
+
+aside.note > :last-child { margin-bottom: 0; }
+
+aside.note .aside-title {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+/* -------------------------------------------------------------------- math */
+
+.math-block { overflow-x: auto; margin: 1.5rem 0; }
+
+/* ------------------------------------------------------------------ footer */
+
+footer {
+  max-width: calc(var(--measure) + 3rem);
+  margin: 5rem auto 0;
+  padding: 1.4rem 1.5rem 3rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+body.post footer {
+  max-width: calc(var(--measure) + var(--gutter) + var(--margin-col) + 3rem);
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+footer nav a, footer .contact {
+  color: var(--muted);
+  border-bottom-color: transparent;
+}
+
+footer nav a:hover { color: var(--accent); }
+
+footer .contact { margin: 0; }
+footer .contact span { opacity: 0.55; }
+
+/* ------------------------------------------------------------------ narrow */
+
+@media (max-width: 1000px) {
+  /* Not enough room for a margin column: sidenotes and margin figures fold
+     back into the text, revealed by tapping their number. Collapsed notes are
+     hidden visually rather than with display:none, so a screen reader still
+     reads each one in place after its reference. */
+  .sidenote, figure.margin-figure {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + figure.margin-figure {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    float: none;
+    max-width: 100%;
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    background: var(--surface);
+    border-left: 2px solid var(--rule);
+  }
+
+  /* A superscript digit is too small to hit with a thumb, so on touch widths
+     the number becomes a small inline-block pill instead. */
+  .sidenote-number::after {
+    display: inline-block;
+    min-width: 1.5rem;
+    padding: 0.4rem 0;
+    margin: -0.4rem 0;
+    font-size: 0.8rem;
+    line-height: 1;
+    text-align: center;
+    vertical-align: baseline;
+  }
+
+  /* With no margin column, the post container narrows and centres like the
+     homepage -- otherwise the measure would stretch to ~75ch on an iPad held
+     in portrait. */
+  body.post main { max-width: calc(var(--measure) + 3rem); }
+  figure.fullwidth { max-width: 100%; }
+  body.post article > * { max-width: 100%; }
+}
+
+@media (max-width: 700px) {
+  body { font-size: 1.15rem; }
+  main { padding: 3rem 1.25rem 0; }
+  h1 { font-size: 1.8rem; }
+  footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+}

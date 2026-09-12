@@ -1,0 +1,111 @@
+{
+ "12e11d4e5a5126fc": [
+  {
+   "name": "stdout",
+   "output_type": "stream",
+   "text": "Index(['Cell_0', 'Cell_1', 'Cell_2', 'Cell_3', 'Cell_4', 'Cell_5', 'Cell_6',\n       'Cell_7', 'Cell_8', 'Cell_9'],\n      dtype='str')\n"
+  }
+ ],
+ "3158989c0576ff86": [
+  {
+   "data": {
+    "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>cell_type</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>Cell_0</th>\n      <td>T</td>\n    </tr>\n    <tr>\n      <th>Cell_1</th>\n      <td>B</td>\n    </tr>\n    <tr>\n      <th>Cell_2</th>\n      <td>Monocyte</td>\n    </tr>\n    <tr>\n      <th>Cell_3</th>\n      <td>Monocyte</td>\n    </tr>\n    <tr>\n      <th>Cell_4</th>\n      <td>B</td>\n    </tr>\n    <tr>\n      <th>...</th>\n      <td>...</td>\n    </tr>\n    <tr>\n      <th>Cell_95</th>\n      <td>B</td>\n    </tr>\n    <tr>\n      <th>Cell_96</th>\n      <td>T</td>\n    </tr>\n    <tr>\n      <th>Cell_97</th>\n      <td>T</td>\n    </tr>\n    <tr>\n      <th>Cell_98</th>\n      <td>Monocyte</td>\n    </tr>\n    <tr>\n      <th>Cell_99</th>\n      <td>Monocyte</td>\n    </tr>\n  </tbody>\n</table>\n<p>100 rows \u00d7 1 columns</p>\n</div>",
+    "text/plain": "        cell_type\nCell_0          T\nCell_1          B\nCell_2   Monocyte\nCell_3   Monocyte\nCell_4          B\n...           ...\nCell_95         B\nCell_96         T\nCell_97         T\nCell_98  Monocyte\nCell_99  Monocyte\n\n[100 rows x 1 columns]"
+   },
+   "execution_count": 5,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "31c00be3ed5e4f3e": [
+  {
+   "data": {
+    "text/plain": "AnnData object with n_obs \u00d7 n_vars = 100 \u00d7 2000\n    obs: 'cell_type'\n    obsm: 'X_umap'\n    varm: 'gene_stuff'\n    layers: None (.X)"
+   },
+   "execution_count": 9,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "44fd5af99f9e01d0": [
+  {
+   "data": {
+    "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Gene_0</th>\n      <th>Gene_1</th>\n      <th>Gene_2</th>\n      <th>Gene_3</th>\n      <th>Gene_4</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>Cell_0</th>\n      <td>0.000000</td>\n      <td>0.000000</td>\n      <td>0.000000</td>\n      <td>1.098612</td>\n      <td>0.693147</td>\n    </tr>\n    <tr>\n      <th>Cell_1</th>\n      <td>0.693147</td>\n      <td>0.693147</td>\n      <td>0.693147</td>\n      <td>1.386294</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>Cell_2</th>\n      <td>0.000000</td>\n      <td>0.000000</td>\n      <td>0.693147</td>\n      <td>0.693147</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>Cell_3</th>\n      <td>0.000000</td>\n      <td>1.098612</td>\n      <td>0.693147</td>\n      <td>0.693147</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>Cell_4</th>\n      <td>0.693147</td>\n      <td>1.386294</td>\n      <td>0.000000</td>\n      <td>0.000000</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>...</th>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n      <td>...</td>\n    </tr>\n    <tr>\n      <th>Cell_95</th>\n      <td>1.098612</td>\n      <td>1.609438</td>\n      <td>0.693147</td>\n      <td>0.693147</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>Cell_96</th>\n      <td>0.000000</td>\n      <td>1.098612</td>\n      <td>0.000000</td>\n      <td>0.693147</td>\n      <td>0.693147</td>\n    </tr>\n    <tr>\n      <th>Cell_97</th>\n      <td>0.000000</td>\n      <td>0.693147</td>\n      <td>1.098612</td>\n      <td>0.693147</td>\n      <td>0.693147</td>\n    </tr>\n    <tr>\n      <th>Cell_98</th>\n      <td>0.693147</td>\n      <td>0.693147</td>\n      <td>0.000000</td>\n      <td>0.693147</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>Cell_99</th>\n      <td>0.000000</td>\n      <td>0.000000</td>\n      <td>0.000000</td>\n      <td>0.000000</td>\n      <td>1.386294</td>\n    </tr>\n  </tbody>\n</table>\n<p>100 rows \u00d7 5 columns</p>\n</div>",
+    "text/plain": "           Gene_0    Gene_1    Gene_2    Gene_3    Gene_4\nCell_0   0.000000  0.000000  0.000000  1.098612  0.693147\nCell_1   0.693147  0.693147  0.693147  1.386294  0.000000\nCell_2   0.000000  0.000000  0.693147  0.693147  0.000000\nCell_3   0.000000  1.098612  0.693147  0.693147  0.000000\nCell_4   0.693147  1.386294  0.000000  0.000000  0.000000\n...           ...       ...       ...       ...       ...\nCell_95  1.098612  1.609438  0.693147  0.693147  0.000000\nCell_96  0.000000  1.098612  0.000000  0.693147  0.693147\nCell_97  0.000000  0.693147  1.098612  0.693147  0.693147\nCell_98  0.693147  0.693147  0.000000  0.693147  0.000000\nCell_99  0.000000  0.000000  0.000000  0.000000  1.386294\n\n[100 rows x 5 columns]"
+   },
+   "execution_count": 12,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "5b194be046a030c4": [
+  {
+   "data": {
+    "text/plain": "<Compressed Sparse Row sparse matrix of dtype 'int64'\n\twith 126321 stored elements and shape (100, 2000)>"
+   },
+   "execution_count": 2,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "87a67f70a5d062a6": [
+  {
+   "data": {
+    "text/plain": "OrderedDict([('random', [1, 2, 3])])"
+   },
+   "execution_count": 10,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "91df7c44de8a2ca6": [
+  {
+   "data": {
+    "text/plain": "View of AnnData object with n_obs \u00d7 n_vars = 2 \u00d7 2\n    layers: None (.X)"
+   },
+   "execution_count": 4,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "b00a4eb1228d0138": [
+  {
+   "data": {
+    "text/plain": "AnnData object with n_obs \u00d7 n_vars = 100 \u00d7 2000\n    layers: None (.X)"
+   },
+   "execution_count": 1,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "d7ee2719635b2db3": [
+  {
+   "data": {
+    "text/plain": "AnnData object with n_obs \u00d7 n_vars = 100 \u00d7 2000\n    obs: 'cell_type'\n    uns: 'random'\n    obsm: 'X_umap'\n    varm: 'gene_stuff'\n    layers: None (.X), 'log_transformed'"
+   },
+   "execution_count": 11,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "e2f9af9f21098577": [
+  {
+   "data": {
+    "text/plain": "AxisArrays with keys: 'X_umap'"
+   },
+   "execution_count": 8,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ],
+ "ebb141e8cc601633": [
+  {
+   "data": {
+    "text/plain": "View of AnnData object with n_obs \u00d7 n_vars = 40 \u00d7 2000\n    obs: 'cell_type'\n    layers: None (.X)"
+   },
+   "execution_count": 7,
+   "metadata": {},
+   "output_type": "execute_result"
+  }
+ ]
+}

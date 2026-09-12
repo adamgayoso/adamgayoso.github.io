@@ -1,4 +1,8 @@
-# Getting started with single-cell genomics
+---
+title: Getting started with single-cell genomics
+date: 2021-05-31
+summary: New to single-cell genomics? These are the resources I wish I had when I entered the field.
+---
 
 ```{article-info}
 :date: May 31, 2021

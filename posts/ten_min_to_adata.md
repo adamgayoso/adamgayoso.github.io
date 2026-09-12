@@ -1,18 +1,8 @@
 ---
-jupytext:
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: '0.8'
-    jupytext_version: 1.4.1+dev
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
+title: "5, maybe 10 minutes to AnnData"
+date: 2021-11-13
+summary: A beginner's guide to the AnnData package for storage of single-cell omics data.
 ---
-
-# 5, maybe 10 minutes to AnnData
 
 ```{article-info}
 :date: November 13, 2021

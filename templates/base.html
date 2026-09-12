@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Adam Gayoso{% endblock %}</title>
+<meta name="description" content="{% block description %}Adam Gayoso is a Senior Research Scientist at Google DeepMind working on genomics.{% endblock %}">
+
+<link rel="icon" href="/_assets/favicon.ico" sizes="any">
+<link rel="icon" href="/_assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
+<link rel="manifest" href="/_assets/site.webmanifest">
+<link rel="canonical" href="{{ base_url }}{% block canonical %}/{% endblock %}">
+
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ self.description() }}">
+<meta property="og:type" content="{% block og_type %}website{% endblock %}">
+<meta property="og:url" content="{{ base_url }}{{ self.canonical() }}">
+<meta property="og:image" content="{{ base_url }}/_assets/adam_square.jpeg">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="/static/css/site.css">
+{% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<footer>
+{% block footer %}
+  <nav>
+    <a href="/">Adam Gayoso</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://scholar.google.com/citations?user=TNqOADUAAAAJ&amp;hl=en">Publications</a>
+    <a href="https://github.com/adamgayoso">GitHub</a>
+    <a href="https://linkedin.com/in/adam-gayoso">LinkedIn</a>
+  </nav>
+  <p class="contact">adamgayoso <span>[at]</span> google <span>[dot]</span> com</p>
+{% endblock %}
+</footer>
+
+<script async src="https://gc.zgo.at/count.js"
+        data-goatcounter="https://smtp123.goatcounter.com/count"></script>
+</body>
+</html>
