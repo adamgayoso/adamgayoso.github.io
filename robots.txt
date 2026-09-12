@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adamgayoso.github.io/sitemap.xml

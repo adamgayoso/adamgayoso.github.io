@@ -93,6 +93,12 @@ h3 {
   margin: 2rem 0 0.6rem;
 }
 
+p, li {
+  /* Avoids a single word orphaned on the last line. Ignored where
+     unsupported, so there is nothing to fall back to. */
+  text-wrap: pretty;
+}
+
 p { margin: 0 0 1.2rem; }
 
 a {
