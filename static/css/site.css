@@ -212,6 +212,10 @@ body.post article > * {
   background: color-mix(in srgb, var(--accent) 12%, var(--chip));
 }
 
+/* .prose zeroes its last child's margin, so a listing following an intro
+   paragraph needs its own gap. */
+.prose + .listing { margin-top: 2rem; }
+
 /* ----------------------------------------------------------------- listing */
 
 .listing ul { list-style: none; padding: 0; margin: 0; }

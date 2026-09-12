@@ -418,7 +418,7 @@ def build() -> None:
     write(
         "/",
         env.get_template("home.html").render(
-            meta=home_meta, body=render_markdown(home_text), posts=posts
+            meta=home_meta, body=render_markdown(home_text)
         ),
     )
 
