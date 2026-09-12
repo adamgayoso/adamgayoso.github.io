@@ -34,4 +34,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_build
-        cname: adamgayoso.com
+        # No cname here on purpose: adamgayoso.com is forwarded to
+        # adamgayoso.github.io by the registrar. Publishing a CNAME file makes
+        # Pages claim the custom domain and redirect github.io -> adamgayoso.com,
+        # which the forward sends straight back -- an infinite redirect.
