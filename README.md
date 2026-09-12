@@ -48,7 +48,9 @@ to hold a post back. The homepage and `/blog/` listings are generated from it,
 so there is no index to maintain by hand.
 
 URLs are directories (`/posts/<slug>/`), matching what the old Sphinx
-`dirhtml` build produced.
+`dirhtml` build produced. `404.html`, `sitemap.xml` and `robots.txt` are
+generated too — `robots.txt` is deliberately not copied from the repo, so a
+stray one there cannot shadow the generated file.
 
 ## Writing
 

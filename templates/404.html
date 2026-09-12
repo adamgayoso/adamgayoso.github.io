@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Not found · Adam Gayoso{% endblock %}
+{% block description %}That page does not exist.{% endblock %}
+{% block canonical %}/404.html{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block head %}
+<meta name="robots" content="noindex">
+{% endblock %}
+
+{% block content %}
+<h1>Not found</h1>
+
+<div class="prose">
+  <p>There is nothing at this address. It may have moved, or it may never have
+  existed.</p>
+  <p><a href="/">Back to the homepage</a>, or have a look at the
+  <a href="/blog/">posts</a>.</p>
+</div>
+{% endblock %}

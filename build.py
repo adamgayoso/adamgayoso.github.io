@@ -370,6 +370,34 @@ def write(url: str, html: str) -> None:
     print(f"  {url:34s} -> {out.relative_to(ROOT)}")
 
 
+def write_sitemap(posts: list[Page]) -> None:
+    """A sitemap of the four real pages. lastmod only where there is a real
+    date to report -- stamping the build time would churn the file on every
+    build and tell crawlers nothing."""
+    entries = [("/", None), ("/blog/", None)]
+    entries += [(p.url, p.date) for p in posts]
+
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for url, lastmod in entries:
+        lines.append("  <url>")
+        lines.append(f"    <loc>{BASE_URL}{url}</loc>")
+        if lastmod:
+            lines.append(f"    <lastmod>{lastmod.isoformat()}</lastmod>")
+        lines.append("  </url>")
+    lines.append("</urlset>")
+
+    (BUILD / "sitemap.xml").write_text("\n".join(lines) + "\n")
+    print(f"  {'/sitemap.xml':34s} -> _build/sitemap.xml ({len(entries)} urls)")
+
+
+def write_robots() -> None:
+    (BUILD / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n"
+    )
+    print(f"  {'/robots.txt':34s} -> _build/robots.txt")
+
+
 def build() -> None:
     if BUILD.exists():
         shutil.rmtree(BUILD)
@@ -400,6 +428,14 @@ def build() -> None:
     for post in posts:
         write(post.url, post_tpl.render(page=post))
 
+    # GitHub Pages serves /404.html for any unmatched path, so this one is a
+    # file rather than a directory index.
+    (BUILD / "404.html").write_text(env.get_template("404.html").render())
+    print(f"  {'/404.html':34s} -> _build/404.html")
+
+    write_sitemap(posts)
+    write_robots()
+
     # Pygments stylesheets, generated so they always match the installed
     # version. Two themes, because one set of token colours can't carry both
     # the cream and the dark background.
@@ -426,7 +462,9 @@ def build() -> None:
         if src.is_dir():
             shutil.copytree(src, BUILD / tree, dirs_exist_ok=True)
 
-    for extra in ("CNAME", "robots.txt"):
+    # robots.txt is generated above, so it is deliberately not in this list --
+    # copying one from the repo would silently shadow the generated file.
+    for extra in ("CNAME",):
         if (ROOT / extra).exists():
             shutil.copy(ROOT / extra, BUILD / extra)
 
