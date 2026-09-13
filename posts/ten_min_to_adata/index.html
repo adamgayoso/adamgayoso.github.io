@@ -55,6 +55,24 @@
   </svg>
 </button>
 <main>
+<script>
+// Swap a video facade for the real player on click. Nothing from YouTube is
+// loaded until someone actually asks for it.
+document.addEventListener("click", function (e) {
+  var btn = e.target.closest && e.target.closest(".video-play");
+  if (!btn) return;
+  var box = btn.parentElement;
+  var id = box.getAttribute("data-video");
+  var f = document.createElement("iframe");
+  f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1";
+  f.title = btn.getAttribute("aria-label") || "video";
+  f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; " +
+            "gyroscope; picture-in-picture";
+  f.allowFullscreen = true;
+  box.replaceChildren(f);
+});
+</script>
+
 <article>
   <p class="back"><a href="/">Adam Gayoso</a></p>
   <h1>5, maybe 10 minutes to AnnData</h1>

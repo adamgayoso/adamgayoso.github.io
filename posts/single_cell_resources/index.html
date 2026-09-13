@@ -45,6 +45,24 @@
   </svg>
 </button>
 <main>
+<script>
+// Swap a video facade for the real player on click. Nothing from YouTube is
+// loaded until someone actually asks for it.
+document.addEventListener("click", function (e) {
+  var btn = e.target.closest && e.target.closest(".video-play");
+  if (!btn) return;
+  var box = btn.parentElement;
+  var id = box.getAttribute("data-video");
+  var f = document.createElement("iframe");
+  f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1";
+  f.title = btn.getAttribute("aria-label") || "video";
+  f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; " +
+            "gyroscope; picture-in-picture";
+  f.allowFullscreen = true;
+  box.replaceChildren(f);
+});
+</script>
+
 <article>
   <p class="back"><a href="/">Adam Gayoso</a></p>
   <h1>Getting started with single-cell genomics</h1>
@@ -56,15 +74,15 @@
 <p>These videos provide a high-level overview of many popular biological questions that can be answered with single-cell data, as well as some description of the underlying technologies.</p>
 <h3>Videos</h3>
 <div class="responsive-youtube">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" height="315" loading="lazy" src="https://www.youtube.com/embed/PRjX3-m16cw" title="YouTube video player" width="560"></iframe>
+<div class="video" data-video="PRjX3-m16cw"><button aria-label="Play video" class="video-play" type="button"><img alt="" height="360" loading="lazy" src="https://i.ytimg.com/vi/PRjX3-m16cw/hqdefault.jpg" width="480"/><span aria-hidden="true" class="video-icon"></span></button></div>
 </div>
 <br/>
 <div class="responsive-youtube">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" height="315" loading="lazy" src="https://www.youtube.com/embed/Mt1BbuW75qc" title="YouTube video player" width="560"></iframe>
+<div class="video" data-video="Mt1BbuW75qc"><button aria-label="Play video" class="video-play" type="button"><img alt="" height="360" loading="lazy" src="https://i.ytimg.com/vi/Mt1BbuW75qc/hqdefault.jpg" width="480"/><span aria-hidden="true" class="video-icon"></span></button></div>
 </div>
 <p>This last video is from the <a class="external" href="https://canvas.harvard.edu/courses/39391">Stat 115</a> course at Harvard, which is fully available online, and goes more in depth with single-cell technologies.</p>
 <div class="responsive-youtube">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" height="315" loading="lazy" src="https://www.youtube.com/embed/PFG_SKpM5OI" title="YouTube video player" width="560"></iframe>
+<div class="video" data-video="PFG_SKpM5OI"><button aria-label="Play video" class="video-play" type="button"><img alt="" height="360" loading="lazy" src="https://i.ytimg.com/vi/PFG_SKpM5OI/hqdefault.jpg" width="480"/><span aria-hidden="true" class="video-icon"></span></button></div>
 </div>
 <h3>Papers</h3>
 <ul>
