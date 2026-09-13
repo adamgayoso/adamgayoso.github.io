@@ -316,6 +316,19 @@ figure.margin-figure {
   margin-top: 0.35rem;
 }
 
+/* Embedded video. The width/height attributes are 560x315, which overflows
+   the page on a phone, so override to the container and keep the ratio. */
+article iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  margin: 1.8rem 0;
+  background: var(--chip);
+}
+
 /* -------------------------------------------------------------- code cells */
 
 .cell { margin: 1.6rem 0; }

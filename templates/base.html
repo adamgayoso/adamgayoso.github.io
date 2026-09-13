@@ -96,7 +96,19 @@
 })();
 </script>
 
-<script async src="https://gc.zgo.at/count.js"
-        data-goatcounter="https://smtp123.goatcounter.com/count"></script>
+{# Analytics is loaded after the load event rather than as an async script in
+   the markup. async does not block rendering, but it does hold the load event
+   -- and gc.zgo.at can take seconds on a cold connection, which shows up as a
+   spinning tab long after the page is readable. Nothing here should be able to
+   do that. #}
+<script>
+window.addEventListener("load", function () {
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter", "https://smtp123.goatcounter.com/count");
+  document.body.appendChild(s);
+});
+</script>
 </body>
 </html>

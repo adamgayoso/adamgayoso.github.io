@@ -198,8 +198,24 @@ def footnotes_to_sidenotes(html: str) -> str:
     return str(soup)
 
 
+def lazy_iframes(html: str) -> str:
+    """Make embedded iframes lazy.
+
+    A YouTube embed is ~130 KB of HTML that then pulls megabytes from several
+    Google domains. Eagerly loading three of them costs more than the entire
+    rest of the site put together, and they are always below the fold.
+    """
+    if "<iframe" not in html:
+        return html
+    soup = BeautifulSoup(html, "html.parser")
+    for frame in soup.find_all("iframe"):
+        frame["loading"] = "lazy"
+        frame.attrs.pop("frameborder", None)  # presentational, and invalid HTML5
+    return str(soup)
+
+
 def render_markdown(text: str) -> str:
-    return footnotes_to_sidenotes(MD.render(strip_myst_directives(text)))
+    return lazy_iframes(footnotes_to_sidenotes(MD.render(strip_myst_directives(text))))
 
 
 # --------------------------------------------------------------------------- #
@@ -328,6 +344,13 @@ class Page:
     @property
     def date_display(self) -> str:
         return self.date.strftime("%B %-d, %Y") if self.date else ""
+
+    @property
+    def has_math(self) -> bool:
+        """Whether the rendered body contains any math, so the template can
+        skip KaTeX entirely on posts that do not. It is ~300 KB and a
+        render-blocking stylesheet -- not something to load speculatively."""
+        return "\\(" in self.body or "\\[" in self.body
 
 
 def load(path: Path) -> tuple[dict, str]:
