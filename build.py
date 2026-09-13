@@ -198,24 +198,53 @@ def footnotes_to_sidenotes(html: str) -> str:
     return str(soup)
 
 
-def lazy_iframes(html: str) -> str:
-    """Make embedded iframes lazy.
+RE_YOUTUBE_ID = re.compile(r"youtube(?:-nocookie)?\.com/embed/([\w-]{6,20})")
 
-    A YouTube embed is ~130 KB of HTML that then pulls megabytes from several
-    Google domains. Eagerly loading three of them costs more than the entire
-    rest of the site put together, and they are always below the fold.
+
+def defer_embeds(html: str) -> str:
+    """Replace YouTube iframes with a click-to-play facade.
+
+    A YouTube embed pulls 1-2 MB of player into the page whether or not anyone
+    watches it, and loading="lazy" does not reliably prevent that -- browsers
+    load iframes they judge to be near the viewport. Three of them took this
+    post's load event past ten seconds.
+
+    The facade is a thumbnail and a play button; the real iframe is swapped in
+    on click (see templates/post.html). Other iframes just get lazy loading.
     """
     if "<iframe" not in html:
         return html
+
     soup = BeautifulSoup(html, "html.parser")
     for frame in soup.find_all("iframe"):
-        frame["loading"] = "lazy"
-        frame.attrs.pop("frameborder", None)  # presentational, and invalid HTML5
+        frame.attrs.pop("frameborder", None)  # presentational, invalid HTML5
+        m = RE_YOUTUBE_ID.search(frame.get("src", ""))
+        if not m:
+            frame["loading"] = "lazy"
+            continue
+
+        vid = m.group(1)
+        # YouTube's default embed title is the generic "YouTube video player",
+        # which would read as "Play YouTube video player".
+        title = frame.get("title") or ""
+        label = "Play video" if title.strip().lower() in (
+            "", "youtube video player") else f"Play {title}"
+        facade = BeautifulSoup(
+            f'<div class="video" data-video="{vid}">'
+            f'<button type="button" class="video-play" aria-label="{label}">'
+            f'<img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt=""'
+            f' loading="lazy" width="480" height="360">'
+            f'<span class="video-icon" aria-hidden="true"></span>'
+            f"</button></div>",
+            "html.parser",
+        )
+        frame.replace_with(facade)
+
     return str(soup)
 
 
 def render_markdown(text: str) -> str:
-    return lazy_iframes(footnotes_to_sidenotes(MD.render(strip_myst_directives(text))))
+    return defer_embeds(footnotes_to_sidenotes(MD.render(strip_myst_directives(text))))
 
 
 # --------------------------------------------------------------------------- #
