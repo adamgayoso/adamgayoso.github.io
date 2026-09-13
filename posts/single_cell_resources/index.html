@@ -22,15 +22,6 @@
 
 <link rel="stylesheet" href="/static/css/site.css">
 <link rel="stylesheet" href="/static/css/pygments.css">
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
-<script defer
-        src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-<script defer
-        src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body, {delimiters: [
-          {left: '\\[', right: '\\]', display: true},
-          {left: '\\(', right: '\\)', display: false}]})"></script>
 
 <script>
 (function () {
@@ -58,42 +49,42 @@
   <p class="back"><a href="/">Adam Gayoso</a></p>
   <h1>Getting started with single-cell genomics</h1>
   <p class="byline"><time datetime="2021-05-31">May 31, 2021</time></p>
-  <aside class="note"><p class='aside-title'>Update (May 4, 2023)</p><p>I now recommend the sc-best-practices <a href="https://www.sc-best-practices.org/preamble.html" class="external">book</a> for a more comprehensive set of resources.</p>
+  <aside class="note"><p class="aside-title">Update (May 4, 2023)</p><p>I now recommend the sc-best-practices <a class="external" href="https://www.sc-best-practices.org/preamble.html">book</a> for a more comprehensive set of resources.</p>
 </aside>
-<p>I started working with single-cell RNA-sequencing (scRNA-seq) data in 2016 during my Master’s. As the field was rapidly proliferating at the time, there were a lack of resources available to quickly learn about how single-cell data are generated as well as best practices for how it should be analyzed. As single-cell genomics has become more routine, there are now so many resources that it can be hard to know where to start. Here I provide some of my favorite resources that I regularly share with undergraduates and new PhD students. This intentionally short list of resources is intended to quickly acclimate those with computational backgrounds; however, they are all of general interest. I will continue to update this post as new material becomes available. For a more comprehensive set of resources, I recommend <a href="https://twitter.com/tangming2005" class="external">Ming Tang’s</a> <a href="https://github.com/crazyhottommy/scRNAseq-analysis-notes" class="external">analysis notes</a>.</p>
+<p>I started working with single-cell RNA-sequencing (scRNA-seq) data in 2016 during my Master’s. As the field was rapidly proliferating at the time, there were a lack of resources available to quickly learn about how single-cell data are generated as well as best practices for how it should be analyzed. As single-cell genomics has become more routine, there are now so many resources that it can be hard to know where to start. Here I provide some of my favorite resources that I regularly share with undergraduates and new PhD students. This intentionally short list of resources is intended to quickly acclimate those with computational backgrounds; however, they are all of general interest. I will continue to update this post as new material becomes available. For a more comprehensive set of resources, I recommend <a class="external" href="https://twitter.com/tangming2005">Ming Tang’s</a> <a class="external" href="https://github.com/crazyhottommy/scRNAseq-analysis-notes">analysis notes</a>.</p>
 <h2>Overview of single-cell genomics</h2>
 <p>These videos provide a high-level overview of many popular biological questions that can be answered with single-cell data, as well as some description of the underlying technologies.</p>
 <h3>Videos</h3>
 <div class="responsive-youtube">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PRjX3-m16cw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" height="315" loading="lazy" src="https://www.youtube.com/embed/PRjX3-m16cw" title="YouTube video player" width="560"></iframe>
 </div>
-<br>
+<br/>
 <div class="responsive-youtube">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Mt1BbuW75qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" height="315" loading="lazy" src="https://www.youtube.com/embed/Mt1BbuW75qc" title="YouTube video player" width="560"></iframe>
 </div>
-<p>This last video is from the <a href="https://canvas.harvard.edu/courses/39391" class="external">Stat 115</a> course at Harvard, which is fully available online, and goes more in depth with single-cell technologies.</p>
+<p>This last video is from the <a class="external" href="https://canvas.harvard.edu/courses/39391">Stat 115</a> course at Harvard, which is fully available online, and goes more in depth with single-cell technologies.</p>
 <div class="responsive-youtube">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PFG_SKpM5OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" height="315" loading="lazy" src="https://www.youtube.com/embed/PFG_SKpM5OI" title="YouTube video player" width="560"></iframe>
 </div>
 <h3>Papers</h3>
 <ul>
-<li>Wagner, A., Regev, A., &amp; Yosef, N. (2016). Revealing the vectors of cellular identity with single-cell genomics. Nature biotechnology, 34(11), 1145-1160. <a href="https://www.nature.com/articles/nbt.3711" class="external">[Paper]</a></li>
-<li>Regev, A., Teichmann, S. A., Lander, E. S., Amit, I., Benoist, C., Birney, E., … &amp; Yosef, N. (2017). Science forum: the human cell atlas. Elife, 6, e27041. <a href="https://elifesciences.org/articles/27041" class="external">[Paper]</a></li>
+<li>Wagner, A., Regev, A., &amp; Yosef, N. (2016). Revealing the vectors of cellular identity with single-cell genomics. Nature biotechnology, 34(11), 1145-1160. <a class="external" href="https://www.nature.com/articles/nbt.3711">[Paper]</a></li>
+<li>Regev, A., Teichmann, S. A., Lander, E. S., Amit, I., Benoist, C., Birney, E., … &amp; Yosef, N. (2017). Science forum: the human cell atlas. Elife, 6, e27041. <a class="external" href="https://elifesciences.org/articles/27041">[Paper]</a></li>
 </ul>
 <h2>Data analysis</h2>
-<p>The development of computational methods for single-cell genomics data has become very popular in the computational biology/applied stats/applied machine learning fields. In fact, there are about two new scRNA-seq computational methods for every three studies (with new data) published (<a href="https://twitter.com/sinabooeshaghi/status/1357434610750136321?s=20" class="external">source</a>). These methods <a href="https://www.scrna-tools.org/analysis" class="external">overwhelmingly</a> target a core set of tasks, and most are designed to handle the technical characteristics of these data.</p>
+<p>The development of computational methods for single-cell genomics data has become very popular in the computational biology/applied stats/applied machine learning fields. In fact, there are about two new scRNA-seq computational methods for every three studies (with new data) published (<a class="external" href="https://twitter.com/sinabooeshaghi/status/1357434610750136321?s=20">source</a>). These methods <a class="external" href="https://www.scrna-tools.org/analysis">overwhelmingly</a> target a core set of tasks, and most are designed to handle the technical characteristics of these data.</p>
 <h3>Papers</h3>
 <ul>
-<li>Luecken, M. D., &amp; Theis, F. J. (2019). Current best practices in single‐cell RNA‐seq analysis: a tutorial. Molecular systems biology, 15(6), e8746. <a href="https://www.embopress.org/doi/full/10.15252/msb.20188746" class="external">[Paper]</a></li>
-<li>Lähnemann, D., Köster, J., Szczurek, E., McCarthy, D. J., Hicks, S. C., Robinson, M. D., … &amp; Schönhuth, A. (2020). Eleven grand challenges in single-cell data science. Genome biology, 21(1), 1-35. <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1926-6" class="external">[Paper]</a></li>
-<li>Amezquita, R. A., Lun, A. T., Becht, E., Carey, V. J., Carpp, L. N., Geistlinger, L., … &amp; Hicks, S. C. (2020). Orchestrating single-cell analysis with Bioconductor. Nature methods, 17(2), 137-145. <a href="https://www.nature.com/articles/s41592-019-0654-x" class="external">[Paper]</a> <a href="https://bioconductor.org/books/release/OSCA/" class="external">[Online book]</a> (<em>caveat: I would first focus on the motivation sections and not the code sections of the online book.</em>)</li>
+<li>Luecken, M. D., &amp; Theis, F. J. (2019). Current best practices in single‐cell RNA‐seq analysis: a tutorial. Molecular systems biology, 15(6), e8746. <a class="external" href="https://www.embopress.org/doi/full/10.15252/msb.20188746">[Paper]</a></li>
+<li>Lähnemann, D., Köster, J., Szczurek, E., McCarthy, D. J., Hicks, S. C., Robinson, M. D., … &amp; Schönhuth, A. (2020). Eleven grand challenges in single-cell data science. Genome biology, 21(1), 1-35. <a class="external" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1926-6">[Paper]</a></li>
+<li>Amezquita, R. A., Lun, A. T., Becht, E., Carey, V. J., Carpp, L. N., Geistlinger, L., … &amp; Hicks, S. C. (2020). Orchestrating single-cell analysis with Bioconductor. Nature methods, 17(2), 137-145. <a class="external" href="https://www.nature.com/articles/s41592-019-0654-x">[Paper]</a> <a class="external" href="https://bioconductor.org/books/release/OSCA/">[Online book]</a> (<em>caveat: I would first focus on the motivation sections and not the code sections of the online book.</em>)</li>
 </ul>
 <h3>Software and tutorials</h3>
-<p>A lot of high quality open-source software has been developed just for single-cell data analysis. I am biased as I mostly use Python and therefore only present Python packages here. I assume that R is the more popular language for single-cell data analysis due to <a href="https://satijalab.org/seurat/" class="external">Seurat</a>; however, given the power of Python-based machine learning frameworks like <a href="https://pytorch.org/" class="external">PyTorch</a>, <a href="https://github.com/google/jax" class="external">Jax</a>, and <a href="https://www.tensorflow.org/" class="external">Tensorflow</a>, along with datasets that regularly approach &gt;100,000 cells, I believe Python has a brighter future in the field. That said, for now, many common analyses can be done with either language, though certain tasks may require language-specific packages. Therefore, it’s also beneficial to understand popular data structures in both languages and how to convert between them (perhaps described in another tutorial). Also, in Python, all packages use the cell by genes orientation for the data, while in R it’s genes by cells.</p>
+<p>A lot of high quality open-source software has been developed just for single-cell data analysis. I am biased as I mostly use Python and therefore only present Python packages here. I assume that R is the more popular language for single-cell data analysis due to <a class="external" href="https://satijalab.org/seurat/">Seurat</a>; however, given the power of Python-based machine learning frameworks like <a class="external" href="https://pytorch.org/">PyTorch</a>, <a class="external" href="https://github.com/google/jax">Jax</a>, and <a class="external" href="https://www.tensorflow.org/">Tensorflow</a>, along with datasets that regularly approach &gt;100,000 cells, I believe Python has a brighter future in the field. That said, for now, many common analyses can be done with either language, though certain tasks may require language-specific packages. Therefore, it’s also beneficial to understand popular data structures in both languages and how to convert between them (perhaps described in another tutorial). Also, in Python, all packages use the cell by genes orientation for the data, while in R it’s genes by cells.</p>
 <ul>
-<li><a href="https://scanpy.readthedocs.io/en/stable/" class="external">Scanpy</a> and its <a href="https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html" class="external">basic tutorial</a>. Scanpy underlies most Python-based single-cell analyses and for good reason. It uses the <a href="https://anndata.readthedocs.io/en/latest/" class="external">AnnData</a> data structure for storing the data, which has become the most widely accepted input to other Python-based methods. It also provides nice plotting functions for exploratory analysis. Familiarity with the Scanpy workflow is essential.</li>
-<li><a href="https://scvi-tools.org/" class="external">scvi-tools</a>, which I help develop, provides access to <a href="https://scvi-tools.org/get_started#single-cell-omics-data-analysis" class="external">many</a> popular probabilistic models for single-cell genomics as well as an interface to build novel probabilistic/deep learning models using <a href="https://pytorch.org/" class="external">PyTorch</a>, <a href="https://www.pytorchlightning.ai/" class="external">PyTorch Lightning</a>, and <a href="https://pyro.ai/" class="external">Pyro</a>. I present a Scanpy/scvi-tools tutorial <a href="https://ccbskillssem.github.io/pages/scanpy_scvi_tools/" class="external">here</a>, with corresponding <a href="https://youtu.be/EKTg9NV5hEA" class="external">video</a>.</li>
-<li><a href="https://chanzuckerberg.github.io/cellxgene/" class="external">cellxgene</a> for interactive visualization.</li>
+<li><a class="external" href="https://scanpy.readthedocs.io/en/stable/">Scanpy</a> and its <a class="external" href="https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html">basic tutorial</a>. Scanpy underlies most Python-based single-cell analyses and for good reason. It uses the <a class="external" href="https://anndata.readthedocs.io/en/latest/">AnnData</a> data structure for storing the data, which has become the most widely accepted input to other Python-based methods. It also provides nice plotting functions for exploratory analysis. Familiarity with the Scanpy workflow is essential.</li>
+<li><a class="external" href="https://scvi-tools.org/">scvi-tools</a>, which I help develop, provides access to <a class="external" href="https://scvi-tools.org/get_started#single-cell-omics-data-analysis">many</a> popular probabilistic models for single-cell genomics as well as an interface to build novel probabilistic/deep learning models using <a class="external" href="https://pytorch.org/">PyTorch</a>, <a class="external" href="https://www.pytorchlightning.ai/">PyTorch Lightning</a>, and <a class="external" href="https://pyro.ai/">Pyro</a>. I present a Scanpy/scvi-tools tutorial <a class="external" href="https://ccbskillssem.github.io/pages/scanpy_scvi_tools/">here</a>, with corresponding <a class="external" href="https://youtu.be/EKTg9NV5hEA">video</a>.</li>
+<li><a class="external" href="https://chanzuckerberg.github.io/cellxgene/">cellxgene</a> for interactive visualization.</li>
 </ul>
 <h2>Tips and other considerations</h2>
 <ul>
@@ -149,7 +140,14 @@
 })();
 </script>
 
-<script async src="https://gc.zgo.at/count.js"
-        data-goatcounter="https://smtp123.goatcounter.com/count"></script>
+<script>
+window.addEventListener("load", function () {
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter", "https://smtp123.goatcounter.com/count");
+  document.body.appendChild(s);
+});
+</script>
 </body>
 </html>
