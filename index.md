@@ -2,9 +2,9 @@
 title: Adam Gayoso
 ---
 
-I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/), where I work on genomics. My projects at GDM include [AlphaGenome](https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/), a model that predicts how genetic variants affect regulatory activity directly from DNA sequence.
+I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/), where I work on genomics. I led the research for [AlphaGenome 2](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/), a DNA sequence model that predicts how genetic variants affect regulatory activity at the cell-type-level.
 
-Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley, co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://www.weizmann.ac.il/immunology/yosef/). There I developed [scvi-tools](http://scvi-tools.org/), a Python library for probabilistic analysis of single-cell omics data, with implementations of published models and the building blocks for new ones. Models I designed with it include [totalVI](https://doi.org/10.1038/s41592-020-01050-x), for multimodal single-cell integration, and [veloVI](https://doi.org/10.1038/s41592-023-01994-w), for transcriptional dynamics. I also co-founded the [scverse](https://scverse.org/) consortium.
+Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley, co-advised by [Aaron Streets](http://streetslab.berkeley.edu) and [Nir Yosef](https://www.weizmann.ac.il/immunology/yosef/). There I developed [scvi-tools](http://scvi-tools.org/), a Python library for probabilistic analysis of single-cell omics data, with implementations of published models and the building blocks for new ones. Models I designed with it include [totalVI](https://doi.org/10.1038/s41592-020-01050-x), for multimodal single-cell integration, and [veloVI](https://doi.org/10.1038/s41592-023-01994-w), for modeling transcriptional dynamics. I also co-founded the [scverse](https://scverse.org/) consortium.
 
 Before that, I studied operations research and computer science at Columbia University, where I was introduced to single-cell genomics in the [Dana Pe'er Lab](https://www.mskcc.org/research-areas/labs/dana-pe-er).
 
