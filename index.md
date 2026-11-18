@@ -2,7 +2,7 @@
 title: Adam Gayoso
 ---
 
-I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/), where I work on genomics. I led the research for [AlphaGenome 2](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/), a DNA sequence model that predicts how genetic variants affect regulatory activity across cell states.
+I am a Senior Research Scientist at [Google DeepMind](https://www.deepmind.com/), where I work on genomics. I led the research for [AlphaGenome 2](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/), a DNA sequence model that predicts the effect of genetic variants on regulatory activity across cell states.
 
 Previously, I completed my PhD in the Center for Computational Biology at UC Berkeley. There I developed [scvi-tools](http://scvi-tools.org/), a Python library for probabilistic analysis of single-cell omics data, with implementations of published models and the building blocks for new ones. Models I designed with it include [totalVI](https://doi.org/10.1038/s41592-020-01050-x), for multimodal single-cell integration, and [veloVI](https://doi.org/10.1038/s41592-023-01994-w), for modeling transcriptional dynamics. I also co-founded the [scverse](https://scverse.org/) consortium.
 
@@ -10,6 +10,6 @@ Before that, I studied operations research and computer science at Columbia Univ
 
 ## Selected work
 
-- [AlphaGenome 2](https://www.biorxiv.org/content/10.64898/2026.11.11.765857) — a unified DNA sequence model predicting how genetic variants affect regulatory activity across cell states. *bioRxiv*, 2026. <a class="aux" href="https://github.com/google-deepmind/alphagenome">code</a> <a class="aux" href="https://www.alphagenomedocs.com/">docs</a>
+- [AlphaGenome 2](https://www.biorxiv.org/content/10.64898/2026.11.11.765857) — a unified DNA sequence model predicting the effect of genetic variants on regulatory activity across cell states. *bioRxiv*, 2026. <a class="aux" href="https://github.com/google-deepmind/alphagenome">code</a> <a class="aux" href="https://www.alphagenomedocs.com/">docs</a>
 - [scvi-tools](https://doi.org/10.1038/s41587-021-01206-w) — probabilistic models for single-cell omics, and a framework for building new ones. *Nature Biotechnology*, 2022. <a class="aux" href="https://github.com/scverse/scvi-tools">code</a> <a class="aux" href="https://scvi-tools.org/">docs</a>
 - [Publications](https://scholar.google.com/citations?user=TNqOADUAAAAJ&hl=en) on Google Scholar.
